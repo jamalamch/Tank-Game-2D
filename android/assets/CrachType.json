@@ -1,0 +1,616 @@
+{	
+  crach: {
+	1: {	
+    vitass : 19
+	force : 2.6
+	rotation : 1 
+	refire : 6
+	life : 70
+	}
+	2: {
+    vitass : 20
+	force : 2.9
+	rotation : 1
+	refire : 5.7
+	life : 90
+	}
+	3: {
+    vitass : 21
+	force : 3
+	rotation : 1.1
+    refire : 5.6
+	life : 100
+	}
+	4: {
+    vitass : 23
+	force : 3.3
+	rotation : 1.4
+	refire : 5.5
+	life : 120
+	}
+	5: {
+    vitass : 27
+	force : 3
+	rotation : 1.5
+	refire : 5.4
+	life : 130
+	}
+	6: {
+    vitass : 28
+	force : 3.2
+	rotation : 2
+	refire : 5.2
+	life : 150
+	}
+	7: {
+    vitass : 30
+	force : 3.5
+	rotation : 1.5
+	refire : 5
+	life : 160
+	}
+	8: {
+    vitass : 31
+	force : 3.9
+	rotation : 2.1
+	refire : 4.6
+	life : 190
+	}
+	9: {
+    vitass : 30
+	force : 4.1
+	rotation : 2.1
+	refire : 4.4
+	life : 200
+	}
+	10: {
+    vitass : 32
+	force : 6
+	rotation : 1.2
+	refire : 4.1
+	life : 230
+	}
+	11: {
+    vitass : 33
+	force : 6.7
+	rotation : 2
+	refire : 3.8
+	life : 250
+	}
+	12: {
+    vitass : 34
+	force : 7.5
+	rotation : 1.9
+	refire : 3.5
+	life : 260
+	}
+	13: {
+    vitass : 35
+	force : 8.1
+	rotation : 2
+	refire : 3
+	life : 310
+	}
+	14: {
+    vitass : 36
+	force : 8
+	rotation : 2
+	refire : 2.9
+	life : 340
+	}
+	15: {
+    vitass : 36
+	force : 9
+	rotation : 2
+	refire : 1.8
+	life : 300
+	}
+  }
+  GunA:{
+	1: {
+		prix : 0
+		speed : 0
+		energy : 0
+		protection : 1
+		rotation : 3
+		refire : 10
+	}
+	2: {
+		prix : 300
+		speed : 0
+		energy : 1
+		protection :3
+		rotation : 3
+		refire : 11
+	}
+	3: {
+		prix : 500
+		speed : 0
+		energy : 4
+		protection :3
+		rotation : 4
+		refire : 11
+	}
+	4: {
+		prix : 600
+		speed : 0
+		energy : 7
+		protection :4
+		rotation : 4
+		refire : 11
+	}
+	5: {
+		prix : 800
+		speed : 0
+		energy : 10
+		protection :6
+		rotation : 4
+		refire : 11
+	}
+	6: {
+		prix : 900
+		speed : 0
+		energy : 10
+		protection :7
+		rotation : 4
+		refire : 12
+	}
+	7: {
+		prix : 1400
+		speed : 0
+		energy : 10
+		protection :8
+		rotation : 4
+		refire : 13
+	}
+	8: {
+		prix : 1600
+		speed : 0
+		energy : 13
+		protection :9
+		rotation : 5
+		refire : 15
+	}
+	9: {
+		prix : 2050
+		speed : 0
+		energy : 30
+		protection :8
+		rotation : 6
+		refire : 14
+	}
+	10: {
+		prix : 3000
+		speed : 0
+		energy : 10
+		protection :9
+		rotation : 4
+		refire : 14
+	}
+	11: {
+		prix : 4300
+		speed : 0
+		energy : 19
+		protection :8
+		rotation : 5
+		refire : 13
+	}
+	12: {
+		prix : 5000
+		speed : 4
+		energy : 12
+		protection :8
+		rotation : 5
+		refire : 15
+	}
+	13: {
+		prix : 6000
+		speed : 0
+		energy : 15
+		protection :10
+		rotation : 10
+		refire : 16
+	}
+	14: {
+		prix : 7600
+		speed : 0
+		energy : 16
+		protection :15
+		rotation : 11
+		refire : 17
+	}
+	15: {
+		prix : 9000
+		speed : 0
+		energy : 15
+		protection :14
+		rotation : 12
+		refire : 18
+	}
+	16: {
+		prix : 10200
+		speed : 9
+		energy : 17
+		protection :14
+		rotation : 14
+		refire : 20
+	}
+  }
+  GunB: {
+		1: {
+		prix : 0
+		speed : 3
+		energy : 7
+		protection :0
+		rotation : 20
+		refire : 12
+	}
+	2: {
+		prix : 500
+		speed : 3
+		energy : 8
+		protection :5
+		rotation : 20
+		refire : 12
+	}
+	3: {
+		prix : 600
+		speed : 3
+		energy : 7
+		protection :5
+		rotation : 21
+		refire : 12
+	}
+	4: {
+		prix : 700
+		speed : 3
+		energy : 7
+		protection :6
+		rotation : 22
+		refire : 13
+	}
+	5: {
+		prix : 950
+		speed : 5
+		energy : 8
+		protection :7
+		rotation : 23
+		refire : 14
+	}
+	6: {
+		prix : 1300
+		speed : 4
+		energy : 11
+		protection :7
+		rotation : 25
+		refire : 14
+	}
+	7: {
+		prix : 2000
+		speed : 5
+		energy : 14
+		protection :7
+		rotation : 26
+		refire : 15
+	}
+	8: {
+		prix : 4000
+		speed : 6
+		energy : 16
+		protection :8
+		rotation : 27
+		refire : 15
+	}
+	9: {
+		prix : 5600
+		speed : 6
+		energy : 20
+		protection :7
+		rotation : 27
+		refire : 16
+	}
+	10: {
+		prix : 6700
+		speed : 5
+		energy : 22
+		protection :7
+		rotation : 26
+		refire : 18
+	}
+	11: {
+		prix : 8000
+		speed : 7
+		energy : 24
+		protection :8
+		rotation : 29
+		refire : 25
+	}
+	12: {
+		prix : 9000
+		speed : 7
+		energy : 27
+		protection :8
+		rotation : 31
+		refire : 30
+	}
+	13: {
+		prix : 10500
+		speed : 8
+		energy : 30
+		protection :10
+		rotation : 30
+		refire : 35
+	}
+	14: {
+		prix : 13000
+		speed : 7
+		energy : 39
+		protection :12
+		rotation : 32
+		refire : 40
+	}
+	15: {
+		prix : 16000
+		speed : 9
+		energy : 43
+		protection :14
+		rotation : 30
+		refire : 42
+	}
+	16: {
+		prix : 20000
+		speed : 10
+		energy : 40
+		protection :15
+		rotation : 33
+		refire : 50
+	}
+  }
+  Hull: {
+	1: {
+		prix : 0
+		speed : 8
+		energy : 4
+		protection :9
+		rotation : 11
+		refire : 9
+	}
+	2: {
+		prix : 2000
+		speed : 9
+		energy : 6
+		protection :10
+		rotation : 13
+		refire : 9
+	}
+	3: {
+		prix : 4500
+		speed : 9
+		energy : 8
+		protection :5
+		rotation : 14
+		refire : 10
+	}
+	4: {
+		prix : 5500
+		speed : 9
+		energy : 10
+		protection :10
+		rotation : 16
+		refire : 10
+	}
+	5: {
+		prix : 6900
+		speed : 9
+		energy : 12
+		protection :10
+		rotation : 17
+		refire : 11
+	}
+	6: {
+		prix : 8200
+		speed : 10
+		energy : 14
+		protection :11
+		rotation : 18
+		refire : 11
+	}
+	7: {
+		prix : 9000
+		speed : 10
+		energy : 15
+		protection :12
+		rotation : 21
+		refire : 11
+	}
+	8: {
+		prix : 12000
+		speed : 10
+		energy : 17
+		protection :20
+		rotation : 24
+		refire : 11
+	}
+	9: {
+		prix : 15000
+		speed : 10
+		energy : 20
+		protection :22
+		rotation : 26
+		refire : 12
+	}
+	10: {
+		prix : 20000
+		speed : 10
+		energy : 23
+		protection :20
+		rotation : 25
+		refire : 13
+	}
+	11: {
+		prix : 33000
+		speed : 11
+		energy : 25
+		protection :24
+		rotation : 27
+		refire : 15
+	}
+	12: {
+		prix : 40000
+		speed : 10
+		energy : 29
+		protection :26
+		rotation : 28
+		refire : 19
+	}
+	13: {
+		prix : 60000
+		speed : 10
+		energy : 30
+		protection :27
+		rotation : 31
+		refire : 20
+	}
+	14: {
+		prix : 90300
+		speed : 18
+		energy : 35
+		protection :48
+		rotation : 35
+		refire : 21
+	}
+	15: {
+		prix : 100000
+		speed : 18
+		energy : 39
+		protection :50
+		rotation : 39
+		refire : 23
+	}
+	16: {
+		prix : 160000
+		speed : 18
+		energy : 40
+		protection :55
+		rotation : 45
+		refire : 30
+	}
+
+  }
+  Track: {
+	1: {
+		prix : 0
+		speed : 30
+		energy : 2
+		protection :1
+		rotation : 9
+		refire : 0
+	}
+	2: {
+		prix : 5000
+		speed : 35
+		energy : 2
+		protection :3
+		rotation : 10
+		refire : 0
+	}
+	3: {
+		prix : 12000
+		speed : 37
+		energy : 2
+		protection :4
+		rotation : 10
+		refire : 0
+	}
+	4: {
+		prix : 20000
+		speed : 40
+		energy : 2
+		protection :4
+		rotation : 10
+		refire : 0
+	}
+	5: {
+		prix : 30500
+		speed : 45
+		energy : 3
+		protection :4
+		rotation : 10
+		refire : 0
+	}
+	6: {
+		prix : 50000
+		speed : 48
+		energy : 6
+		protection :4
+		rotation : 11
+		refire : 0
+	}
+	7: {
+		prix : 69000
+		speed : 50
+		energy : 7
+		protection :4
+		rotation : 10
+		refire : 1
+	}
+	8: {
+		prix : 110000
+		speed : 60
+		energy : 10
+		protection :5
+		rotation : 10
+		refire : 1
+	}
+  }
+  Shell: {
+	Granade_Shell: {
+		prix : 0
+		speed : 20
+		Damage :10
+		life : 2
+	}
+	Heavy_Shell: {
+		prix : 40000
+		speed : 60
+		Damage :30
+		life : 2.3
+	}
+	Laser :{
+		prix : 70000
+		speed : 95
+		Damage : 20
+		life : 2.4
+	}
+	Light_Shell: {
+		prix : 30000
+		speed : 30
+		Damage : 20
+		life : 2.7
+	}
+	Medium_Shell: {
+		prix : 35000
+		speed : 50
+		Damage :30
+		life : 3
+	}
+	Plasma: {
+		prix : 60000
+		speed : 40
+		Damage :50
+		life : 4
+	}
+	Shotgun_Shells: {
+		prix : 100000
+		speed : 50
+		Damage :70
+		life : 4
+	}
+	Sniper_Shell: {
+		prix : 190000
+		speed : 70
+		Damage : 90
+		life : 5
+	}
+  }
+}

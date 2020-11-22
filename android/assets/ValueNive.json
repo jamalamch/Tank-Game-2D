@@ -1,0 +1,112 @@
+{
+  "1": {
+    "drawable" : "Bonus_Items/Ammunition_Icon",
+    "max" : 3000,
+    "prize" : 10
+  },
+  "2": {
+    "drawable" : "Bonus_Items/Ammunition_Debuff",
+    "max" : 5000,
+    "prize" : 30
+  },
+  "3": {
+    "drawable" : "Bonus_Items/Ammunition_Bonus",
+    "max" : 9000,
+    "prize" : 45
+  },
+  "4": {
+    "drawable" : "Bonus_Items/Armor_Icon",
+    "max" : 19500,
+    "prize" : 60
+  },
+  "5": {
+    "drawable" : "Bonus_Items/Armor_Debuff",
+    "max" : 20300,
+    "prize" : 80
+  },
+  "6": {
+    "drawable" : "Bonus_Items/Armor_Bonus",
+    "max" : 32000,
+    "prize" : 100
+  },
+  "7": {
+    "drawable" : "Bonus_Items/Attack_Icon",
+    "max" : 34000,
+    "prize" : 125
+  },
+  "8": {
+    "drawable" : "Bonus_Items/Attack_Bonus",
+    "max" : 47000,
+    "prize" : 150
+  },
+  "9": {
+    "drawable" : "Bonus_Items/HP_Icon",
+    "max" : 50000,
+    "prize" : 180
+  },
+  "10": {
+    "drawable" : "Bonus_Items/HP_Debuff",
+    "max" : 66000,
+    "prize" : 290
+  },
+  "11": {
+    "drawable" : "Bonus_Items/HP_Bonus",
+    "max" : 72000,
+    "prize" : 300
+  },
+  "12": {
+    "drawable" : "Bonus_Items/Magnet_Icon",
+    "max" : 85000,
+    "prize" : 430
+  },
+  "13": {
+    "drawable" : "Bonus_Items/Magnet_Bonus",
+    "max" : 99000,
+    "prize" : 450
+  },
+  "14": {
+    "drawable" : "Bonus_Items/Mobility_Icon",
+    "max" : 126000,
+    "prize" : 500
+  },
+  "15": {
+    "drawable" : "Bonus_Items/Mobility_Debuff",
+    "max" : 190000,
+    "prize" : 560
+  },
+  "16": {
+    "drawable" : "Bonus_Items/Nuke_Icon",
+    "max" : 240000,
+    "prize" : 670
+  },
+  "17": {
+    "drawable" : "Bonus_Items/Nuke_Bonus",
+    "max" : 285000,
+    "prize" : 785
+  },
+  "18": {
+    "drawable" : "Bonus_Items/Shield_Icon",
+    "max" : 350000,
+    "prize" : 800
+  },
+  "19": {
+    "drawable" : "Bonus_Items/Shield_Bonus",
+    "max" : 430000,
+    "prize" : 820
+  },
+  "20": {
+    "drawable" : "Bonus_Items/Speed_Icon",
+    "max" : 490000,
+    "prize" : 950
+  },
+  "21": {
+    "drawable" : "Bonus_Items/Speed_Debuff",
+    "max" : 650000,
+    "prize" : 1000
+  },
+  "22": {
+    "drawable" : "Bonus_Items/Speed_Bonus",
+    "max" : 790000,
+    "prize" : 1450
+  }
+}

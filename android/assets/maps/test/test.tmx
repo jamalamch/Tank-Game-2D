@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="40" height="25" tilewidth="64" tileheight="64" infinite="1" nextlayerid="14" nextobjectid="12">
+ <tileset firstgid="1" source="TILDES.tsx"/>
+ <group id="8" name="Object">
+  <group id="9" name="PickUp">
+   <group id="7" name="Crystal">
+    <objectgroup id="12" name="Object Layer 1">
+     <object id="1" x="-496" y="-1089.33">
+      <point/>
+     </object>
+     <object id="2" x="-246.667" y="-902.667">
+      <point/>
+     </object>
+     <object id="3" x="-85.3333" y="-1033.33">
+      <point/>
+     </object>
+     <object id="4" x="-481.333" y="-897.333">
+      <point/>
+     </object>
+    </objectgroup>
+   </group>
+  </group>
+  <group id="11" name="Box">
+   <objectgroup id="13" name="Object Layer 2">
+    <object id="5" x="-334.667" y="-1081.33">
+     <point/>
+    </object>
+    <object id="6" x="-68" y="-785.333">
+     <point/>
+    </object>
+    <object id="7" x="-481.333" y="-705.333">
+     <point/>
+    </object>
+    <object id="8" x="-756" y="-732">
+     <point/>
+    </object>
+    <object id="9" x="-742.667" y="-992">
+     <point/>
+    </object>
+    <object id="10" x="-250.667" y="-1172">
+     <point/>
+    </object>
+    <object id="11" x="106.667" y="-934.667">
+     <point/>
+    </object>
+   </objectgroup>
+  </group>
+  <group id="10" name="Enimy"/>
+ </group>
+</map>

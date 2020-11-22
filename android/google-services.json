@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "279102367784",
+    "firebase_url": "https://crach-game-th-1979-3647907.firebaseio.com",
+    "project_id": "crach-game-th-1979-3647907",
+    "storage_bucket": "crach-game-th-1979-3647907.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279102367784:android:cdf9bc450f9fea893dad1d",
+        "android_client_info": {
+          "package_name": "crach.stage.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279102367784-8hic6t3b57rjb3uul01noslfjq2rsuh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPXHgUwZ7mUEI4MADFzyhIMDnTsR6gSg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279102367784-8hic6t3b57rjb3uul01noslfjq2rsuh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

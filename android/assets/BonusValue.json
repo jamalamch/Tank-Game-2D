@@ -1,0 +1,121 @@
+{
+	"Medal1": {
+	     "medalIcon" : "Bonus_Items/badge_1",
+		 "mission" : "mission1",
+		 "prize" : 10,
+		 "type" : "Exper",
+		 "quantity" :2000
+	},
+	"Medal2": {
+	     "medalIcon" : "Bonus_Items/badge_2",
+		 "mission" : "mission2",
+		 "prize" : 90,
+		 "type" : "Exper",
+		 "quantity" :60000
+	},
+	"Medal3": {
+	     "medalIcon" : "Bonus_Items/badge_3",
+		 "mission" : "mission3",
+		 "prize" : 25,
+		 "type" : "Nive",
+		 "quantity" :4
+	},
+	"Medal4": {
+	     "medalIcon" : "Bonus_Items/badge_4",
+		 "mission" : "mission4",
+		 "prize" : 20,
+		 "type" : "Coin",
+		 "quantity" :10000
+	},
+	"Medal5": {
+	     "medalIcon" : "Bonus_Items/badge_5",
+		 "mission" : "mission5",
+		 "prize" : 20,
+		 "type" : "Hp",
+		 "quantity" :10
+	},
+	"Medal6": {
+	     "medalIcon" : "Bonus_Items/badge_6",
+		 "mission" : "mission6",
+		 "prize" : 10,
+		 "type" : "enimykill",
+		 "quantity" :20
+	},
+	"Medal7": {
+	     "medalIcon" : "Bonus_Items/badge_7",
+		 "mission" : "mission7",
+		 "prize" : 200,
+		 "type" : "adsWatchd",
+		 "quantity" :40
+	},
+	"Medal8": {
+	     "medalIcon" : "Bonus_Items/badge_8",
+		 "mission" : "mission8",
+		 "prize" : 100,
+		 "type" : "nPlayMulti",
+		 "quantity" :2000
+	},
+	"Medal9": {
+	     "medalIcon" : "Bonus_Items/badge_9",
+		 "mission" : "mission9",
+		 "prize" : 50,
+		 "type" : "Hp",
+		 "quantity" :60
+	},
+	"Medal10": {
+	     "medalIcon" : "Bonus_Items/badge_10",
+		 "mission" : "mission10",
+		 "prize" : 100,
+		 "type" : "Nive",
+		 "quantity" : 10
+	},
+	"Medal11": {
+	     "medalIcon" : "Bonus_Items/badge_11",
+		 "mission" : "mission11",
+		 "prize" : 100,
+		 "type" : "matchWinne",
+		 "quantity" :200
+	},
+	"Medal12": {
+	     "medalIcon" : "Bonus_Items/badge_12",
+		 "mission" : "mission12",
+		 "prize" : 50,
+		 "type" : "nStar",
+		 "quantity" :20
+	},
+	"Medal13": {
+	     "medalIcon" : "Bonus_Items/badge_13",
+		 "mission" : "mission13",
+		 "prize" : 100,
+		 "type" : "hoursPlayed",
+		 "quantity" :60
+	},
+	"Medal14": {
+	     "medalIcon" : "Bonus_Items/badge_14",
+		 "mission" : "mission14",
+		 "prize" : 30,
+		 "type" : "bombs",
+		 "quantity" :20
+	},
+	"Medal15": {
+	     "medalIcon" : "Bonus_Items/badge_15",
+		 "mission" : "mission15",
+		 "prize" : 100,
+		 "type" : "Coin",
+		 "quantity" :50000
+	},
+	"Medal16": {
+	     "medalIcon" : "Bonus_Items/badge_16",
+		 "mission" : "mission16",
+		 "prize" : 200,
+		 "type" : "nStar",
+		 "quantity" :100
+	},
+	"Medal17": {
+	     "medalIcon" : "Bonus_Items/badge_17",
+		 "mission" : "mission17",
+		 "prize" : 250,
+		 "type" : "matchWinne",
+		 "quantity" :200
+	}
+}

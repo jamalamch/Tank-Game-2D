@@ -1,0 +1,2430 @@
+GameStyle.png
+size: 2044, 3884
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armor_Dot
+  rotate: false
+  xy: 1127, 1974
+  size: 23, 10
+  split: 2, 2, 2, 2
+  pad: -1, -1, -1, -1
+  orig: 23, 10
+  offset: 0, 0
+  index: -1
+Armor_Table
+  rotate: false
+  xy: 681, 3445
+  size: 32, 32
+  split: 4, 4, 4, 4
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+BackgroundInfo
+  rotate: false
+  xy: 1, 1667
+  size: 640, 360
+  orig: 640, 360
+  offset: 0, 0
+  index: -1
+BackgroundMenu
+  rotate: false
+  xy: 1, 1
+  size: 1920, 1080
+  orig: 1920, 1080
+  offset: 0, 0
+  index: -1
+Bar
+  rotate: false
+  xy: 1085, 2196
+  size: 31, 16
+  split: 4, 4, 4, 4
+  pad: -1, -1, -1, -1
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+BarWatchAds
+  rotate: false
+  xy: 1418, 1681
+  size: 285, 140
+  split: 157, 109, 67, 67
+  pad: 142, 77, 57, 57
+  orig: 285, 140
+  offset: 0, 0
+  index: -1
+Bonus_Items/Ammunition_Bonus
+  rotate: false
+  xy: 1955, 230
+  size: 88, 88
+  orig: 128, 128
+  offset: 20, 20
+  index: -1
+Bonus_Items/Ammunition_Debuff
+  rotate: false
+  xy: 1955, 320
+  size: 88, 88
+  orig: 128, 128
+  offset: 20, 20
+  index: -1
+Bonus_Items/Ammunition_Icon
+  rotate: false
+  xy: 1383, 3605
+  size: 88, 88
+  orig: 128, 128
+  offset: 20, 20
+  index: -1
+Bonus_Items/Armor_Bonus
+  rotate: false
+  xy: 1953, 3211
+  size: 90, 102
+  orig: 128, 128
+  offset: 19, 13
+  index: -1
+Bonus_Items/Armor_Debuff
+  rotate: false
+  xy: 1932, 1446
+  size: 90, 102
+  orig: 128, 128
+  offset: 19, 13
+  index: -1
+Bonus_Items/Armor_Icon
+  rotate: false
+  xy: 1197, 3514
+  size: 90, 102
+  orig: 128, 128
+  offset: 19, 13
+  index: -1
+Bonus_Items/Attack_Bonus
+  rotate: false
+  xy: 1473, 3605
+  size: 88, 88
+  orig: 128, 128
+  offset: 20, 20
+  index: -1
+Bonus_Items/Attack_Icon
+  rotate: false
+  xy: 1563, 3608
+  size: 88, 88
+  orig: 128, 128
+  offset: 20, 20
+  index: -1
+Bonus_Items/badge_1
+  rotate: false
+  xy: 1411, 3254
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_2
+  rotate: false
+  xy: 1801, 3363
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_3
+  rotate: false
+  xy: 880, 3384
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_4
+  rotate: false
+  xy: 1010, 3384
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_5
+  rotate: false
+  xy: 1140, 3384
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_6
+  rotate: false
+  xy: 1270, 3384
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_7
+  rotate: false
+  xy: 1400, 3384
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_8
+  rotate: false
+  xy: 1530, 3384
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_9
+  rotate: false
+  xy: 845, 3514
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_10
+  rotate: false
+  xy: 1433, 3124
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_11
+  rotate: false
+  xy: 1563, 3103
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_12
+  rotate: false
+  xy: 1693, 3103
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_13
+  rotate: false
+  xy: 1823, 3103
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_14
+  rotate: false
+  xy: 1541, 3254
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_15
+  rotate: false
+  xy: 1671, 3233
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_16
+  rotate: false
+  xy: 1801, 3233
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/badge_17
+  rotate: false
+  xy: 1671, 3363
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Bonus_Items/HP_Bonus
+  rotate: false
+  xy: 1289, 3514
+  size: 97, 89
+  orig: 128, 128
+  offset: 15, 20
+  index: -1
+Bonus_Items/HP_Debuff
+  rotate: false
+  xy: 1388, 3514
+  size: 97, 89
+  orig: 128, 128
+  offset: 15, 20
+  index: -1
+Bonus_Items/HP_Icon
+  rotate: false
+  xy: 1487, 3514
+  size: 97, 89
+  orig: 128, 128
+  offset: 15, 20
+  index: -1
+Bonus_Items/Magnet_Bonus
+  rotate: false
+  xy: 1961, 2775
+  size: 82, 92
+  orig: 128, 128
+  offset: 23, 18
+  index: -1
+Bonus_Items/Magnet_Icon
+  rotate: false
+  xy: 1961, 2869
+  size: 82, 92
+  orig: 128, 128
+  offset: 23, 18
+  index: -1
+Bonus_Items/Mobility_Debuff
+  rotate: false
+  xy: 805, 1767
+  size: 108, 60
+  orig: 128, 128
+  offset: 10, 34
+  index: -1
+Bonus_Items/Mobility_Icon
+  rotate: false
+  xy: 1923, 1014
+  size: 108, 60
+  orig: 128, 128
+  offset: 10, 34
+  index: -1
+Bonus_Items/Nuke_Bonus
+  rotate: false
+  xy: 1287, 3687
+  size: 88, 88
+  orig: 128, 128
+  offset: 20, 20
+  index: -1
+Bonus_Items/Nuke_Icon
+  rotate: false
+  xy: 1377, 3695
+  size: 88, 88
+  orig: 128, 128
+  offset: 20, 20
+  index: -1
+Bonus_Items/Shield_Bonus
+  rotate: false
+  xy: 1923, 410
+  size: 102, 102
+  orig: 128, 128
+  offset: 13, 13
+  index: -1
+Bonus_Items/Shield_Icon
+  rotate: false
+  xy: 1923, 514
+  size: 102, 102
+  orig: 128, 128
+  offset: 13, 13
+  index: -1
+Bonus_Items/Speed_Bonus
+  rotate: false
+  xy: 1937, 2559
+  size: 90, 106
+  orig: 128, 128
+  offset: 19, 11
+  index: -1
+Bonus_Items/Speed_Debuff
+  rotate: false
+  xy: 1937, 2667
+  size: 90, 106
+  orig: 128, 128
+  offset: 19, 11
+  index: -1
+Bonus_Items/Speed_Icon
+  rotate: false
+  xy: 1953, 3103
+  size: 90, 106
+  orig: 128, 128
+  offset: 19, 11
+  index: -1
+Bottom_table_decor
+  rotate: false
+  xy: 620, 2469
+  size: 198, 30
+  orig: 198, 30
+  offset: 0, 0
+  index: -1
+BTNs/Add_Coins_BTN
+  rotate: false
+  xy: 805, 1637
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Back_BTN
+  rotate: false
+  xy: 631, 3177
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Backward_BTN
+  rotate: false
+  xy: 791, 2925
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/BTN
+  rotate: false
+  xy: 453, 2697
+  size: 256, 128
+  split: 16, 15, 31, 31
+  pad: 14, 15, 16, 16
+  orig: 256, 128
+  offset: 0, 0
+  index: -1
+BTNs/BTN_ITEM
+  rotate: false
+  xy: 1802, 1213
+  size: 127, 234
+  split: 59, 60, 11, 11
+  pad: 31, 31, 11, 11
+  orig: 127, 234
+  offset: 0, 0
+  index: -1
+BTNs/Change_BTN
+  rotate: false
+  xy: 397, 3626
+  size: 58, 60
+  orig: 58, 60
+  offset: 0, 0
+  index: -1
+BTNs/CHK_BTN
+  rotate: false
+  xy: 1085, 2146
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs/Close_BTN
+  rotate: false
+  xy: 1933, 1076
+  size: 98, 98
+  orig: 98, 98
+  offset: 0, 0
+  index: -1
+BTNs/Coin_Icon
+  rotate: false
+  xy: 495, 3334
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs/Color_A_BTN
+  rotate: false
+  xy: 845, 3762
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs/Color_B_BTN
+  rotate: false
+  xy: 1586, 3514
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs/Color_C_BTN
+  rotate: false
+  xy: 1680, 3493
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs/Color_D_BTN
+  rotate: false
+  xy: 1774, 3493
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs/CTF_BTN
+  rotate: false
+  xy: 783, 3055
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Deathmatch_BTN
+  rotate: false
+  xy: 761, 3185
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Facebook_BTN
+  rotate: false
+  xy: 936, 2214
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/FAQ_BTN
+  rotate: false
+  xy: 806, 2214
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Football_BTN
+  rotate: false
+  xy: 929, 2344
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Forward_BTN
+  rotate: false
+  xy: 1553, 1867
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Game_Center_BTN
+  rotate: false
+  xy: 1683, 1841
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Hangar_BTN
+  rotate: false
+  xy: 1813, 1841
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Info_BTN
+  rotate: false
+  xy: 1656, 2039
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/KOH_BTN
+  rotate: false
+  xy: 1786, 2039
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/LIST_BTN
+  rotate: false
+  xy: 1802, 1449
+  size: 128, 128
+  split: 32, 32, 76, 37
+  pad: 32, 32, 18, 18
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Load_BTN
+  rotate: false
+  xy: 865, 2474
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Menu_BTN
+  rotate: false
+  xy: 995, 2474
+  size: 128, 128
+  split: 15, 106, 103, 16
+  pad: 15, 107, 24, 16
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Moin_BTN
+  rotate: false
+  xy: 1868, 3493
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs/More_Coin_Icon
+  rotate: false
+  xy: 643, 1829
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs/More_Diamond_Icon
+  rotate: false
+  xy: 1211, 1873
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs/More_Games_BTN
+  rotate: false
+  xy: 897, 2604
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Music_BTN
+  rotate: false
+  xy: 897, 2734
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/No_ADS_Icon
+  rotate: false
+  xy: 643, 1989
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs/NoAds
+  rotate: false
+  xy: 1923, 618
+  size: 101, 100
+  orig: 121, 120
+  offset: 10, 10
+  index: -1
+BTNs/Notifications_BTN
+  rotate: false
+  xy: 1027, 2604
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/number
+  rotate: false
+  xy: 432, 3835
+  size: 48, 48
+  split: 18, 18, 18, 18
+  pad: 11, 11, 11, 11
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs/Ok_BTN
+  rotate: false
+  xy: 1027, 2734
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Pause_BTN
+  rotate: false
+  xy: 1196, 2193
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Play_BTN
+  rotate: false
+  xy: 1326, 2193
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/PlayAds
+  rotate: false
+  xy: 1933, 1176
+  size: 97, 98
+  orig: 100, 100
+  offset: 1, 1
+  index: -1
+BTNs/Plus_BTN
+  rotate: false
+  xy: 969, 3712
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs/PTP_BTN
+  rotate: false
+  xy: 1059, 2344
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/PVP_BTN
+  rotate: false
+  xy: 1066, 2214
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/radio
+  rotate: false
+  xy: 482, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs/Rating_BTN
+  rotate: false
+  xy: 1456, 2193
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Refuse_BTN
+  rotate: false
+  xy: 1125, 2474
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Replay_BTN
+  rotate: false
+  xy: 1157, 2604
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Save_BTN
+  rotate: false
+  xy: 1157, 2734
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Settings_BTN
+  rotate: false
+  xy: 1189, 2344
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Share_BTN
+  rotate: false
+  xy: 1319, 2323
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Shop_BTN
+  rotate: false
+  xy: 1449, 2323
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Sound_BTN
+  rotate: false
+  xy: 1255, 2474
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/TableItems
+  rotate: false
+  xy: 937, 1285
+  size: 141, 158
+  split: 34, 36, 56, 56
+  pad: -1, -1, 2, 2
+  orig: 141, 158
+  offset: 0, 0
+  index: -1
+BTNs/Team_PVP_BTN
+  rotate: false
+  xy: 1385, 2453
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Twitter_BTN
+  rotate: false
+  xy: 1287, 2604
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Upgrade_BTN
+  rotate: false
+  xy: 1287, 2734
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/Upgrade_Part_BTN
+  rotate: false
+  xy: 382, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs/Vibration_BTN
+  rotate: false
+  xy: 1417, 2713
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/VK_BTN
+  rotate: false
+  xy: 1417, 2583
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs/XP_Boost_Icon
+  rotate: false
+  xy: 829, 1986
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs_Active/Add_Coins_BTN
+  rotate: false
+  xy: 1515, 2453
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Back_BTN
+  rotate: false
+  xy: 1547, 2583
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Backward_BTN
+  rotate: false
+  xy: 1547, 2713
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/BTN
+  rotate: false
+  xy: 457, 3494
+  size: 256, 128
+  split: 16, 15, 31, 31
+  pad: 15, 15, 16, 16
+  orig: 256, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Change_BTN
+  rotate: false
+  xy: 397, 3688
+  size: 58, 60
+  orig: 58, 60
+  offset: 0, 0
+  index: -1
+BTNs_Active/Close_BTN
+  rotate: false
+  xy: 1931, 3455
+  size: 98, 98
+  orig: 98, 98
+  offset: 0, 0
+  index: -1
+BTNs_Active/CTF_BTN
+  rotate: false
+  xy: 1579, 2323
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Deathmatch_BTN
+  rotate: false
+  xy: 1586, 2193
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Facebook_BTN
+  rotate: false
+  xy: 1645, 2453
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/FAQ_BTN
+  rotate: false
+  xy: 1716, 2169
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Football_BTN
+  rotate: false
+  xy: 1677, 2583
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Forward_BTN
+  rotate: false
+  xy: 1677, 2713
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Game_Center_BTN
+  rotate: false
+  xy: 1709, 2323
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Hangar_BTN
+  rotate: false
+  xy: 1775, 2453
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Info_BTN
+  rotate: false
+  xy: 1807, 2583
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/KOH_BTN
+  rotate: false
+  xy: 1807, 2713
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/LIST_BTN
+  rotate: false
+  xy: 1846, 2169
+  size: 128, 128
+  split: 29, 31, 72, 37
+  pad: 29, 31, 17, 18
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Load_BTN
+  rotate: false
+  xy: 1839, 2299
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Menu_BTN
+  rotate: false
+  xy: 921, 2864
+  size: 128, 128
+  split: 15, 106, 103, 16
+  pad: 15, 106, 24, 16
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Moin_BTN
+  rotate: false
+  xy: 532, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs_Active/More_Games_BTN
+  rotate: false
+  xy: 1051, 2864
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Music_BTN
+  rotate: false
+  xy: 1181, 2864
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Notifications_BTN
+  rotate: false
+  xy: 1311, 2864
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Ok_BTN
+  rotate: false
+  xy: 1441, 2843
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Pause_BTN
+  rotate: false
+  xy: 1831, 2843
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Play_BTN
+  rotate: false
+  xy: 921, 2994
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/PlayAds
+  rotate: false
+  xy: 1931, 1276
+  size: 97, 98
+  orig: 100, 100
+  offset: 1, 1
+  index: -1
+BTNs_Active/Plus_BTN
+  rotate: false
+  xy: 582, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs_Active/PTP_BTN
+  rotate: false
+  xy: 1571, 2843
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/PVP_BTN
+  rotate: false
+  xy: 1701, 2843
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Rating_BTN
+  rotate: false
+  xy: 1051, 2994
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Refuse_BTN
+  rotate: false
+  xy: 1181, 2994
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Replay_BTN
+  rotate: false
+  xy: 1311, 2994
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Save_BTN
+  rotate: false
+  xy: 1441, 2973
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Settings_BTN
+  rotate: false
+  xy: 1571, 2973
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Share_BTN
+  rotate: false
+  xy: 1701, 2973
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Shop_BTN
+  rotate: false
+  xy: 1831, 2973
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Sound_BTN
+  rotate: false
+  xy: 913, 3124
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Team_PVP_BTN
+  rotate: false
+  xy: 1043, 3124
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Twitter_BTN
+  rotate: false
+  xy: 1173, 3124
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Upgrade_BTN
+  rotate: false
+  xy: 1303, 3124
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/Upgrade_Part_BTN
+  rotate: false
+  xy: 632, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs_Active/Vibration_BTN
+  rotate: false
+  xy: 891, 3254
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Active/VK_BTN
+  rotate: false
+  xy: 1905, 2429
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/BTN
+  rotate: false
+  xy: 457, 3624
+  size: 256, 128
+  split: 16, 15, 31, 31
+  pad: 15, 15, 16, 16
+  orig: 256, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/BTN_ITEM
+  rotate: false
+  xy: 491, 2029
+  size: 127, 234
+  split: 59, 60, 11, 11
+  pad: 31, 31, 11, 11
+  orig: 127, 234
+  offset: 0, 0
+  index: -1
+BTNs_Checked/CHK_BTN
+  rotate: false
+  xy: 682, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Coin_Icon
+  rotate: false
+  xy: 620, 2149
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Color_A_BTN
+  rotate: false
+  xy: 1892, 1579
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Color_B_BTN
+  rotate: false
+  xy: 939, 3762
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Color_C_BTN
+  rotate: false
+  xy: 1680, 3587
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Color_D_BTN
+  rotate: false
+  xy: 1774, 3587
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Deathmatch_BTN
+  rotate: false
+  xy: 1021, 3254
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Football_BTN
+  rotate: false
+  xy: 1151, 3254
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Hangar_BTN
+  rotate: false
+  xy: 1281, 3254
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/LIST_BTN
+  rotate: false
+  xy: 681, 3315
+  size: 128, 128
+  split: 32, 32, 76, 37
+  pad: 32, 32, 18, 18
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/More_Coin_Icon
+  rotate: false
+  xy: 620, 2309
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs_Checked/More_Diamond_Icon
+  rotate: false
+  xy: 679, 2501
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs_Checked/No_ADS_Icon
+  rotate: false
+  xy: 711, 2661
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs_Checked/NoAds
+  rotate: false
+  xy: 806, 2344
+  size: 121, 120
+  orig: 121, 120
+  offset: 0, 0
+  index: -1
+BTNs_Checked/number
+  rotate: false
+  xy: 732, 3835
+  size: 48, 48
+  split: 20, 19, 20, 19
+  pad: 13, 12, 13, 12
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs_Checked/PTP_BTN
+  rotate: false
+  xy: 715, 3445
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/PVP_BTN
+  rotate: false
+  xy: 715, 3575
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/radio
+  rotate: false
+  xy: 782, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Shop_BTN
+  rotate: false
+  xy: 715, 3705
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/TableItems
+  rotate: false
+  xy: 1015, 1986
+  size: 141, 158
+  split: 36, 67, 48, 47
+  pad: 40, 41, 8, 9
+  orig: 141, 158
+  offset: 0, 0
+  index: -1
+BTNs_Checked/Team_PVP_BTN
+  rotate: false
+  xy: 1861, 1677
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+BTNs_Checked/XP_Boost_Icon
+  rotate: false
+  xy: 1158, 2033
+  size: 184, 158
+  orig: 184, 158
+  offset: 0, 0
+  index: -1
+BTNs_Disabled/BTN
+  rotate: false
+  xy: 829, 1856
+  size: 256, 128
+  split: 16, 15, 31, 31
+  pad: 14, 15, 16, 16
+  orig: 256, 128
+  offset: 0, 0
+  index: -1
+BTNs_Disabled/BTN_ITEM
+  rotate: false
+  xy: 491, 2265
+  size: 127, 234
+  split: 59, 60, 11, 11
+  pad: 31, 31, 11, 11
+  orig: 127, 234
+  offset: 0, 0
+  index: -1
+BTNs_Disabled/Color_A_BTN
+  rotate: false
+  xy: 1868, 3555
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs_Disabled/Color_B_BTN
+  rotate: false
+  xy: 1868, 3649
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs_Disabled/Color_C_BTN
+  rotate: false
+  xy: 1099, 3613
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs_Disabled/Color_D_BTN
+  rotate: false
+  xy: 1193, 3618
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+BTNs_Disabled/number
+  rotate: false
+  xy: 1158, 1974
+  size: 48, 48
+  split: 18, 18, 18, 18
+  pad: 11, 11, 11, 11
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+Buttons/Armor_Icon3
+  rotate: false
+  xy: 1705, 1681
+  size: 154, 158
+  orig: 154, 158
+  offset: 0, 0
+  index: -1
+Buttons/Damage_Icon2
+  rotate: false
+  xy: 1344, 2033
+  size: 154, 158
+  orig: 154, 158
+  offset: 0, 0
+  index: -1
+Buttons/HP_Icon4
+  rotate: false
+  xy: 1397, 1873
+  size: 154, 158
+  orig: 154, 158
+  offset: 0, 0
+  index: -1
+Buttons/Speed_Icon2
+  rotate: false
+  xy: 1500, 2033
+  size: 154, 158
+  orig: 154, 158
+  offset: 0, 0
+  index: -1
+Cloud_01
+  rotate: false
+  xy: 1, 3061
+  size: 628, 152
+  split: 37, 36, 67, 66
+  pad: 37, 36, 65, 66
+  orig: 628, 152
+  offset: 0, 0
+  index: -1
+Cloud_03
+  rotate: false
+  xy: 1, 2029
+  size: 488, 449
+  split: 107, 311, 105, 267
+  pad: 55, 59, 51, 123
+  orig: 488, 449
+  offset: 0, 0
+  index: -1
+Cloud_04
+  rotate: false
+  xy: 1, 2892
+  size: 628, 167
+  split: 32, 179, 38, 111
+  pad: 34, 47, 30, 103
+  orig: 628, 167
+  offset: 0, 0
+  index: -1
+controle/accepter_1
+  rotate: false
+  xy: 1083, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/accepter_2
+  rotate: false
+  xy: 1133, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/annuler_1
+  rotate: false
+  xy: 1183, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/annuler_2
+  rotate: false
+  xy: 1233, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/BigAccepter_1
+  rotate: false
+  xy: 1961, 2963
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/BigAccepter_2
+  rotate: false
+  xy: 1962, 3555
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/BigRefuser_1
+  rotate: false
+  xy: 1962, 3637
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/BigRefuser_2
+  rotate: false
+  xy: 1467, 3695
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/BigStar_1
+  rotate: false
+  xy: 1549, 3698
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/BigStar_2
+  rotate: false
+  xy: 1631, 3698
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonDown_1
+  rotate: false
+  xy: 1713, 3681
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonDown_2
+  rotate: false
+  xy: 1713, 3763
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/Buttonfire_1
+  rotate: false
+  xy: 1549, 3780
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/Buttonfire_2
+  rotate: false
+  xy: 1631, 3780
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonInteraction_1
+  rotate: false
+  xy: 1795, 3751
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonInteraction_2
+  rotate: false
+  xy: 1877, 3743
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonLeft_1
+  rotate: false
+  xy: 1959, 3793
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonLeft_2
+  rotate: false
+  xy: 1943, 1807
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonRight_1
+  rotate: false
+  xy: 1943, 1889
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonRight_2
+  rotate: false
+  xy: 1920, 1971
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonUp_1
+  rotate: false
+  xy: 1916, 2053
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/ButtonUp_2
+  rotate: false
+  xy: 1467, 3777
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+controle/continer_1
+  rotate: false
+  xy: 1283, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/continer_2
+  rotate: false
+  xy: 1333, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/enregister_1
+  rotate: false
+  xy: 1383, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/enregister_2
+  rotate: false
+  xy: 1795, 3833
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/Lalister_1
+  rotate: false
+  xy: 1045, 3682
+  size: 48, 48
+  split: 5, 37, 35, 4
+  pad: 4, 37, 6, 5
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/Lalister_2
+  rotate: false
+  xy: 1095, 3707
+  size: 48, 48
+  split: 5, 37, 35, 4
+  pad: 5, 37, 6, 4
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/lister_1
+  rotate: false
+  xy: 1845, 3833
+  size: 48, 48
+  split: 4, 4, 4, 4
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/lister_2
+  rotate: false
+  xy: 1895, 3825
+  size: 48, 48
+  split: 4, 4, 4, 4
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/Lock_1
+  rotate: false
+  xy: 1185, 3712
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/Lock_2
+  rotate: false
+  xy: 1235, 3712
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/music_1
+  rotate: false
+  xy: 1986, 1600
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/music_2
+  rotate: false
+  xy: 1991, 1650
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/musicOf
+  rotate: false
+  xy: 1986, 1550
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/parameter_1
+  rotate: false
+  xy: 1991, 1700
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/parameter_2
+  rotate: false
+  xy: 1991, 1750
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/pauser_1
+  rotate: false
+  xy: 1033, 3732
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/pauser_2
+  rotate: false
+  xy: 1033, 3782
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/refuser_1
+  rotate: false
+  xy: 1083, 3757
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/refuser_2
+  rotate: false
+  xy: 1133, 3783
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/SonOf
+  rotate: false
+  xy: 1185, 3762
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/SonOn_1
+  rotate: false
+  xy: 1235, 3762
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/SonOn_2
+  rotate: false
+  xy: 1285, 3777
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/star_1
+  rotate: false
+  xy: 1969, 2299
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/star_2
+  rotate: false
+  xy: 1969, 2349
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/Touchpad
+  rotate: false
+  xy: 1099, 3514
+  size: 96, 97
+  orig: 96, 97
+  offset: 0, 0
+  index: -1
+controle/Touchpad_back
+  rotate: false
+  xy: 643, 1667
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+controle/Zoom_1
+  rotate: false
+  xy: 1375, 3785
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+controle/Zoom_2
+  rotate: false
+  xy: 1033, 3835
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+cursor
+  rotate: false
+  xy: 1083, 3732
+  size: 10, 10
+  split: 4, 4, 4, 4
+  pad: -1, -1, -1, -1
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+Decor_List_BG_Table
+  rotate: false
+  xy: 453, 2501
+  size: 224, 194
+  split: 0, 0, 21, 22
+  pad: 6, 7, 26, 25
+  orig: 224, 194
+  offset: 0, 0
+  index: -1
+Decor_Part_Side_Table
+  rotate: false
+  xy: 729, 1285
+  size: 206, 350
+  split: 64, 67, 0, 350
+  pad: 12, 14, -1, -1
+  orig: 206, 350
+  offset: 0, 0
+  index: -1
+Decor_Table
+  rotate: false
+  xy: 1, 2480
+  size: 450, 410
+  split: 149, 158, 63, 76
+  pad: 60, 51, 30, 31
+  orig: 450, 410
+  offset: 0, 0
+  index: -1
+Decor_Table04
+  rotate: false
+  xy: 937, 1574
+  size: 287, 150
+  split: 86, 90, 19, 22
+  pad: 42, 45, -1, -1
+  orig: 287, 150
+  offset: 0, 0
+  index: -1
+DIamoundLabel
+  rotate: false
+  xy: 711, 2821
+  size: 184, 102
+  split: 21, 84, 49, 49
+  pad: 17, 16, 22, 22
+  orig: 184, 102
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1, 3334
+  size: 492, 128
+  split: 52, 52, 98, 19
+  pad: 52, 52, 20, 21
+  orig: 492, 128
+  offset: 0, 0
+  index: -1
+Head_title
+  rotate: false
+  xy: 1083, 1213
+  size: 717, 274
+  orig: 830, 280
+  offset: 61, 3
+  index: -1
+HP_Bar_01_B
+  rotate: false
+  xy: 1087, 1974
+  size: 38, 10
+  split: 2, 2, 2, 2
+  pad: -1, -1, -1, -1
+  orig: 38, 10
+  offset: 0, 0
+  index: -1
+HP_Bar_01_V
+  rotate: false
+  xy: 1211, 1726
+  size: 10, 38
+  split: 2, 2, 2, 2
+  pad: -1, -1, -1, -1
+  orig: 10, 38
+  offset: 0, 0
+  index: -1
+HP_Bar_02_B
+  rotate: false
+  xy: 1868, 3543
+  size: 38, 10
+  split: 2, 2, 2, 2
+  pad: -1, -1, -1, -1
+  orig: 38, 10
+  offset: 0, 0
+  index: -1
+HP_Bar_02_V
+  rotate: false
+  xy: 1653, 3658
+  size: 10, 38
+  split: 2, 2, 3, 3
+  pad: -1, -1, -1, -1
+  orig: 10, 38
+  offset: 0, 0
+  index: -1
+HP_Bar_03_B
+  rotate: false
+  xy: 1335, 3815
+  size: 38, 10
+  split: 2, 2, 2, 2
+  pad: -1, -1, -1, -1
+  orig: 38, 10
+  offset: 0, 0
+  index: -1
+HP_Bar_03_V
+  rotate: false
+  xy: 1665, 3658
+  size: 10, 38
+  split: 2, 2, 2, 3
+  pad: -1, -1, -1, -1
+  orig: 10, 38
+  offset: 0, 0
+  index: -1
+Hub
+  rotate: false
+  xy: 937, 1489
+  size: 498, 83
+  split: 0, 498, 2, 8
+  pad: 10, 9, 8, 9
+  orig: 498, 83
+  offset: 0, 0
+  index: -1
+Icon/10_Diamonds
+  rotate: false
+  xy: 1, 3812
+  size: 254, 42
+  orig: 254, 42
+  offset: 0, 0
+  index: -1
+Icon/100_Coins
+  rotate: false
+  xy: 1405, 1823
+  size: 196, 42
+  orig: 196, 42
+  offset: 0, 0
+  index: -1
+Icon/1000_Coins
+  rotate: false
+  xy: 453, 2827
+  size: 222, 42
+  orig: 222, 42
+  offset: 0, 0
+  index: -1
+Icon/Armor_Icon
+  rotate: false
+  xy: 1923, 720
+  size: 102, 96
+  orig: 102, 96
+  offset: 0, 0
+  index: -1
+Icon/Armor_Icon4
+  rotate: false
+  xy: 1931, 3233
+  size: 20, 22
+  orig: 32, 32
+  offset: 6, 4
+  index: -1
+Icon/Assist_Icon
+  rotate: false
+  xy: 937, 1473
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+Icon/AudacityLogo
+  rotate: false
+  xy: 631, 3055
+  size: 150, 120
+  orig: 155, 147
+  offset: 3, 7
+  index: -1
+Icon/Blue_Dot
+  rotate: false
+  xy: 2005, 1376
+  size: 36, 68
+  orig: 36, 68
+  offset: 0, 0
+  index: -1
+Icon/Bonus_Icon
+  rotate: false
+  xy: 631, 2871
+  size: 54, 52
+  orig: 128, 128
+  offset: 37, 38
+  index: -1
+Icon/Carte_Icon
+  rotate: false
+  xy: 811, 3315
+  size: 67, 83
+  orig: 86, 86
+  offset: 8, 1
+  index: -1
+Icon/Clock_Icon
+  rotate: false
+  xy: 1045, 3632
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+Icon/Coin_A
+  rotate: false
+  xy: 1017, 2146
+  size: 66, 66
+  orig: 82, 82
+  offset: 8, 8
+  index: -1
+Icon/Coin_B
+  rotate: false
+  xy: 1962, 3719
+  size: 80, 72
+  orig: 86, 86
+  offset: 3, 8
+  index: -1
+Icon/Coin_Icon
+  rotate: false
+  xy: 1795, 3681
+  size: 68, 68
+  split: 8, 59, 58, 8
+  pad: 8, 59, 9, 9
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+Icon/Coin_small
+  rotate: false
+  xy: 779, 1637
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+Icon/Color_Icon
+  rotate: false
+  xy: 1923, 1
+  size: 110, 110
+  orig: 110, 110
+  offset: 0, 0
+  index: -1
+Icon/Damage_Icon
+  rotate: false
+  xy: 1923, 818
+  size: 102, 96
+  orig: 102, 96
+  offset: 0, 0
+  index: -1
+Icon/Debuff_Icon
+  rotate: false
+  xy: 1603, 1823
+  size: 54, 40
+  orig: 128, 128
+  offset: 37, 44
+  index: -1
+Icon/DIamond
+  rotate: false
+  xy: 811, 3400
+  size: 45, 40
+  orig: 45, 42
+  offset: 0, 0
+  index: -1
+Icon/DIamond_Icon
+  rotate: false
+  xy: 975, 3632
+  size: 68, 68
+  split: 8, 59, 57, 9
+  pad: 8, 59, 9, 10
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+Icon/DIamond_small
+  rotate: false
+  xy: 679, 2661
+  size: 30, 26
+  orig: 30, 27
+  offset: 0, 0
+  index: -1
+Icon/DIamoundS
+  rotate: false
+  xy: 1289, 3605
+  size: 92, 80
+  orig: 92, 80
+  offset: 0, 0
+  index: -1
+Icon/gimp-logo.jpeg
+  rotate: false
+  xy: 1226, 1574
+  size: 190, 190
+  orig: 190, 190
+  offset: 0, 0
+  index: -1
+Icon/Health
+  rotate: false
+  xy: 858, 3400
+  size: 20, 16
+  orig: 20, 16
+  offset: 0, 0
+  index: -1
+Icon/HP_Icon
+  rotate: false
+  xy: 1923, 916
+  size: 102, 96
+  orig: 102, 96
+  offset: 0, 0
+  index: -1
+Icon/HP_IconSmall
+  rotate: false
+  xy: 1418, 1574
+  size: 17, 16
+  orig: 17, 16
+  offset: 0, 0
+  index: -1
+Icon/libgdx-logo
+  rotate: false
+  xy: 1211, 1766
+  size: 192, 105
+  orig: 192, 105
+  offset: 0, 0
+  index: -1
+Icon/Lock_Icon
+  rotate: false
+  xy: 334, 3812
+  size: 46, 62
+  orig: 46, 62
+  offset: 0, 0
+  index: -1
+Icon/LVL_Dot
+  rotate: false
+  xy: 2035, 1
+  size: 8, 16
+  orig: 8, 16
+  offset: 0, 0
+  index: -1
+Icon/PLUS off
+  rotate: false
+  xy: 891, 3245
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: -1
+Icon/plus on
+  rotate: false
+  xy: 334, 3876
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: -1
+Icon/Red_Dot
+  rotate: false
+  xy: 673, 3754
+  size: 36, 68
+  orig: 36, 68
+  offset: 0, 0
+  index: -1
+Icon/Round_Dot
+  rotate: false
+  xy: 891, 3185
+  size: 20, 58
+  orig: 20, 58
+  offset: 0, 0
+  index: -1
+Icon/Speed_Icon
+  rotate: false
+  xy: 1788, 1579
+  size: 102, 96
+  orig: 102, 96
+  offset: 0, 0
+  index: -1
+Icon/Star01
+  rotate: false
+  xy: 1087, 1856
+  size: 122, 116
+  orig: 122, 116
+  offset: 0, 0
+  index: -1
+Icon/Star02
+  rotate: false
+  xy: 845, 3644
+  size: 122, 116
+  orig: 122, 116
+  offset: 0, 0
+  index: -1
+Icon/Star03
+  rotate: false
+  xy: 975, 3514
+  size: 122, 116
+  orig: 122, 116
+  offset: 0, 0
+  index: -1
+Icon/StarSmall01
+  rotate: false
+  xy: 1145, 3707
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+Icon/StarSmall02
+  rotate: false
+  xy: 1145, 3745
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+Icon/StarSmall03
+  rotate: false
+  xy: 1335, 3777
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+Icon/Team_Blue
+  rotate: false
+  xy: 829, 2146
+  size: 186, 66
+  split: 11, 11, 10, 10
+  pad: 12, 12, 11, 11
+  orig: 186, 66
+  offset: 0, 0
+  index: -1
+Icon/Team_Red
+  rotate: false
+  xy: 1683, 1971
+  size: 186, 66
+  split: 11, 11, 10, 10
+  pad: 12, 12, 11, 11
+  orig: 186, 66
+  offset: 0, 0
+  index: -1
+Icon/Tiled-logo
+  rotate: false
+  xy: 1437, 1489
+  size: 349, 190
+  orig: 349, 190
+  offset: 0, 0
+  index: -1
+Icon/Weapon2
+  rotate: false
+  xy: 1931, 3257
+  size: 20, 16
+  orig: 20, 16
+  offset: 0, 0
+  index: -1
+Icon/XP_Icon
+  rotate: false
+  xy: 1923, 113
+  size: 100, 115
+  orig: 100, 115
+  offset: 0, 0
+  index: -1
+Icon/XP_smallIcon
+  rotate: false
+  xy: 1871, 1971
+  size: 47, 52
+  orig: 48, 52
+  offset: 0, 0
+  index: -1
+Level_Dot_Active
+  rotate: false
+  xy: 865, 2604
+  size: 24, 48
+  split: 10, 10, 12, 12
+  pad: 5, 5, 5, 5
+  orig: 24, 48
+  offset: 0, 0
+  index: -1
+Level_Dot_Active_V
+  rotate: false
+  xy: 631, 3307
+  size: 48, 24
+  split: 12, 12, 10, 10
+  pad: 8, 8, 5, 5
+  orig: 48, 24
+  offset: 0, 0
+  index: -1
+Level_Dot_Inctive
+  rotate: false
+  xy: 1653, 3608
+  size: 24, 48
+  split: 10, 10, 12, 12
+  pad: 5, 5, 5, 5
+  orig: 24, 48
+  offset: 0, 0
+  index: -1
+Level_Dot_Inctive_V
+  rotate: false
+  xy: 729, 1637
+  size: 48, 24
+  split: 12, 12, 8, 8
+  pad: 5, 5, 5, 4
+  orig: 48, 24
+  offset: 0, 0
+  index: -1
+Loading_Bar_A
+  rotate: false
+  xy: 915, 1767
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+Loading_Bar_B
+  rotate: false
+  xy: 915, 1787
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+Loading_Bar_C
+  rotate: false
+  xy: 915, 1807
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+Main_Tank_Table
+  rotate: false
+  xy: 1, 3626
+  size: 394, 184
+  split: 51, 50, 50, 53
+  pad: 18, 18, 57, 55
+  orig: 394, 184
+  offset: 0, 0
+  index: -1
+Scroll_Bar_h
+  rotate: false
+  xy: 937, 1445
+  size: 72, 26
+  split: 32, 32, 0, 0
+  pad: 31, 31, 9, 9
+  orig: 72, 26
+  offset: 0, 0
+  index: -1
+Scroll_Bar_v
+  rotate: false
+  xy: 2002, 1971
+  size: 26, 72
+  split: 0, 0, 32, 32
+  pad: 9, 9, 30, 30
+  orig: 26, 72
+  offset: 0, 0
+  index: -1
+selection
+  rotate: false
+  xy: 1080, 1285
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+slider-back
+  rotate: false
+  xy: 1961, 3045
+  size: 72, 48
+  split: 31, 33, 22, 24
+  pad: 29, 30, 9, 8
+  orig: 72, 48
+  offset: 0, 0
+  index: -1
+splitpane-h
+  rotate: false
+  xy: 1405, 1867
+  size: 4, 4
+  split: 1, 1, 1, 1
+  pad: 1, 1, 0, 0
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+splitpane-v
+  rotate: false
+  xy: 1377, 3687
+  size: 4, 4
+  split: 1, 1, 1, 1
+  pad: 0, 0, 1, 1
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+Table-special01
+  rotate: false
+  xy: 1, 3464
+  size: 454, 160
+  split: 38, 39, 37, 37
+  pad: 40, 40, 11, 10
+  orig: 454, 160
+  offset: 0, 0
+  index: -1
+Table-special05
+  rotate: false
+  xy: 1083, 1083
+  size: 848, 128
+  split: 7, 39, 60, 60
+  pad: 9, 40, 9, 9
+  orig: 848, 128
+  offset: 0, 0
+  index: -1
+Table-special07
+  rotate: false
+  xy: 631, 2925
+  size: 158, 128
+  split: 45, 17, 26, 25
+  pad: 43, 15, 15, 15
+  orig: 158, 128
+  offset: 0, 0
+  index: -1
+table
+  rotate: false
+  xy: 1931, 1376
+  size: 72, 68
+  split: 8, 8, 8, 9
+  orig: 72, 68
+  offset: 0, 0
+  index: -1
+Table04
+  rotate: false
+  xy: 397, 3754
+  size: 274, 77
+  split: 8, 8, 27, 27
+  pad: 14, 13, 15, 14
+  orig: 274, 77
+  offset: 0, 0
+  index: -1
+Table_left
+  rotate: false
+  xy: 1931, 3315
+  size: 112, 68
+  split: 32, 8, 26, 8
+  pad: 33, 9, 8, 9
+  orig: 112, 68
+  offset: 0, 0
+  index: -1
+Table_right
+  rotate: false
+  xy: 1931, 3385
+  size: 112, 68
+  split: 8, 32, 26, 9
+  pad: 9, 33, 8, 8
+  orig: 112, 68
+  offset: 0, 0
+  index: -1
+textfield
+  rotate: false
+  xy: 257, 3812
+  size: 75, 71
+  split: 8, 34, 35, 35
+  pad: 8, 34, 8, 8
+  orig: 75, 71
+  offset: 0, 0
+  index: -1
+Upgrade_Level_Table
+  rotate: false
+  xy: 1083, 3807
+  size: 23, 26
+  split: 8, 8, 8, 8
+  pad: 4, 4, 4, 4
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+Upgrade_Table_Decor
+  rotate: false
+  xy: 1923, 230
+  size: 30, 176
+  orig: 30, 176
+  offset: 0, 0
+  index: -1
+Weapon_Dot
+  rotate: false
+  xy: 2027, 410
+  size: 16, 10
+  split: 2, 2, 2, 2
+  pad: -1, -1, -1, -1
+  orig: 16, 10
+  offset: 0, 0
+  index: -1
+window-dialog
+  rotate: false
+  xy: 1, 1285
+  size: 726, 380
+  split: 57, 57, 270, 61
+  pad: 66, 58, 61, 62
+  orig: 726, 380
+  offset: 0, 0
+  index: -1
+window-s
+  rotate: false
+  xy: 935, 1726
+  size: 274, 128
+  split: 120, 121, 34, 63
+  pad: 18, 18, 27, 48
+  orig: 274, 128
+  offset: 0, 0
+  index: -1
+window-Setting
+  rotate: false
+  xy: 1, 1083
+  size: 1080, 200
+  split: 22, 22, 62, 94
+  pad: 22, 22, 53, 89
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+window
+  rotate: false
+  xy: 1, 3215
+  size: 628, 117
+  split: 8, 8, 37, 63
+  pad: 18, 18, 24, 54
+  orig: 628, 117
+  offset: 0, 0
+  index: -1

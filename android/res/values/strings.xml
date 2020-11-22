@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tank 1979</string>
+	<string name="app_id">279102367784</string>
+	<string name="facebook_app_id">2535589819836193</string>
+	<string name="AdmobId">ca-app-pub-9299941173277338~3704821421</string>
+	<string name="Adbanner">ca-app-pub-9299941173277338/9981457684</string>
+	<string name="AdVideo">ca-app-pub-9299941173277338/5064691479</string>
+</resources>

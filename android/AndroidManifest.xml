@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="crach.stage.game">
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:isGame="true"
+        android:appCategory="game"
+        android:label="@string/app_name"
+        android:theme="@style/GdxTheme" >
+        <activity
+            android:name="crach.stage.game.AndroidLauncher"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout" android:theme="@style/GdxTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/AdmobId"/>
+		<meta-data android:name="com.google.android.gms.games.APP_ID"
+			android:value="@string/app_id" />
+		<meta-data android:name="ADMOB_ALLOW_LOCATION_FOR_ADS" 
+			android:value="true"/>
+		 <meta-data android:name="com.facebook.sdk.ApplicationId"
+		 android:value="@string/facebook_app_id" />
+
+		     <activity android:name="com.facebook.FacebookActivity"
+          android:configChanges=
+                 "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+          android:label="@string/app_name" />
+    </application>
+
+</manifest>

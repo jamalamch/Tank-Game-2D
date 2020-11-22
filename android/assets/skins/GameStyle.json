@@ -1,0 +1,371 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	font: {
+		file: font.fnt
+	}
+	big-font: {
+	    file: font-big-ui.fnt
+	}
+	numberFont: {
+		file: NumberFont.fnt
+	}
+	font-small: {
+	    file: font-small.fnt
+	}
+	big-number: {
+		file: NumberFont.fnt
+	}
+}
+com.badlogic.gdx.graphics.Color: {
+	black: {
+		r: 0,g: 0, b: 0, a: 1
+	}
+	sky-blue: {
+		r: 0.2733333, g: 0.68720984, b: 1, a: 1
+	}
+	white: {
+	    r: 1, g: 1, b: 1, a: 1
+	}
+	inactiveColor: {
+	    r: 0.67, g: 0.67, b: 0.67, a: 0.6
+	}
+	diamondColor: {
+	    r: 0.282, g: 0.58, b: 0.784, a: 1
+	}
+	CoinColor: {
+	    r: 0.773, g: 0.70, b: 0.337, a: 1
+	}
+	dialogTitleColor: {
+		r: 0.257, g: 0.508, b: 0.27, a: 1
+	}
+	dialogTitleColor2: {
+		r: 0.557, g: 0.508, b: 0.67, a: 1
+	}
+}
+
+com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle: {
+	default: {
+		checkboxOn: BTNs_Checked/CHK_BTN
+		checkboxOff: BTNs/CHK_BTN
+		font: font
+		downFontColor: sky-blue
+		checkedFontColor: sky-blue
+	}
+	radio: {
+		checkboxOn: BTNs_Checked/radio
+		checkboxOff: BTNs/radio
+		font: font
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: { up: BTNs/BTN, down: BTNs_Active/BTN ,disabled : BTNs_Disabled/BTN}
+	toggle:  { up: BTNs/BTN, down: BTNs_Active/BTN ,checked: BTNs_Checked/BTN ,disabled : BTNs_Disabled/BTN}
+	
+	Add_Coins_BTN: { up: BTNs/Add_Coins_BTN ,down: BTNs_Active/Add_Coins_BTN }
+	Back_BTN: { up: BTNs/Back_BTN ,down: BTNs_Active/Back_BTN }
+	Backward_BTN: { up: BTNs/Backward_BTN ,down: BTNs_Active/Backward_BTN }
+	Change_BTN: {up: BTNs/Change_BTN ,down: BTNs_Active/Change_BTN }
+	Close_BTN: { up: BTNs/Close_BTN ,down: BTNs_Active/Close_BTN }
+	CTF_BTN: { up: BTNs/CTF_BTN ,down: BTNs_Active/CTF_BTN }
+	Deathmatch_BTN: { up: BTNs/Deathmatch_BTN ,down: BTNs_Active/Deathmatch_BTN, checked: BTNs_Checked/Deathmatch_BTN}
+	Facebook_BTN: { up: BTNs/Facebook_BTN ,down: BTNs_Active/Facebook_BTN }
+	FAQ_BTN: { up: BTNs/FAQ_BTN ,down: BTNs_Active/FAQ_BTN }
+	Football_BTN: { up: BTNs/Football_BTN ,down: BTNs_Active/Football_BTN ,checked: BTNs_Checked/Football_BTN}
+	Forward_BTN: { up: BTNs/Forward_BTN ,down: BTNs_Active/Forward_BTN }
+	Game_Center_BTN: { up: BTNs/Game_Center_BTN ,down: BTNs_Active/Game_Center_BTN }
+	Hangar_BTN: { up: BTNs/Hangar_BTN ,down: BTNs_Active/Hangar_BTN ,checked: BTNs_Checked/Hangar_BTN}
+	Info_BTN: { up: BTNs/Info_BTN ,down: BTNs_Active/Info_BTN }
+	KOH_BTN: { up: BTNs/KOH_BTN ,down: BTNs_Active/KOH_BTN }
+	LIST_BTN: { up: BTNs/LIST_BTN ,down: BTNs_Active/LIST_BTN ,checked: BTNs_Checked/LIST_BTN}
+	Load_BTN: { up: BTNs/Load_BTN ,down: BTNs_Active/Load_BTN }
+	Menu_BTN: { up: BTNs/Menu_BTN ,down: BTNs_Active/Menu_BTN }
+	Moin_BTN: { up: BTNs/Moin_BTN ,down: BTNs_Active/Moin_BTN }
+	More_Games_BTN: { up: BTNs/More_Games_BTN ,down: BTNs_Active/More_Games_BTN }
+	Music_BTN: { up: BTNs/Music_BTN ,down: BTNs_Active/Music_BTN }
+	Notifications_BTN: { up: BTNs/Notifications_BTN ,down: BTNs_Active/Notifications_BTN }
+	Ok_BTN: { up: BTNs/Ok_BTN ,down: BTNs_Active/Ok_BTN }
+	Pause_BTN: { up: BTNs/Pause_BTN ,down: BTNs_Active/Pause_BTN }
+	Play_BTN: { up: BTNs/Play_BTN ,down: BTNs_Active/Play_BTN }
+	PlayAds: { up: BTNs/PlayAds ,down: BTNs_Active/PlayAds }
+	Plus_BTN: { up: BTNs/Plus_BTN ,down: BTNs_Active/Plus_BTN }
+	PTP_BTN: { up: BTNs/PTP_BTN ,down: BTNs_Active/PTP_BTN ,checked: BTNs_Checked/PTP_BTN }
+	PVP_BTN: { up: BTNs/PVP_BTN ,down: BTNs_Active/PVP_BTN ,checked: BTNs_Checked/PVP_BTN }
+	Rating_BTN: { up: BTNs/Rating_BTN ,down: BTNs_Active/Rating_BTN }
+	Refuse_BTN: { up: BTNs/Refuse_BTN ,down: BTNs_Active/Refuse_BTN }
+	Replay_BTN: { up: BTNs/Replay_BTN ,down: BTNs_Active/Replay_BTN }
+	Save_BTN: { up: BTNs/Save_BTN ,down: BTNs_Active/Save_BTN }
+	Settings_BTN: { up: BTNs/Settings_BTN ,down: BTNs_Active/Settings_BTN }
+	Share_BTN: { up: BTNs/Share_BTN ,down: BTNs_Active/Share_BTN }
+	Shop_BTN: { up: BTNs/Shop_BTN ,down: BTNs_Active/Shop_BTN ,checked: BTNs_Checked/Shop_BTN}
+	Sound_BTN: { up: BTNs/Sound_BTN ,down: BTNs_Active/Sound_BTN }
+	Team_PVP_BTN: { up: BTNs/Team_PVP_BTN ,down: BTNs_Active/Team_PVP_BTN ,checked: BTNs_Checked/Team_PVP_BTN}
+	Twitter_BTN: { up: BTNs/Twitter_BTN ,down: BTNs_Active/Twitter_BTN }
+	Upgrade_BTN: { up: BTNs/Upgrade_BTN ,down: BTNs_Active/Upgrade_BTN }
+	Vibration_BTN: { up: BTNs/Vibration_BTN ,down: BTNs_Active/Vibration_BTN }
+	VK_BTN: { up: BTNs/VK_BTN ,down: BTNs_Active/VK_BTN }
+	
+	Coin_Icon: { up: BTNs/Coin_Icon ,checked: BTNs_Checked/Coin_Icon }
+	More_Coin_Icon: { up: BTNs/More_Coin_Icon ,checked: BTNs_Checked/More_Coin_Icon }
+	More_Diamond_Icon : { up: BTNs/More_Diamond_Icon ,checked: BTNs_Checked/More_Diamond_Icon }
+	No_ADS_Icon: { up: BTNs/No_ADS_Icon ,checked: BTNs_Checked/No_ADS_Icon }
+	XP_Boost_Icon : { up: BTNs/XP_Boost_Icon ,checked: BTNs_Checked/XP_Boost_Icon }
+	
+	Color_A_BTN: { up: BTNs/Color_A_BTN  ,checked: BTNs_Checked/Color_A_BTN ,disabled : BTNs_Disabled/Color_A_BTN }
+	Color_B_BTN: { up: BTNs/Color_B_BTN  ,checked: BTNs_Checked/Color_B_BTN ,disabled : BTNs_Disabled/Color_B_BTN }
+	Color_C_BTN: { up: BTNs/Color_C_BTN  ,checked: BTNs_Checked/Color_C_BTN ,disabled : BTNs_Disabled/Color_C_BTN }
+	Color_D_BTN: { up: BTNs/Color_D_BTN  ,checked: BTNs_Checked/Color_D_BTN ,disabled : BTNs_Disabled/Color_D_BTN }
+	
+	accepter: { up: controle/accepter_1 ,down: controle/accepter_2 }
+	annuler: { up: controle/annuler_1 ,down: controle/annuler_2 }
+	BigAccepter: { up: controle/BigAccepter_1 ,down: controle/BigAccepter_2 }
+	BigRefuser: { up: controle/BigRefuser_1 ,down: controle/BigRefuser_2 }
+	BigStar: { up: controle/BigStar_1 ,down: controle/BigStar_2 }
+	ButtonDown: { up: controle/ButtonDown_1 ,down: controle/ButtonDown_2 }
+	Buttonfire: { up: controle/Buttonfire_1 ,down: controle/Buttonfire_2 }
+	ButtonInteraction: { up: controle/ButtonInteraction_1 ,down: controle/ButtonInteraction_2 }
+	ButtonLeft: { up: controle/ButtonLeft_1 ,down: controle/ButtonLeft_2 }
+	ButtonRight: { up: controle/ButtonRight_1 ,down: controle/ButtonRight_2 }
+	ButtonUp: { up: controle/ButtonUp_1 ,down: controle/ButtonUp_2 }
+	continer: { up: controle/continer_1 ,down: controle/continer_2 }
+	enregister: { up: controle/enregister_1 ,down: controle/enregister_2 }
+	Lalister: { up: controle/Lalister_1 ,down: controle/Lalister_2 ,checked: controle/refuser_2}
+	lister: { up: controle/lister_1 ,down: controle/lister_2 }
+	Lock: { up: controle/Lock_1 ,down: controle/Lock_2 }
+	music: { up: controle/music_1 ,down: controle/music_2 ,checked: controle/musicOf }
+	parameter: { up: controle/parameter_1 ,down: controle/parameter_2 }
+	pauser: { up: controle/pauser_1 ,down: controle/pauser_2 }
+	refuser: { up: controle/refuser_1 ,down: controle/refuser_2 }
+	son: { up: controle/SonOn_1 ,down: controle/SonOn_2 ,checked: controle/SonOf }
+	star: { up: controle/star_1 ,down: controle/star_2 }
+	Zoom: { up: controle/Zoom_1 ,down: controle/Zoom_2 ,checked: controle/Zoom_2}
+	
+	items: {
+		up: BTNs/BTN_ITEM
+		checked: BTNs_Checked/BTN_ITEM
+		disabled: BTNs_Disabled/BTN_ITEM
+	}
+	SelectItems: {
+		up: BTNs/TableItems
+		checked: BTNs_Checked/TableItems
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: {
+		font: font ,fontColor: white ,disabledFontColor: inactiveColor
+		up: BTNs/BTN
+		down: BTNs_Active/BTN ,disabled : BTNs_Disabled/BTN
+	}
+	toggle: {
+		font: font ,disabledFontColor: inactiveColor
+		up: BTNs/BTN ,down: BTNs_Active/BTN ,checked: BTNs_Checked/BTN ,disabled : BTNs_Disabled/BTN
+	}
+	tileButton: {
+	   	font: big-font 
+		up: BTNs/BTN ,down: BTNs_Active/BTN
+	}
+	number: { 
+		font: font-small ,fontColor: diamondColor ,checkedFontColor: sky-blue ,disabledFontColor: inactiveColor
+		up: BTNs/number  ,checked: BTNs_Checked/number ,disabled : BTNs_Disabled/number }
+	stage: {
+		font: big-number ,fontColor: white ,checkedFontColor: CoinColor
+		 up: BTNs/LIST_BTN ,down: BTNs_Active/LIST_BTN ,checked: BTNs_Checked/LIST_BTN
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle: {
+    default: { up: BTNs/BTN, down: BTNs_Active/BTN }
+	toggle:  { up: BTNs/BTN, down: BTNs_Active/BTN ,checked: BTNs_Checked/BTN }
+	NoAds: {
+		up: BTNs/BTN
+		down: BTNs_Active/BTN
+		checked: BTNs_Checked/BTN
+		imageUp: BTNs/NoAds
+		imageChecked:BTNs_Checked/NoAds
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ImageTextButton$ImageTextButtonStyle: {
+	default: {
+		font: font
+		up: BTNs/BTN
+		down: BTNs_Active/BTN
+	}
+	toggle: {
+		font: font
+		checkedFontColor: sky-blue
+		disabledFontColor: inactiveColor
+		up: BTNs/BTN
+		down: BTNs_Active/BTN
+		checked: BTNs_Checked/BTN
+		disabled: BTNs_Disabled/BTN
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Image: {
+    Head_title: { drawable: Head_title }
+	BackgroundMenu: { drawable: BackgroundMenu }
+	BackgroundInfo: { drawable: BackgroundInfo }
+	TitleWindowsBg: {drawable: head}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: {
+		font: font
+	}
+	title_small: {
+		"font" : font-small
+	}
+	title: {
+	   font: big-font
+	   background: Table04
+	}
+	inSqure: {
+	   font: font
+	   background: table
+	}
+	Ldiamond:{
+	   font: font
+	   background: Icon/DIamond_Icon
+	   fontColor: diamondColor
+	}
+	Lcoin: {
+	   font: font
+	   background: Icon/Coin_Icon
+	   fontColor: diamondColor
+	}
+	number: {
+		font: numberFont
+		background: Table04 
+	}
+	extra: {
+		font: font-small
+		background: Armor_Table
+	}
+},
+com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle: {
+	A-horizontal: { background: Bar ,knobBefore: Loading_Bar_A}
+	B-horizontal: {background: Bar ,knobBefore: Loading_Bar_B }
+	C-horizontal: { background: Bar ,knobBefore: Loading_Bar_C }
+	
+	A_Upgrade_h: { background: Upgrade_Level_Table ,knobBefore: HP_Bar_01_B }
+	A_Upgrade_v: { background: Upgrade_Level_Table ,knobBefore: HP_Bar_01_V }
+	B_Upgrade_h: { background: Upgrade_Level_Table ,knobBefore: HP_Bar_02_B }
+	B_Upgrade_v: { background: Upgrade_Level_Table ,knobBefore: HP_Bar_02_V }
+	C_Upgrade_h: { background: Upgrade_Level_Table ,knobBefore: HP_Bar_03_B }
+	C_Upgrade_v: { background: Upgrade_Level_Table ,knobBefore: HP_Bar_03_V }
+	
+	ProgresUI: { background: Bar ,knob: Icon/Round_Dot}
+	WatchAds: { background: BarWatchAds ,knobBefore: Loading_Bar_B}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+	default: {
+	    hScroll : Scroll_Bar_h
+		vScroll : Scroll_Bar_v
+		hScrollKnob: Level_Dot_Active_V
+		vScrollKnob: Level_Dot_Active
+	}
+	list: {
+		background:  controle/lister_2
+		hScrollKnob: Level_Dot_Active_V
+		vScrollKnob: Level_Dot_Active
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+	default: {
+		font: font
+		fontColorSelected: sky-blue
+		fontColorUnselected: white
+		selection: selection
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+	default: {
+		font: font
+		fontColor: white
+		background: controle/Lalister_1
+		scrollStyle: list
+		listStyle: default
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+	default-horizontal: {
+		background: slider-back
+		knob: Level_Dot_Active
+		disabledKnob: Level_Dot_Inctive
+	}
+	default-vertical: {
+		background: slider-back
+		knob: Level_Dot_Active_V
+		disabledKnob: Level_Dot_Inctive_V
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
+	default-horizontal: {
+		handle: splitpane-h
+	}
+	default-vertical: {
+		handle: splitpane-v
+	}
+}
+
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: {
+		font: font
+		fontColor: sky-blue
+		background: textfield
+		cursor: cursor
+		selection: selection
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
+	default: {
+		label: default
+		background: Armor_Table
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Tree$TreeStyle: {
+	default: {
+		plus: BTNs/Plus_BTN
+		minus: BTNs/Moin_BTN
+		plusOver: BTNs_Active/Plus_BTN
+		minusOver: BTNs_Active/Moin_BTN
+	}
+}
+  com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
+		default: {
+			background: controle/Touchpad_back
+			knob: controle/Touchpad
+			}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+	default: {
+		background: window
+		titleFont: big-font
+		stageBackground: Decor_Table
+	}
+	dialog: {
+		background: window-dialog
+		titleFont: big-font
+		titleFontColor : dialogTitleColor
+		stageBackground: Decor_Table
+	}
+	Setting: {
+	    background: window-Setting
+		titleFont: big-font
+		stageBackground: Decor_List_BG_Table
+	}
+	default-small: {
+		background: window-s
+		titleFont: big-font
+		titleFontColor: black
+		stageBackground: Decor_Table04
+	}
+	special-dialog: {
+		background: Cloud_03
+		titleFont: big-font
+		titleFontColor: black
+	}
+	special-dialog2: {
+		background: Cloud_01
+		titleFont: big-font,
+		titleFontColor: dialogTitleColor2
+		stageBackground: Decor_Table
+	}
+}
+}

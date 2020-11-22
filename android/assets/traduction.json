@@ -1,0 +1,171 @@
+{
+    "English":{
+	    "Menu" :{
+			"Star" : "Start",
+			"Exit" : "Exit"
+			},
+		"Setting": {
+			"title" : "Settings",
+			"name" : "name",
+			"sfx": "sfx",
+			"music": "music",
+			"vibration": "vibration",
+			"notification": "notification",
+			"Language": "Language",
+			"credits" : "Credits"
+		},
+		"ModeGame": {
+			"1vs1" : "1 Vs 1",
+			"mission" : "Mission",
+			"TmvsTm" : "Tm Vs Tm",
+			"Football" : "FootBall",
+          "Deathmatch" : "Death Match"
+		},
+		"Shop": {
+			"convert" : "Convert",
+			"paid" : "Paid",
+			"collect" : "Collect",
+			"watch1" : " Watch videos to gan the diamonds",
+			"watch2" : " Watch video to Gan ",
+			"fill" : "Fill"
+		},
+		"Hanger": {
+			"Title" : "Hanger",
+			"dialoge" : "shoping",
+			"dialogeM" : "do you whant shop ?"
+		},
+		"Bonus": {
+			"title" : "Bonus",
+			"Culer" : "Culer",
+			"mission1" : " Have experienced up to  ",
+			"mission2" : "  Have experienced up to   ",
+			"mission3" : " Super in the livel  ",
+			"mission4" : " Collect Coins  ",
+			"mission5" : " Get medical equipement  ",
+			"mission6" : "  kill the Enemies ",
+			"mission7" : " View ads  ",
+			"mission8" : " Play multi-player game  ",
+			"mission9" : " Get medical equipement ",
+			"mission10" : " Super in the livel ",
+			"mission11" : " Win In the game ",
+			"mission12" : " Get stars ",
+			"mission13" : " spent time in the game ",
+			"mission14" : " Get the Boombs  ",
+			"mission15" : " Collect Coins ",
+			"mission16" : " Get stars ",
+			"mission17" : " Win In the game "
+		},
+		"Select_stage": {
+			"title" : "Level Select",
+            "title_match" : "Level Match"
+        },
+		"Help": {
+			"title" : "Help"
+		},
+		"credits" :{
+			"title" : "Credits"
+		},
+		"dialoge": {
+			"BonusNive" : "The Gift",
+			"pause" : "Pause",
+			"victory" : "Victory",
+			"defeat" : "Defeat",
+			"level" : "Level",
+			"finirStage" : "you have conpleted the stage successfuly",
+            "changeLang" : "Change languge",
+            "msgChangLang" : "Do you want to reload",
+            "exit" : "Exit",
+            "msgExit" : "do you want to Quit ?",
+            "score" : "Score",
+            "record" : "Record",
+            "noLife" : "Add Life",
+            "msgNoLife" : " Watch Ads  to has Full Life",
+            "dowload" : "Dowload ..."
+		}
+	},
+  "Arabic": {
+      "Menu" :{
+        "Star" : "ابدا",
+        "Exit" : "خروج"
+      },
+      "Setting": {
+        "title" : "اعددات",
+        "name" : "الاسم",
+        "sfx": "الصوت",
+        "music": "المسيقى",
+        "vibration": "الاهتزاز",
+        "notification": "الاشعارات",
+        "Language": "اللغة",
+        "credits" : "من نحن"
+      },
+      "ModeGame": {
+        "1vs1" : "1 ضد 1",
+        "mission" : "مهمات",
+        "TmvsTm" : "ضد فريق",
+        "Football" : "كرة قدم",
+        "Deathmatch" : " مبارات الموت "
+      },
+      "Shop": {
+        "convert" : "صرف",
+        "paid" : "دفع",
+        "collect" : "تحصيل",
+        "watch1" : " شاهد الاعلان وحصل على الماس  ",
+        "watch2" : " شاهد اعلان لربح ",
+        "fill" : "ملا"
+      },
+      "Hanger": {
+        "Title" : " المخزن ",
+        "dialoge" : " الشراء ",
+        "dialogeM" : "هل ترغب في الشراء ؟"
+      },
+      "Bonus": {
+        "title" : "جوائز",
+        "Culer" : " حصل ",
+        "mission1" : " احصل على خبرة تصل الى ",
+        "mission2" : " حقق الخبرة للفوز عند بلوغ ",
+        "mission3" : " قم بالوصول الى المستوى ",
+        "mission4" : " اجمع النقود وحصل على ",
+        "mission5" : " احصل على المساعدات النتطورة ",
+        "mission6" : "  اقتل الاعداء ",
+        "mission7" : " شاهد الاعلانات ",
+        "mission8" : " اللعب الوضع التنائي مع اصدقاء  ",
+        "mission9" : " احصل علي مداليات ",
+        "mission10" : " تجاوز المستوى ",
+        "mission11" : " فز في عدد مباريات اكتر من  ",
+        "mission12" : " احصل على نجمات الامتياز مجموع  ",
+        "mission13" : " امضي في اللعبة وقت كافي ",
+        "mission14" : " اجمع القنابل ",
+        "mission15" : " اجمع النقود وكن غنيا  ",
+        "mission16" : " اجمع النجوم الدهبية ",
+        "mission17" : " فز في مباريات كثيرة "
+      },
+      "Select_stage": {
+        "title" : "اختر المرحلة",
+        "title_match" : " اختر المبارات "
+      },
+      "Help": {
+        "title" : "مساعدة"
+      },
+      "credits" :{
+        "title" : " من نحن "
+      },
+      "dialoge": {
+        "BonusNive" : " هدية ",
+        "pause" : "توفق",
+        "victory" : "الفوز",
+        "defeat" : "الهزيمة",
+        "level" : "المستوى",
+        "finirStage" : " لقد انهية المستوى جدارة  ",
+        "changeLang" : "تغير اللغة",
+        "msgChangLang" : "سيتم اعادة تحميل اللعبة",
+        "exit" : "خروج",
+        "msgExit" : " هل ترغب في الخروج ؟ ",
+        "score" : "النقاط",
+        "record" : "القصوى",
+        "noLife" : " الحياة ",
+        "msgNoLife" : " شاهد الاعلان لملا الحياة من جديد "
+      }
+	},
+	"France": {
+	}
+}

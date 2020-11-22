@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="ball" color="#009494">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="barell" color="#a4030b">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="bomb" color="#200031">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="Bombcan" color="#200031">
+  <property name="code" type="int" default="0"/>
+  <property name="derect" type="int" default="0"/>
+  <property name="zone" type="string" default="0"/>
+ </objecttype>
+ <objecttype name="bombfire" color="#200031">
+  <property name="code" type="int" default="0"/>
+  <property name="derect" type="int" default="0"/>
+  <property name="zone" type="string" default="0"/>
+ </objecttype>
+ <objecttype name="bombgun" color="#200031">
+  <property name="code" type="int" default="0"/>
+  <property name="derect" type="int" default="0"/>
+  <property name="zone" type="string" default="0"/>
+ </objecttype>
+ <objecttype name="bombzon" color="#200031">
+  <property name="code" type="int" default="0"/>
+  <property name="derect" type="int" default="0"/>
+  <property name="zone" type="string" default="0"/>
+ </objecttype>
+ <objecttype name="border" color="#6a6a9e">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="box" color="#0055ff">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="cactus" color="#277500">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="circle" color="#d1b779">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="container" color="#0e5bbe">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="crate" color="#0f7ce2">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="crystal" color="#ff557f">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="door" color="#aa0000">
+  <property name="code" type="int" default="0"/>
+  <property name="derect" type="int" default="0"/>
+  <property name="exit" type="bool" default="false"/>
+ </objecttype>
+ <objecttype name="doorExit" color="#aa0000">
+  <property name="code" type="int" default="0"/>
+  <property name="derect" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="dot" color="#a0a0a4">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="enimy" color="#3a1d00">
+  <property name="code" type="int" default="1"/>
+ </objecttype>
+ <objecttype name="flag" color="#0c07a4">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="goal" color="#2868a4">
+  <property name="derect" type="int" default="0"/>
+  <property name="id" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="gold" color="#ffff00">
+  <property name="code" type="int" default="0"/>
+  <property name="score" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="light" color="#ffff00">
+  <property name="color" type="color"/>
+  <property name="distance" type="int" default="70"/>
+  <property name="static" type="bool" default="true"/>
+ </objecttype>
+ <objecttype name="place" color="#ffaa7f">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="plam" color="#aaaa7f">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="player" color="#55ffff">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="repair" color="#ff5500">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="tire" color="#313132">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="tree" color="#a0a0a4">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="upgarde" color="#65cb00">
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="zone" color="#a0a0a4">
+  <property name="Id" type="string" default="0"/>
+  <property name="code" type="int" default="0"/>
+ </objecttype>
+</objecttypes>

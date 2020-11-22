@@ -1,0 +1,47 @@
+Loading.png
+size: 1057, 443
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Background
+  rotate: false
+  xy: 1, 1
+  size: 733, 413
+  orig: 733, 413
+  offset: 0, 0
+  index: -1
+Bar_Loding
+  rotate: false
+  xy: 1, 416
+  size: 1055, 26
+  orig: 1055, 26
+  offset: 0, 0
+  index: -1
+BottomLoding
+  rotate: false
+  xy: 736, 80
+  size: 198, 30
+  orig: 198, 30
+  offset: 0, 0
+  index: -1
+Head_Loding
+  rotate: false
+  xy: 736, 1
+  size: 274, 77
+  orig: 274, 77
+  offset: 0, 0
+  index: -1
+Loading_Bar_BG
+  rotate: false
+  xy: 936, 80
+  size: 59, 15
+  orig: 59, 15
+  offset: 0, 0
+  index: -1
+Loading_Knob
+  rotate: false
+  xy: 936, 97
+  size: 4, 15
+  orig: 4, 15
+  offset: 0, 0
+  index: -1
