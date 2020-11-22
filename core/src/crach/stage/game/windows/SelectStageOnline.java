@@ -12,7 +12,7 @@ import com.badlogic.gdx.utils.Array;
 
 import crach.stage.game.Assest;
 import crach.stage.game.CrachGame;
-import crach.stage.game.Screen.PlayScreen;
+import crach.stage.game.screen.PlayScreen;
 import crach.stage.game.windows.dialog.WaitDowload;
 
 public class SelectStageOnline extends WindowsGames {

@@ -9,7 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import crach.stage.game.Assest;
 import crach.stage.game.CrachGame;
 import crach.stage.game.DownloadFiles;
-import crach.stage.game.Screen.Tools.ProgressUi;
+import crach.stage.game.screen.Tools.ProgressUi;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.fadeOut;
 

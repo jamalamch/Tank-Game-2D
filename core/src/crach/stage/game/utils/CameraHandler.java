@@ -6,7 +6,7 @@ import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import crach.stage.game.CrachGame;
-import crach.stage.game.entites.Crach.CrachPlayer;
+import crach.stage.game.entity.Crach.CrachPlayer;
 public class CameraHandler 
 {
 	private OrthographicCamera camera;

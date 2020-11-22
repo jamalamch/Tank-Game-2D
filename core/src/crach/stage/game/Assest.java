@@ -17,7 +17,7 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.JsonReader;
 import com.badlogic.gdx.utils.JsonValue;
 
-import crach.stage.game.Screen.PlayScreen;
+import crach.stage.game.screen.PlayScreen;
 import crach.stage.game.utils.ArFont;
 
 public class Assest {

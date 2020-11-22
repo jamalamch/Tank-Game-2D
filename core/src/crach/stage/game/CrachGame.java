@@ -6,9 +6,9 @@ import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.utils.Timer;
 
-import crach.stage.game.Screen.Loading;
-import crach.stage.game.Screen.MenuUI;
-import crach.stage.game.Screen.ScreenGame;
+import crach.stage.game.screen.Loading;
+import crach.stage.game.screen.MenuUI;
+import crach.stage.game.screen.ScreenGame;
 import crach.stage.game.windows.Hanger;
 import crach.stage.game.windows.Hanger.TypeItem;
 import de.golfgl.gdxgamesvcs.GameServiceException;

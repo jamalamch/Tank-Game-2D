@@ -1,8 +1,6 @@
 package crach.stage.game.windows;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Action;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.ButtonGroup;
@@ -15,10 +13,9 @@ import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 
 import crach.stage.game.Assest;
 import crach.stage.game.CrachGame;
-import crach.stage.game.Screen.MenuUI;
-import crach.stage.game.Screen.PlayScreen;
+import crach.stage.game.screen.MenuUI;
+import crach.stage.game.screen.PlayScreen;
 import crach.stage.game.windows.dialog.SelectLevel;
-import crach.stage.game.windows.dialog.WaitDowload;
 
 public class SelectStage extends WindowsGames{
 	private ButtonGroup<stage> Stages ;

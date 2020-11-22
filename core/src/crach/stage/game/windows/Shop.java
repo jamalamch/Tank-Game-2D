@@ -16,7 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 import crach.stage.game.Assest;
 import crach.stage.game.CrachGame;
-import crach.stage.game.Screen.Tools.watchAds;
+import crach.stage.game.screen.Tools.WatchAds;
 
 public class Shop extends Table{
 	private final int prix100C=20,prix1000C=180,prixNoAds=1000,PrixNoAdsAndCoin=1100,prixXp2=100,prixXp3=120,prixXp6=200;
@@ -29,7 +29,7 @@ public class Shop extends Table{
     private ImageButton NoAds,NoAdsAndCoin;
     private Table TXP_Boost,TMore_Diamond,TNo_ADS,TMore_Coin;
     private Stack stackUi;
-    private watchAds watchAds;
+    private WatchAds watchAds;
     
 	@SuppressWarnings("unchecked")
 	public Shop(Button paButton) {
@@ -67,7 +67,7 @@ public class Shop extends Table{
 		TNo_ADS = new Table(Assest.Style);
 		TNo_ADS.background("window");
 		
-		watchAds = new watchAds(BCollect);
+		watchAds = new WatchAds(BCollect);
 		
 		stackUi = new Stack();
 		

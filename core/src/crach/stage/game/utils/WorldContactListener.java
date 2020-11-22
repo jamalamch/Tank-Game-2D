@@ -7,8 +7,8 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
 
 import crach.stage.game.CrachGame;
-import crach.stage.game.entites.Entity;
-import crach.stage.game.entites.Crach.Crach;
+import crach.stage.game.entity.Entity;
+import crach.stage.game.entity.Crach.Crach;
 
 public class WorldContactListener implements ContactListener {
 
