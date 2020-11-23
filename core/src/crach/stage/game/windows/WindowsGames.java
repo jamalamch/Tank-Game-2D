@@ -9,7 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Window;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 
 
@@ -25,23 +25,23 @@ public abstract class WindowsGames extends Window{
 		this(title, Style, "head");  
 	}   
 	public WindowsGames(String title,String Style,String DrawTitle) {
-        super(title, Assest.Style, Style);
+        super(title, Assets.skinStyle, Style);
         super.getTitleLabel().setAlignment(Align.center);
-        super.getTitleLabel().getStyle().background =  Assest.Style.getDrawable(DrawTitle);
-		Close = new Button(Assest.Style, "Close_BTN");
+        super.getTitleLabel().getStyle().background =  Assets.skinStyle.getDrawable(DrawTitle);
+		Close = new Button(Assets.skinStyle, "Close_BTN");
 		this.getTitleTable().add(Close).right().pad(5,-40,-10,-30).maxSize(70);
         this.setVisible(false);
 		this.setOrigin(Align.center);
-        this.setSkin(Assest.Style);
+        this.setSkin(Assets.skinStyle);
         setKeepWithinStage(false);
 	}
 	public WindowsGames() {
-		super("", Assest.Style,"default");
-		Close = new Button(Assest.Style, "Close_BTN");
+		super("", Assets.skinStyle,"default");
+		Close = new Button(Assets.skinStyle, "Close_BTN");
 		this.getTitleTable().add(Close).right().bottom().pad(5,-40,0,-10).maxSize(70);
         this.setVisible(false);
 		this.setOrigin(Align.center);
-        this.setSkin(Assest.Style);
+        this.setSkin(Assets.skinStyle);
         setKeepWithinStage(false); 
 	}
 	
@@ -66,7 +66,7 @@ public abstract class WindowsGames extends Window{
 		Close.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick2.play();
+				Assets.buttonClick2.play();
 				Close();
 			}
 		});

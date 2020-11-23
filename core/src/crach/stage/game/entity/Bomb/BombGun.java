@@ -7,7 +7,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 
 import box2dLight.Light;
 import box2dLight.PointLight;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 
@@ -26,7 +26,7 @@ public abstract class BombGun extends TrapBomb{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.magic, Assest.magic_up);
+		setTexture(Assets.animationMagic, Assets.animationMagicUp);
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public abstract class BombGun extends TrapBomb{
 	}
 	@Override
 	public void starAttack() {
-		Assest.blue_attack.play(getVolume());
+		Assets.soundBlueAttack.play(getVolume());
 			creator.addEntity(new BombGunShell.A(b2body.getPosition(), target));
 			timeAttack = 9;
 	}
@@ -93,7 +93,7 @@ public abstract class BombGun extends TrapBomb{
 	}
 	@Override
 	public void starAttack() {
-			Assest.red_attack.play(getVolume());
+			Assets.soundRedAttack.play(getVolume());
 			creator.addEntity(new BombGunShell.B(b2body.getPosition(), target));
 			timeAttack = 10;
 	}

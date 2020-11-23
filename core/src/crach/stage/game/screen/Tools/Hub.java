@@ -9,7 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.screen.PlayScreen;
 import crach.stage.game.creator.B2WorldCreator;
@@ -37,17 +37,17 @@ public class Hub extends Table {
 	public Hub(B2WorldCreator creator) {
 		      this.creator = creator;
 		      this.gdxPlayScreen = creator.getGdxPlayScreen();
-              labelScore = new Label("000000", Assest.Style);
-              timerLabel = new Label("00:00", Assest.Style,"extra");
+              labelScore = new Label("000000", Assets.skinStyle);
+              timerLabel = new Label("00:00", Assets.skinStyle,"extra");
 			  timerLabel.setAlignment(Align.center);
 
-              health = new Image(Assest.Style, "Icon/Health");
-              weapon2 = new Image(Assest.Style, "Icon/Weapon2");
-              pHealth = new ProgressUi(creator.getPlayer().getLife(), Assest.Style, "A_Upgrade_h", true);
+              health = new Image(Assets.skinStyle, "Icon/Health");
+              weapon2 = new Image(Assets.skinStyle, "Icon/Weapon2");
+              pHealth = new ProgressUi(creator.getPlayer().getLife(), Assets.skinStyle, "A_Upgrade_h", true);
               pHealth.setValue(creator.getPlayer().getLife());
-              pWeapon2 = new ProgressUi(creator.getPlayer().fire,0.1f, Assest.Style, "C_Upgrade_h", true);
+              pWeapon2 = new ProgressUi(creator.getPlayer().fire,0.1f, Assets.skinStyle, "C_Upgrade_h", true);
               
-              menu = new Button(Assest.Style, "Lalister");
+              menu = new Button(Assets.skinStyle, "Lalister");
               
               sonAndMusic = new SonAndMusic(menu);
 
@@ -128,13 +128,13 @@ public class Hub extends Table {
 		private Button music,son,annuler,pause,zoom,menu;
 		
 		public SonAndMusic(Button menu) {
-			super(Assest.Style);
+			super(Assets.skinStyle);
 			this.menu = menu;
-			music = new Button(Assest.Style, "music");
-			son = new Button(Assest.Style, "son");
-			annuler = new Button(Assest.Style, "annuler");
-            pause = new Button(Assest.Style, "pauser");
-            zoom = new Button(Assest.Style, "Zoom");
+			music = new Button(Assets.skinStyle, "music");
+			son = new Button(Assets.skinStyle, "son");
+			annuler = new Button(Assets.skinStyle, "annuler");
+            pause = new Button(Assets.skinStyle, "pauser");
+            zoom = new Button(Assets.skinStyle, "Zoom");
             music.setChecked(!CrachGame.isMusic());
             son.setChecked(!CrachGame.isSfx());
 			defaults().maxSize(60).pad(2);

@@ -7,7 +7,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.screen.PlayScreen;
 import crach.stage.game.control.Pathfinding;
@@ -168,12 +168,12 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 					CrachGame.getGdxGame().getScreen().dispose();
 					CrachGame.getGdxGame().setScreen(new PlayScreen(nStage+1, gdxPlayScreen.modeGame));
 				}else{
-					CrachGame.GotToMenu();
+					CrachGame.gotToMenu();
 				}
 			}
 			@Override
 			public void Back() {	
-	        	  CrachGame.GotToMenu();
+	        	  CrachGame.gotToMenu();
 			}
 		});
 	}
@@ -184,7 +184,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 			@Override
 			public void Resume() {
 				rePlay();
-				Assest.upgradSound.play();
+				Assets.soundUpgrade.play();
 			}
 			
 			@Override
@@ -205,7 +205,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 				CrachGame.addEnimykill(numberEnimy);
 				CrachGame.addExper(getExper());
 
-				CrachGame.GotToMenu();
+				CrachGame.gotToMenu();
 			}
 		});
         gdxPlayScreen.showAds();
@@ -238,7 +238,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 	@Override
 	public void QuitGame() {
 		gdxPlayScreen.setPauser(true);
-		gdxPlayScreen.addActor(new DialogQuestion(Assest.StringDialog.getString("exit"), Assest.StringDialog.getString("msgExit")) {
+		gdxPlayScreen.addActor(new DialogQuestion(Assets.jsonStringDialog.getString("exit"), Assets.jsonStringDialog.getString("msgExit")) {
 			@Override
 			public void Refuse() {
 				gdxPlayScreen.setPauser(false);
@@ -251,7 +251,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 				CrachGame.addEnimykill(numberEnimy);
 				CrachGame.addExper(getExper());
 
-				CrachGame.GotToMenu();
+				CrachGame.gotToMenu();
 			}
 		});
         gdxPlayScreen.showAds();
@@ -261,8 +261,8 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 	public void rePlay() {
 		if(!CrachGame.addLife(-1)){
 			gdxPlayScreen.setPauser(true);
-			gdxPlayScreen.addActor(new DialogQuestion(Assest.StringDialog.getString("noLife")
-					, Assest.StringDialog.getString("msgNoLife")) {
+			gdxPlayScreen.addActor(new DialogQuestion(Assets.jsonStringDialog.getString("noLife")
+					, Assets.jsonStringDialog.getString("msgNoLife")) {
 				@Override
 				public void Accepte() {
 					CrachGame.getiActivityRequestHandler().showVideosAds(new Runnable() {
@@ -274,13 +274,13 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 					}, new Runnable() {
 						@Override
 						public void run() {
-							CrachGame.GotToMenu();
+							CrachGame.gotToMenu();
 						}
 					});
 				}
 				@Override
 				public void Refuse() {
-					CrachGame.GotToMenu();
+					CrachGame.gotToMenu();
 				}
 			});
 		}else{
@@ -302,7 +302,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 	}
 	@Override
 	public int getExper() {
-		return (((getScore()>0)?getScore()*2:0) + PointExper)*CrachGame.getXP_Boost();
+		return (((getScore()>0)?getScore()*2:0) + PointExper)*CrachGame.getXPBoost();
 	}
 	@Override
 	public int getStars() {

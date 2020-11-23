@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.physics.box2d.Body;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 
 public class DoorExit extends Door{
@@ -33,19 +33,19 @@ public class DoorExit extends Door{
 	}
 	@Override
 	public void setTexture() {
-		StateDoor =Assest.ExitNo;
-		setRegion(Assest.DoorExit);
+		StateDoor = Assets.ExitNo;
+		setRegion(Assets.textureDoorExit);
 		setOriginCenter();
 	}
 	@Override
 	protected void openDoor() {
           super.openDoor();
-  		  StateDoor = Assest.ExitYes;
+  		  StateDoor = Assets.ExitYes;
 	}
 	@Override
 	protected void StopMove() {
 		super.StopMove();
-		StateDoor = Assest.ExitNo;
+		StateDoor = Assets.ExitNo;
 	}
 	@Override
 	public void draw(Batch batch, Body body) {

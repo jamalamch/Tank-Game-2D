@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.physics.box2d.Body;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 
 
@@ -51,20 +51,20 @@ public class DoorSimple extends Door{
 	}
 	@Override
 	public void setTexture() {
-		Lax = Assest.Lax;
-		StateDoor = Assest.DoorClose;
-		setRegion(Assest.DoorSimple);
+		Lax = Assets.textureLax;
+		StateDoor = Assets.textureDoorClose;
+		setRegion(Assets.textureDoorSimple);
 		setOriginCenter();
 		}
 	@Override
 	protected void openDoor() {
           super.openDoor();
-  		  StateDoor = Assest.DoorOpen;
+  		  StateDoor = Assets.textureDoorOpen;
 	}
 	@Override
 	protected void StopMove() {
 		super.StopMove();
-		StateDoor = Assest.DoorClose;
+		StateDoor = Assets.textureDoorClose;
 	}
 	@Override
 	public void draw(Batch batch, Body body) {

@@ -4,12 +4,12 @@ import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
 import com.badlogic.gdx.utils.Align;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public abstract class Pause extends DialogGame{
 
 	public Pause( int score) {
-		super(Assest.StringDialog.getString("pause"));
+		super(Assets.jsonStringDialog.getString("pause"));
 		addScore(score);
 		getButtonTable().defaults().pad(10).maxSize(115).expandX();
 		button(new Button(getSkin(), "Replay_BTN"), 0,Align.left);
@@ -24,7 +24,7 @@ public abstract class Pause extends DialogGame{
 	}
 	
 	protected void result (Object object) {
-		Assest.buttonClick1.play();
+		Assets.buttonClick1.play();
 		switch((Integer)object) {
 			case 0:
 				Replay();

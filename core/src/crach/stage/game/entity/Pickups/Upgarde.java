@@ -1,7 +1,7 @@
 package crach.stage.game.entity.Pickups;
 
 import com.badlogic.gdx.maps.MapObject;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.entity.Entity;
 
 public class Upgarde extends Pickup{
@@ -12,7 +12,7 @@ public class Upgarde extends Pickup{
 	}
 	@Override
 	public void setTexture() {
-		setTexture(Assest.upgrade);
+		setTexture(Assets.animationUpgrade);
 	}
 	@Override
 	public void DeathEntity() {

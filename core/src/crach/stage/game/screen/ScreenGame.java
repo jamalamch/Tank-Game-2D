@@ -13,12 +13,12 @@ import crach.stage.game.CrachGame;
 public class ScreenGame extends ScreenAdapter {
 	
 	
-	protected Viewport ViewGamePort;
+	protected Viewport viewGamePort;
 	protected Stage stage;
 	
 	public ScreenGame() {
-		ViewGamePort = new ExtendViewport(CrachGame.Width, CrachGame.Height);
-		stage = new Stage(ViewGamePort);
+		viewGamePort = new ExtendViewport(CrachGame.Width, CrachGame.Height);
+		stage = new Stage(viewGamePort);
 		//stage.getBatch().setShader();
 	}
 	@Override
@@ -29,7 +29,7 @@ public class ScreenGame extends ScreenAdapter {
 		
 	@Override
 	public void resize(int width, int height) {
-		ViewGamePort.update(width, height,true);
+		viewGamePort.update(width, height,true);
 	}
 	
 	protected void drawStage(float delta) {
@@ -40,12 +40,9 @@ public class ScreenGame extends ScreenAdapter {
 		stage.addActor(actor);
 	}
 	public Viewport getViewGamePort() {
-		return ViewGamePort;
+		return viewGamePort;
 	}
 	public Stage getStage() {
 		return stage;
 	}
-
-
-
 }

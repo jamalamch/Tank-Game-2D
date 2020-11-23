@@ -2,7 +2,7 @@ package crach.stage.game.entity.Object;
 
 import com.badlogic.gdx.maps.MapObject;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public class BoxInte extends Box{
 
@@ -12,16 +12,16 @@ public class BoxInte extends Box{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.boxNoActive);
+		setTexture(Assets.textureBoxNoActive);
 	}
 	
 	@Override
 	public void update(float dt) {
 		super.update(dt);
 	      if(getBody().isAwake())
-	    	  setRegion(Assest.boxActive);
+	    	  setRegion(Assets.textureBoxActive);
 	      else 
-	    	  setRegion(Assest.boxNoActive);
+	    	  setRegion(Assets.textureBoxNoActive);
 	}
 	@Override
 	public void defineEntity(float X, float Y, float R) {

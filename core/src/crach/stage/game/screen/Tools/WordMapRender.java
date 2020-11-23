@@ -20,7 +20,7 @@ import com.badlogic.gdx.physics.box2d.Shape.Type;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Disposable;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Bomb.BombGun;
 import crach.stage.game.entity.Bomb.BombGunShell;
@@ -57,7 +57,7 @@ public class WordMapRender extends Image implements Disposable {
 	private float timeView = 10f;
 
 	public WordMapRender(float widthMap, float heightMap) {
-		super(Assest.Style, "table");
+		super(Assets.skinStyle, "table");
 		this.drawBodies = true;
 		this.widthMap = widthMap;
 		this.heightMap = heightMap;

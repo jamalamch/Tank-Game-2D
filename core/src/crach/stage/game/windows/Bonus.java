@@ -16,7 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Json;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.screen.Tools.ProgressUi;
 
@@ -26,7 +26,7 @@ public class Bonus extends WindowsGames{
 	private ScrollPane Scrll;
 	private final Json reader = new Json();
 	public Bonus() {
-		super(Assest.StringBonus.getString("title"), "default");
+		super(Assets.jsonStringBonus.getString("title"), "default");
         this.getTitleTable().getCell(getTitleLabel()).maxWidth(500).padBottom(30);
 		Grouplist = new VerticalGroup();
 		addContent();
@@ -41,7 +41,7 @@ public class Bonus extends WindowsGames{
        }
         Grouplist.pad(10,100,10,100);
         Grouplist.space(80);
-		Scrll = new ScrollPane(Grouplist, Assest.Style);
+		Scrll = new ScrollPane(Grouplist, Assets.skinStyle);
 		Scrll.setScrollingDisabled(true, false);
 		Scrll.setScrollBarPositions(true,false);
 		Scrll.setVariableSizeKnobs(false);
@@ -68,21 +68,21 @@ public class Bonus extends WindowsGames{
 		private TextButton BuCuler;
 		private int codeMedal;
 		public Medal(int codeMedal) {
-			super(Assest.Style);
+			super(Assets.skinStyle);
 			background("Cloud_01");
-			data = reader.readValue("Medal"+codeMedal,MedalData.class,MedalData.class , Assest.ValueBonus);
+			data = reader.readValue("Medal"+codeMedal,MedalData.class,MedalData.class , Assets.valueBonus);
 			this.codeMedal = codeMedal;
 			addContent();
 		}
 		public void addContent() {
-		    	   BarVal = new  ProgressUi(data.quantity, Assest.Style, "C_Upgrade_h",true);
+		    	   BarVal = new  ProgressUi(data.quantity, Assets.skinStyle, "C_Upgrade_h",true);
 		    	   BarVal.setRound(false);
-		    	   Image badgeIm = new Image(Assest.Style,data.medalIcon);
-		    	   BuCuler = new TextButton(Assest.StringBonus.getString("Culer"), Assest.Style);
+		    	   Image badgeIm = new Image(Assets.skinStyle,data.medalIcon);
+		    	   BuCuler = new TextButton(Assets.jsonStringBonus.getString("Culer"), Assets.skinStyle);
 		 
 		    	   defaults().minSize(50).pad(5);
 		    	   row();
-		    	   Label infoMission = new Label(Assest.StringBonus.getString(data.mission)+"\n"+data.quantity, getSkin(),"extra" );
+		    	   Label infoMission = new Label(Assets.jsonStringBonus.getString(data.mission)+"\n"+data.quantity, getSkin(),"extra" );
 		    	   infoMission.setColor(Color.SKY);
 		    	   infoMission.setAlignment(Align.center);
 		    	   add();
@@ -98,7 +98,7 @@ public class Bonus extends WindowsGames{
     	   		   BuCuler.addListener(new ClickListener() {
 		    		  @Override
 		    		public void clicked(InputEvent event, float x, float y) {
-		    			  Assest.soundBonus2.play();
+		    			  Assets.soundBonus2.play();
 		    			  CrachGame.addDiamound(data.prize);
 		    			  CrachGame.setBonusColled(codeMedal);
 		    			  BuCuler.setTouchable(Touchable.disabled);

@@ -7,7 +7,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 
 public abstract class  Box extends Object{	
@@ -59,7 +59,7 @@ public abstract class  Box extends Object{
 
 		@Override
 		public void setTexture() {
-			setTexture(Assest.box.get(0));
+			setTexture(Assets.textureBox.get(0));
 		}
 
 		@Override
@@ -75,7 +75,7 @@ public abstract class  Box extends Object{
 
 		@Override
 		public void setTexture() {
-			setTexture(Assest.box.get(0));
+			setTexture(Assets.textureBox.get(0));
 		}
 
 		@Override
@@ -91,7 +91,7 @@ public abstract class  Box extends Object{
 
 		@Override
 		public void setTexture() {
-			setTexture(Assest.box.get(0));
+			setTexture(Assets.textureBox.get(0));
 		}
 
 		@Override

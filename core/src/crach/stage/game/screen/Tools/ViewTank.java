@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 
 public class ViewTank extends Actor {
@@ -27,7 +27,7 @@ public class ViewTank extends Actor {
     
 	float scaleT = 1;
 	
-    private final  Animation<TextureRegion> animation = Assest.Sprite_Effects_Exhaust_00;
+    private final  Animation<TextureRegion> animation = Assets.spriteEffectsExhaust00;
     
 	private TextureRegion textureTrank;
     private TextureRegion textureTrack_1;
@@ -44,7 +44,7 @@ public class ViewTank extends Actor {
         updateTrank(CrachGame.getHullSelect());
         updateGun(CrachGame.getGunBSelect());
         updateGunPoss(CrachGame.getGunASelect());
-		backDrawable = Assest.Style.getDrawable("Main_Tank_Table");
+		backDrawable = Assets.skinStyle.getDrawable("Main_Tank_Table");
     }  
     public void updateColor(int ncolor) {
     	this.ncolor = ncolor;
@@ -53,19 +53,19 @@ public class ViewTank extends Actor {
     }
     public void updateGunPoss(int nGunA) {
     	this.nGunA=nGunA;
-		textureGunPoss = Assest.Gun_A.get(nGunA);
+		textureGunPoss = Assets.textureGunAs.get(nGunA);
 	    heightPos = textureGunPoss.getRegionHeight()*scaleT ;
 		widthPos = textureGunPoss.getRegionWidth()*scaleT;
     }
     public void updateGun(int nGun_B) {
     	this.nGun_B=nGun_B;
-		textureGun = Assest.Gun_B.get(ncolor).get(nGun_B);
+		textureGun = Assets.textureGunBs.get(ncolor).get(nGun_B);
 	    heightGun = textureGun.getRegionHeight()*scaleT ;
 		widthGun = textureGun.getRegionWidth()*scaleT;
     }    
     public void updateTrank(int nHull) {
     	this.nHull = nHull;
-    	textureTrank = Assest.Hull.get(ncolor).get(nHull);
+    	textureTrank = Assets.textureHulls.get(ncolor).get(nHull);
 	    heightBody = textureTrank.getRegionHeight()*scaleT ;widthBody = textureTrank.getRegionWidth()*scaleT;
 	    if(heightBody < (90*scaleT*2- heightTr)) {
 	    	widthBody = widthBody*((90*scaleT*2- heightTr)/heightBody);
@@ -78,8 +78,8 @@ public class ViewTank extends Actor {
     }
     public void updateTrack(int nTranck) {
     	this.nTranck = nTranck;
-		textureTrack_1 = Assest.Track_A.get(nTranck);
-		textureTrack_2 =  Assest.Track_B.get(nTranck);
+		textureTrack_1 = Assets.textureTrackAs.get(nTranck);
+		textureTrack_2 =  Assets.textureTrackBs.get(nTranck);
 		textureTrack = textureTrack_1;
 	    heightTr = textureTrack_1.getRegionHeight()*scaleT ;
 		widthTr = textureTrack_1.getRegionWidth()*scaleT;

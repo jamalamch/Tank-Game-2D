@@ -14,7 +14,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.screen.Tools.WatchAds;
 
@@ -36,35 +36,35 @@ public class Shop extends Table{
 		super();
 		this.parent = paButton;
 		this.setVisible(false);
-		BXP_Boost = new Button(Assest.Style, "XP_Boost_Icon");
-		BMore_Diamond = new Button(Assest.Style, "More_Diamond_Icon");
-		BNo_ADS = new Button(Assest.Style, "No_ADS_Icon");
-		BMore_Coin = new Button(Assest.Style, "More_Coin_Icon");
+		BXP_Boost = new Button(Assets.skinStyle, "XP_Boost_Icon");
+		BMore_Diamond = new Button(Assets.skinStyle, "More_Diamond_Icon");
+		BNo_ADS = new Button(Assets.skinStyle, "No_ADS_Icon");
+		BMore_Coin = new Button(Assets.skinStyle, "More_Coin_Icon");
 		
-	    Coin100 = new Button(Assest.Style, "toggle");
-	    Coin1000 = new Button(Assest.Style, "toggle");
-	    BConvert = new TextButton(Assest.Stringshop.getString("convert"), Assest.Style);
+	    Coin100 = new Button(Assets.skinStyle, "toggle");
+	    Coin1000 = new Button(Assets.skinStyle, "toggle");
+	    BConvert = new TextButton(Assets.jsonStringshop.getString("convert"), Assets.skinStyle);
 	    BConvert.setDisabled(true);
-	    BCollect = new TextButton(Assest.Stringshop.getString("collect"), Assest.Style);
+	    BCollect = new TextButton(Assets.jsonStringshop.getString("collect"), Assets.skinStyle);
 	    BCollect.setDisabled(true);
 	    
-	    NoAds = new ImageButton(Assest.Style, "NoAds");
-	    NoAdsAndCoin = new ImageButton(Assest.Style, "NoAds");
-	    BPaid = new TextButton(Assest.Stringshop.getString("paid"), Assest.Style);
+	    NoAds = new ImageButton(Assets.skinStyle, "NoAds");
+	    NoAdsAndCoin = new ImageButton(Assets.skinStyle, "NoAds");
+	    BPaid = new TextButton(Assets.jsonStringshop.getString("paid"), Assets.skinStyle);
 	    BPaid.setDisabled(true);
-	    BXp2 = new Button(Assest.Style, "toggle");
-	    BXp3 = new Button(Assest.Style, "toggle");
-	    BXp6 = new Button(Assest.Style, "toggle");
-	    BXPaid = new TextButton(Assest.Stringshop.getString("paid"), Assest.Style);
+	    BXp2 = new Button(Assets.skinStyle, "toggle");
+	    BXp3 = new Button(Assets.skinStyle, "toggle");
+	    BXp6 = new Button(Assets.skinStyle, "toggle");
+	    BXPaid = new TextButton(Assets.jsonStringshop.getString("paid"), Assets.skinStyle);
 	    BXPaid.setDisabled(true);
-		TXP_Boost = new Table(Assest.Style);
+		TXP_Boost = new Table(Assets.skinStyle);
 		TXP_Boost.background("window");
-		TMore_Diamond = new Table(Assest.Style);
+		TMore_Diamond = new Table(Assets.skinStyle);
 		TMore_Diamond.background("window");
-		TMore_Coin = new Table(Assest.Style);
+		TMore_Coin = new Table(Assets.skinStyle);
 		TMore_Coin.background("window");
 		
-		TNo_ADS = new Table(Assest.Style);
+		TNo_ADS = new Table(Assets.skinStyle);
 		TNo_ADS.background("window");
 		
 		watchAds = new WatchAds(BCollect);
@@ -83,14 +83,14 @@ public class Shop extends Table{
 		group[0].add(Coin100,Coin1000);
 	    
 	    Coin100.row();
-	    Coin100.add(new Image(Assest.Style, "Icon/Coin_A")).row();
-	    Coin100.add(new Image(Assest.Style, "Icon/100_Coins")).row();
+	    Coin100.add(new Image(Assets.skinStyle, "Icon/Coin_A")).row();
+	    Coin100.add(new Image(Assets.skinStyle, "Icon/100_Coins")).row();
 	    Coin100.add(""+prix100C,"Ldiamond").maxHeight(70).expandY().bottom().pad(20,0,-20,0);
 	    Coin100.pack();
 	    
 	    Coin1000.row();
-	    Coin1000.add(new Image(Assest.Style, "Icon/Coin_B")).row();
-	    Coin1000.add(new Image(Assest.Style, "Icon/1000_Coins")).row();
+	    Coin1000.add(new Image(Assets.skinStyle, "Icon/Coin_B")).row();
+	    Coin1000.add(new Image(Assets.skinStyle, "Icon/1000_Coins")).row();
 	    Coin1000.add(""+prix1000C,"Ldiamond").maxHeight(70).expandY().bottom().pad(20,0,-20,0);
 	    Coin1000.pack();
 	    
@@ -110,7 +110,7 @@ public class Shop extends Table{
 	    NoAds.pack();
 	    
 	    NoAdsAndCoin.row();
-	    NoAdsAndCoin.add(new Image(Assest.Style, "Icon/1000_Coins")).row();
+	    NoAdsAndCoin.add(new Image(Assets.skinStyle, "Icon/1000_Coins")).row();
 	    NoAdsAndCoin.add(""+PrixNoAdsAndCoin,"Ldiamond").maxHeight(70).expandY().bottom().pad(20,0,-20,0);
 	    NoAdsAndCoin.pack();
 	    
@@ -122,31 +122,31 @@ public class Shop extends Table{
 	    TNo_ADS.pack();
 	    
 	    //table add Diamond
-	    BCollect.add(new Image(Assest.Style, "Icon/DIamoundS")).pad(-5);
+	    BCollect.add(new Image(Assets.skinStyle, "Icon/DIamoundS")).pad(-5);
 	    BCollect.pack();
 	    
 	    TMore_Diamond.top().defaults().center();
 	    TMore_Diamond.add(watchAds).padLeft(-10).padRight(-10).expandX().fillX().prefSize(700,150).row();
-	    TMore_Diamond.add(Assest.Stringshop.getString("watch1"),"font",new Color(0x779dbb)).row();
-	    TMore_Diamond.add(Assest.Stringshop.getString("watch2")+135+"£","font-small",new Color(0xababab)).row();
+	    TMore_Diamond.add(Assets.jsonStringshop.getString("watch1"),"font",new Color(0x779dbb)).row();
+	    TMore_Diamond.add(Assets.jsonStringshop.getString("watch2")+135+"£","font-small",new Color(0xababab)).row();
 	    TMore_Diamond.add(BCollect).maxHeight(85).expandY().bottom();
 	    TMore_Diamond.pack();
 	    //table Xper
 	    group[2] = new ButtonGroup<Button>();
 	    group[2].setMinCheckCount(0);
 	    group[2].add(BXp2,BXp3,BXp6);
-	    LabelStyle SXp = new LabelStyle(Assest.Style.get("extra", LabelStyle.class));
+	    LabelStyle SXp = new LabelStyle(Assets.skinStyle.get("extra", LabelStyle.class));
 	    SXp.fontColor = new Color(0x53abe6);
-	    LabelStyle SCo = new LabelStyle(Assest.Style.get("extra", LabelStyle.class));
-	    SCo.fontColor = new Color(Assest.Style.getColor("CoinColor"));
+	    LabelStyle SCo = new LabelStyle(Assets.skinStyle.get("extra", LabelStyle.class));
+	    SCo.fontColor = new Color(Assets.skinStyle.getColor("CoinColor"));
 	    Color Carte = new Color(0.34f,0.714f,0.34f,1);
-	    String Fill = Assest.Stringshop.getString("fill");
+	    String Fill = Assets.jsonStringshop.getString("fill");
 	    
 	    BXp2.row().padBottom(5);
 	    BXp2.add(new Label("% X2", SXp));
 	    BXp2.add(new Label("$ X2", SCo)).row();
 	    BXp2.add("( 2h","font-small",Color.SKY).colspan(2).row();
-	    BXp2.add(new Image(Assest.Style, "Icon/Carte_Icon"));
+	    BXp2.add(new Image(Assets.skinStyle, "Icon/Carte_Icon"));
 	    BXp2.add(Fill,"font",Carte).row();
 	    BXp2.add(""+prixXp2,"Ldiamond").colspan(2).maxHeight(70).expandY().bottom().pad(0,0,-20,0);
 	    BXp2.pack();
@@ -155,7 +155,7 @@ public class Shop extends Table{
 	    BXp3.add(new Label("% X3", SXp));
 	    BXp3.add(new Label("$ X3", SCo)).row();
 	    BXp3.add("( 3h","font-small",Color.SKY).colspan(2).row();
-	    BXp3.add(new Image(Assest.Style, "Icon/Carte_Icon"));
+	    BXp3.add(new Image(Assets.skinStyle, "Icon/Carte_Icon"));
 	    BXp3.add(Fill,"font",Carte).row();
 	    BXp3.add(""+prixXp3,"Ldiamond").colspan(2).maxHeight(70).expandY().bottom().pad(0,0,-20,0);
 	    BXp3.pack();
@@ -164,7 +164,7 @@ public class Shop extends Table{
 	    BXp6.add(new Label("% X6", SXp));
 	    BXp6.add(new Label("$ X8", SCo)).row();
 	    BXp6.add("( 4h","font-small",Color.SKY).colspan(2).row();
-	    BXp6.add(new Image(Assest.Style, "Icon/Carte_Icon"));
+	    BXp6.add(new Image(Assets.skinStyle, "Icon/Carte_Icon"));
 	    BXp6.add(Fill,"font",Carte).row();
 	    BXp6.add(""+prixXp6,"Ldiamond").colspan(2).maxHeight(70).expandY().bottom().pad(0,0,-20,0);
 	    BXp6.pack();
@@ -198,7 +198,7 @@ public class Shop extends Table{
 		VisibleTable();
   		ClickListener C = new ClickListener() {
   			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-  				Assest.checkOnClick.play();
+  				Assets.checkOnClick.play();
   				VisibleTable();
   			}
   		};
@@ -209,8 +209,8 @@ public class Shop extends Table{
   		
   		C = new ClickListener() {
   			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-  						if(group[0].getCheckedIndex() == -1) Assest.checkOfClick.play();
-  							else Assest.checkOnClick.play();
+  						if(group[0].getCheckedIndex() == -1) Assets.checkOfClick.play();
+  							else Assets.checkOnClick.play();
                 		BConvert.setDisabled(group[0].getCheckedIndex() == -1);
   			}
   		};
@@ -218,8 +218,8 @@ public class Shop extends Table{
   		Coin1000.addListener(C);
   		C = new ClickListener() {
   			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-					if(group[1].getCheckedIndex() == -1) Assest.checkOfClick.play();
-						else Assest.checkOnClick.play();
+					if(group[1].getCheckedIndex() == -1) Assets.checkOfClick.play();
+						else Assets.checkOnClick.play();
                 	BPaid.setDisabled(group[1].getCheckedIndex() == -1);
   			}
   		};
@@ -227,8 +227,8 @@ public class Shop extends Table{
   		NoAdsAndCoin.addListener(C);
   		C = new ClickListener() {
   			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-  					if(group[2].getCheckedIndex() == -1) Assest.checkOfClick.play();
-  						else Assest.checkOnClick.play();
+  					if(group[2].getCheckedIndex() == -1) Assets.checkOfClick.play();
+  						else Assets.checkOnClick.play();
                 	BXPaid.setDisabled(group[2].getCheckedIndex() == -1);
   			}
   		};
@@ -239,63 +239,63 @@ public class Shop extends Table{
 
 		BConvert.addListener(new ClickListener() {
 			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				if(Coin100.isChecked() && CrachGame.getDiamound()>= prix100C) {
-					Assest.soundBonus2.play();
+					Assets.soundBonus2.play();
 					CrachGame.addCoin(100);
 					CrachGame.addDiamound(-prix100C);
 				}
 				else if(Coin1000.isChecked() && CrachGame.getDiamound()>= prix1000C) {
-					Assest.soundBonus3.play();
+					Assets.soundBonus3.play();
 
 					CrachGame.addCoin(1000);
 					CrachGame.addDiamound(-prix1000C);
 				}else
-					Assest.soundfialed.play();
+					Assets.soundfialed.play();
 			}
 		});
 		BPaid.addListener(new ClickListener() {
 			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				if(NoAds.isChecked() && CrachGame.getDiamound()>= prixNoAds) {
-					Assest.soundBonus2.play();
+					Assets.soundBonus2.play();
 					CrachGame.addDiamound(-prixNoAds);
 					removeAds();
 				}
 				else if(NoAdsAndCoin.isChecked() && CrachGame.getDiamound()>= PrixNoAdsAndCoin) {
-					Assest.soundBonus3.play();
+					Assets.soundBonus3.play();
 					CrachGame.addCoin(1000);
 					CrachGame.addDiamound(-PrixNoAdsAndCoin);
 					removeAds();
 				}
 				else
-					Assest.soundfialed.play();
+					Assets.soundfialed.play();
 			}
 		});
 		BCollect.addListener(new ClickListener() {
 			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				watchAds.CollectDiamond();
 			}
 		});
         BXPaid.addListener(new ClickListener() {
 			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				if(BXp2.isChecked() && CrachGame.getDiamound()>= prixXp2 && CrachGame.getXP_Boost(0)+CrachGame.getXP_Boost(1)+CrachGame.getXP_Boost(2) == 0) {
-					Assest.soundBonus1.play();
+					Assets.soundBonus1.play();
 					CrachGame.setXP_Boost(0, 7200);
 					CrachGame.addLife(10);
 					CrachGame.addDiamound(-prixXp2);
 					}
 				else if(BXp3.isChecked() && CrachGame.getDiamound()>= prixXp3 && CrachGame.getXP_Boost(1)+CrachGame.getXP_Boost(2) == 0) {
-					Assest.soundBonus1.play();
+					Assets.soundBonus1.play();
 					CrachGame.setXP_Boost(0, 0);
 					CrachGame.setXP_Boost(1, 10800);
 					CrachGame.addLife(10);
 					CrachGame.addDiamound(-prixXp3);
 				}
 				else if(BXp6.isChecked() && CrachGame.getDiamound()>= prixXp6 && CrachGame.getXP_Boost(2) == 0) {
-					Assest.soundBonus1.play();
+					Assets.soundBonus1.play();
 					CrachGame.setXP_Boost(0, 0);
 					CrachGame.setXP_Boost(1, 0);
 					CrachGame.setXP_Boost(2, 14400);
@@ -303,7 +303,7 @@ public class Shop extends Table{
 					CrachGame.addDiamound(-prixXp6);
 				}
 				else
-					Assest.soundfialed.play();
+					Assets.soundfialed.play();
 			}
 		});		
     }

@@ -13,7 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.utils.Align;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public  class DialogGame extends Dialog{
 	protected Button Close;
@@ -25,10 +25,10 @@ public  class DialogGame extends Dialog{
 	}
 	
 	public void addScore(int score) {
-		 getContentTable().add(Assest.StringDialog.getString("score"),"inSqure").width(200).getTable().add(""+score, "inSqure").prefWidth(150).expandX().right().row();
+		 getContentTable().add(Assets.jsonStringDialog.getString("score"),"inSqure").width(200).getTable().add(""+score, "inSqure").prefWidth(150).expandX().right().row();
 	}
 	public void addRecord(int record) {
-		getContentTable().add(Assest.StringDialog.getString("record"),"inSqure").width(200).getTable().add(""+record, "inSqure").prefWidth(150).expandX().right().row();
+		getContentTable().add(Assets.jsonStringDialog.getString("record"),"inSqure").width(200).getTable().add(""+record, "inSqure").prefWidth(150).expandX().right().row();
 	}
 	public void addCoin(int coin) {
 		getContentTable().add(String.format("%04d", coin),"Lcoin").colspan(2).center().size(200,70).row();
@@ -38,18 +38,18 @@ public  class DialogGame extends Dialog{
 	}
 	
 	public DialogGame(String title,String Style,String Titlebackground,boolean Bclose) {
-		super(title, Assest.Style, Style);
+		super(title, Assets.skinStyle, Style);
         this.getTitleLabel().setAlignment(Align.center );
         if(Titlebackground != null) 
-        	super.getTitleLabel().getStyle().background =  Assest.Style.getDrawable(Titlebackground);
+        	super.getTitleLabel().getStyle().background =  Assets.skinStyle.getDrawable(Titlebackground);
         	      
         if(Bclose) {
-         Close = new Button(Assest.Style, "Close_BTN");
+         Close = new Button(Assets.skinStyle, "Close_BTN");
 		 this.getTitleTable().add(Close).right().pad(5,-20,0,-70).maxSize(70);
 			Close.addListener(new ClickListener() {
 				@Override
 				public void clicked(InputEvent event, float x, float y) {
-					Assest.buttonClick2.play();
+					Assets.buttonClick2.play();
 					Close();
 					hide();
 				}
@@ -79,7 +79,7 @@ public  class DialogGame extends Dialog{
 		int nStar;
 		Image star[] = new Image[3];
 		public Stars(int nstar) {	
-			super(Assest.Style);
+			super(Assets.skinStyle);
 			this.nStar =nstar;
 			this.star[0] = new Image(getDrawableStar(0));
 			this.star[1] = new Image(getDrawableStar(0));
@@ -103,7 +103,7 @@ public  class DialogGame extends Dialog{
 				@Override
 				public void run() {
 					if(nStar>0) {
-					if(sound) Assest.soundCrystal.play();
+					if(sound) Assets.soundCrystal.play();
 					star[indexStar].setDrawable(getDrawableStar(nStar));
 					if(indexStar<2)
 						table.addAction(addStar( indexStar+1, nStar-2,delayT,sound));

@@ -12,7 +12,7 @@ import aurelienribon.tweenengine.BaseTween;
 import aurelienribon.tweenengine.Timeline;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenCallback;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Explosion;
 import crach.stage.game.entity.Pickups.Crystal;
@@ -20,7 +20,7 @@ import crach.stage.game.utils.SpriteAccessor;
 import net.dermetfan.gdx.physics.box2d.Box2DUtils;
 
 public abstract class Crate extends Box{
-	private static Animation<TextureRegion> destoryCrate =  Assest.impact_asteroid_a;
+	private static Animation<TextureRegion> destoryCrate =  Assets.animationImpactAsteroidA;
 	private final static float deathDuration = 1;
 	private float dt_time ;
 	private float life = 35;
@@ -61,12 +61,12 @@ public abstract class Crate extends Box{
 	@Override
 	public void Hit(Explosion otherEntity) {
 		life -= otherEntity.getDanger();
-		Assest.impact_Object_wall.play(getVolume(),1,getPan());
+		Assets.soundImpactObjectWall.play(getVolume(),1,getPan());
 	}
 	
 	@Override
 	public void DeathEntity() {
-		Assest.hit_crate_heavy.play(getVolume(),1,getPan());
+		Assets.soundHitCrateHeavy.play(getVolume(),1,getPan());
 		creator.addExper(5);
 
     	Destore= true;
@@ -108,7 +108,7 @@ public abstract class Crate extends Box{
 
 		@Override
 		public void setTexture() {
-			setTexture(Assest.Crate.get(2));
+			setTexture(Assets.textureCrates.get(2));
 		}
 
 		@Override
@@ -125,7 +125,7 @@ public abstract class Crate extends Box{
 
 		@Override
 		public void setTexture() {
-			setTexture(Assest.Crate.get(1));
+			setTexture(Assets.textureCrates.get(1));
 		}
 
 		@Override
@@ -141,7 +141,7 @@ public abstract class Crate extends Box{
 
 		@Override
 		public void setTexture() {
-			setTexture(Assest.Crate.get(0));
+			setTexture(Assets.textureCrates.get(0));
 		}
 
 		@Override

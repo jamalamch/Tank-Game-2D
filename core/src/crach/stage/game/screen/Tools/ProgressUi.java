@@ -12,7 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.StringBuilder;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public class ProgressUi extends ProgressBar{
 	private float position;
@@ -93,12 +93,12 @@ public class ProgressUi extends ProgressBar{
 		}
 		public ProgressText(float max, Skin skin, String styleName,Color color) {
 			this(max, skin, styleName,true);
-	    	cache = new BitmapFontCache(Assest.Style.getFont("font-small"));
+	    	cache = new BitmapFontCache(Assets.skinStyle.getFont("font-small"));
 			FontColor = color;
 		}
 		 public ProgressText(float max, Skin skin, String styleName,Color color,boolean isSample) {
 			 this(max, skin, styleName,isSample);
-			 cache = new BitmapFontCache(Assest.Style.getFont("font-small"));
+			 cache = new BitmapFontCache(Assets.skinStyle.getFont("font-small"));
 			 FontColor = color;
 		 }
 		@Override

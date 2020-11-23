@@ -86,11 +86,10 @@ public class MapsLoader extends TmxMapLoader implements Disposable{
 			texture.dispose();
 		
 	}
-	
-	
+
 	/***************************************************************************/
 	
-	private Array<FileHandle> getDependencyFileHandles (FileHandle tmxFile) {
+	protected Array<FileHandle> getDependencyFileHandles (FileHandle tmxFile) {
 		Array<FileHandle> fileHandles = new Array<FileHandle>();
 
 		// TileSet descriptors

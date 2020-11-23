@@ -9,7 +9,7 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.Shape;
 
 import net.dermetfan.gdx.math.MathUtils;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 
@@ -21,7 +21,7 @@ public class Goal extends Object {
 
     @Override
     public void setTexture() {
-        setRegion(Assest.Football_Goals.get(com.badlogic.gdx.math.MathUtils.random(1)));
+        setRegion(Assets.textureFootballGoals.get(com.badlogic.gdx.math.MathUtils.random(1)));
         setOriginCenter();
         setZIndex(Zindex.ZindexDoor);
     }

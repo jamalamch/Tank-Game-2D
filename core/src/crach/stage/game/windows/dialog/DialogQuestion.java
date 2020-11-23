@@ -5,7 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public abstract class DialogQuestion extends DialogGame{
     private Button Yes,No;
@@ -29,7 +29,7 @@ public abstract class DialogQuestion extends DialogGame{
 	}
 	@Override
 	protected void result(Object object) {
-		Assest.buttonClick1.play();
+		Assets.buttonClick1.play();
 		if((Boolean)object)
 			Accepte();
 		else

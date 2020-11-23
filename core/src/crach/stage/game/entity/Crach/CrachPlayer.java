@@ -16,7 +16,7 @@ import net.dermetfan.gdx.physics.box2d.RotationController;
 import aurelienribon.tweenengine.BaseTween;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenCallback;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.control.ControuleClass;
 import crach.stage.game.entity.Entity;
@@ -117,13 +117,13 @@ public class CrachPlayer extends Crach {
 		this.fire = 10/((float)hanger.getRefire());
 	}
 	public void reLifeUpdate() {
-		Assest.upgradSound.play();
+		Assets.soundUpgrade.play();
 		this.life = 150 + hanger.getEnergy();
 		tweenFadeInt();
 		creator.updatehubHealth();
 	}
 	public void UpgradCrach() {
-			Assest.upgradSound.play();
+			Assets.soundUpgrade.play();
 			this.Vitass = hanger.getSpeed()*6;
 			this.Force= (hanger.getProtection()/10) + 10;
 			this.fire = 10f/((float)hanger.getRefire()) - 0.3f;
@@ -228,7 +228,7 @@ public class CrachPlayer extends Crach {
     	
     }
     public void TireFire() {
-    	Assest.playerattack.play();
+    	Assets.soundPlayerAttack.play();
     	creator.addEntity(Shell.createShell(typeShell, getBody().getPosition(), b2body.getAngle(), Force, Shell.maskShell.playershot));
         actGunPoss(20,30);
         addSmokeFire();

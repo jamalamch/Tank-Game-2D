@@ -10,7 +10,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 import crach.stage.game.entity.Crach.CrachPlayer;
@@ -117,7 +117,7 @@ public abstract class Door extends Entity {
 	}
 
 	protected void openDoor() {
-		Assest.soundDoor.play();
+		Assets.soundDoor.play();
 		toOpen = true;
        switch (DerType) {
    	case Top:

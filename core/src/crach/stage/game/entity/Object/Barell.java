@@ -13,15 +13,15 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 
 import aurelienribon.tweenengine.Timeline;
 import aurelienribon.tweenengine.Tween;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Explosion;
 import crach.stage.game.utils.SpriteAccessor;
 import net.dermetfan.gdx.physics.box2d.Box2DUtils;
 
  public abstract  class Barell extends M_Circle implements Explosion{
-	private static Animation<TextureRegion> destoryBarell =  Assest.fire_smoke;
-	private static Animation<TextureRegion> ExplosionBarell = Assest.Sprite_Effects_Explosion;
+	private static Animation<TextureRegion> destoryBarell =  Assets.animationFireSmoke;
+	private static Animation<TextureRegion> ExplosionBarell = Assets.spriteEffectsExplosion;
 	private Animation<TextureRegion> animationBarell = destoryBarell;
 	private float RATA = 2;
 	
@@ -74,7 +74,7 @@ import net.dermetfan.gdx.physics.box2d.Box2DUtils;
 	}
 	@Override
 	public void Hit(Explosion otherEntity) {
-		Assest.explos_Barell_secret.play(getVolume(),1,getPan());
+		Assets.soundExplosBarellSecret.play(getVolume(),1,getPan());
 		life -= otherEntity.getDanger();
 	}
 	
@@ -105,7 +105,7 @@ import net.dermetfan.gdx.physics.box2d.Box2DUtils;
 	}
 	
 	private void AddZoneOfDestor() {
-		Assest.destroy_circular_blade.play(getVolume(0.5f),1,getPan());
+		Assets.soundDestroyCircularBlade.play(getVolume(0.5f),1,getPan());
 		
 		Explosion = true;
         CircleShape shape = new CircleShape();
@@ -136,7 +136,7 @@ public static class Barell1 extends Barell{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.Barell.get(0));
+		setTexture(Assets.textureBarells.get(0));
 	}
 
 
@@ -157,7 +157,7 @@ public static class Barell2 extends Barell{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.Barell.get(1));
+		setTexture(Assets.textureBarells.get(1));
 	}
 
 	@Override
@@ -177,7 +177,7 @@ public static class Barell3 extends Barell{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.Barell.get(2));
+		setTexture(Assets.textureBarells.get(2));
 	}
 
 	@Override

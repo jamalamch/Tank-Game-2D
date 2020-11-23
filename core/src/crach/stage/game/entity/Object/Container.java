@@ -3,7 +3,7 @@ package crach.stage.game.entity.Object;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.math.MathUtils;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public  class Container extends Box{
 
@@ -16,16 +16,16 @@ public  class Container extends Box{
 		int random = MathUtils.random(3);
 		switch (random) {
 		case 0:
-			setTexture(Assest.Container_A);
+			setTexture(Assets.textureContainerA);
 			break;
 		case 1:
-			setTexture(Assest.Container_B);
+			setTexture(Assets.textureContainerB);
 			break;
 		case 2:
-			setTexture(Assest.Container_C);
+			setTexture(Assets.textureContainerC);
 			break;
 		case 3:
-			setTexture(Assest.Container_D);
+			setTexture(Assets.textureContainerD);
 			break;
 		}
 	}

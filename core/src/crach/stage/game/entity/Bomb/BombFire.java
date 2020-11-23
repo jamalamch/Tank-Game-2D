@@ -8,7 +8,7 @@ import com.badlogic.gdx.math.Vector2;
 
 import box2dLight.Light;
 import box2dLight.PointLight;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 
 public class BombFire extends TrapBomb{
@@ -29,7 +29,7 @@ public class BombFire extends TrapBomb{
 	
 	@Override
 	public void setTexture() {
-		setTexture(Assest.blueish_flame_up, Assest.Sprite_Fire_Shots_Flame);
+		setTexture(Assets.animationBlueishFlameUp, Assets.spriteFireShotsFlame);
 	}
 	
 	
@@ -57,7 +57,7 @@ public class BombFire extends TrapBomb{
 	
 	@Override
 	protected void starAttack() {
-		Assest.Effects_flam.get(MathUtils.random(3)).play(getVolume(),1,getPan());
+		Assets.Effects_flam.get(MathUtils.random(3)).play(getVolume(),1,getPan());
 		attack = true;
 		pause =false;
 		tweenToAttack();

@@ -2,7 +2,7 @@ package crach.stage.game.entity.Bomb;
 
 import com.badlogic.gdx.maps.MapObject;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.entity.Entity;
 
 public class Bomb2  extends Bomb{
@@ -14,7 +14,7 @@ public class Bomb2  extends Bomb{
 	}
 	@Override
 	public void setTexture() {
-		setTexture(Assest.Bomb_Idle_B, Assest.Bomb_Triggering_B, Assest.Bomb_Explosion_B);
+		setTexture(Assets.animationBombIdleB, Assets.animationBombTriggeringB, Assets.animationBombExplosionB);
 	}
 	@Override
 	public void update(float dt) {

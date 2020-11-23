@@ -1,7 +1,7 @@
 package crach.stage.game.entity.Shell;
 
 import com.badlogic.gdx.math.Vector2;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public class Sniper_Shell extends Shell{
 
@@ -11,7 +11,7 @@ public class Sniper_Shell extends Shell{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.Sniper_Shell);
+		setTexture(Assets.textureSniperShell);
 	}
 
 }

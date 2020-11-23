@@ -8,7 +8,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.screen.MenuUI;
 
 public class ModeGame extends Table{
@@ -18,14 +18,14 @@ public class ModeGame extends Table{
        public ModeGame(MenuUI Menu) {
     	   this.setVisible(false);
     	   this.menu = Menu;
-    	   btn1vs1 = new Button(Assest.Style, "PVP_BTN");
-    	   btnmission = new Button(Assest.Style, "PTP_BTN");
-		   btdeathmatch = new Button(Assest.Style, "Deathmatch_BTN");
-    	   btnFoot = new Button(Assest.Style, "Football_BTN");
-    	   l1Vs1 = new Label(Assest.StringModeGame.getString("1vs1"), Assest.Style, "inSqure");
-    	   lMission = new Label(Assest.StringModeGame.getString("mission"), Assest.Style, "inSqure");
-		   ldeathmatch = new Label(Assest.StringModeGame.getString("Deathmatch"), Assest.Style, "inSqure");
-    	   lFoot = new Label(Assest.StringModeGame.getString("Football"), Assest.Style, "inSqure");
+    	   btn1vs1 = new Button(Assets.skinStyle, "PVP_BTN");
+    	   btnmission = new Button(Assets.skinStyle, "PTP_BTN");
+		   btdeathmatch = new Button(Assets.skinStyle, "Deathmatch_BTN");
+    	   btnFoot = new Button(Assets.skinStyle, "Football_BTN");
+    	   l1Vs1 = new Label(Assets.jsonStringModeGame.getString("1vs1"), Assets.skinStyle, "inSqure");
+    	   lMission = new Label(Assets.jsonStringModeGame.getString("mission"), Assets.skinStyle, "inSqure");
+		   ldeathmatch = new Label(Assets.jsonStringModeGame.getString("Deathmatch"), Assets.skinStyle, "inSqure");
+    	   lFoot = new Label(Assets.jsonStringModeGame.getString("Football"), Assets.skinStyle, "inSqure");
     	   addContent();
 		   addListener();
 		   
@@ -51,33 +51,33 @@ public class ModeGame extends Table{
             add(lMission);
             add(ldeathmatch);
             add(lFoot);
-            setBackground(Assest.Style.getDrawable("Decor_Part_Side_Table"));
+            setBackground(Assets.skinStyle.getDrawable("Decor_Part_Side_Table"));
             pack();
        }
        private void addListener() {
 		   btn1vs1.addListener(new ClickListener() {
 			   @Override
 			   public void clicked(InputEvent event, float x, float y) {
-				   Assest.checkOnClick.play();
+				   Assets.checkOnClick.play();
 				   btn1vs1.setChecked(false);
 			   }});
 		   btnmission.addListener(new ClickListener() {
 			   @Override
 			   public void clicked(InputEvent event, float x, float y) {
-				   Assest.checkOnClick.play();
+				   Assets.checkOnClick.play();
 				   menu.getSelectStage().Open();
 				   btnmission.setChecked(false);
 			   }});
 		   btdeathmatch.addListener(new ClickListener() {
 			   @Override
 			   public void clicked(InputEvent event, float x, float y) {
-				   Assest.checkOnClick.play();
+				   Assets.checkOnClick.play();
 				   btdeathmatch.setChecked(false);
 			   }});
 		   btnFoot.addListener(new ClickListener() {
 			   @Override
 			   public void clicked(InputEvent event, float x, float y) {
-				   Assest.checkOnClick.play();
+				   Assets.checkOnClick.play();
 				   menu.getSelectMatch().Open();
 				   btnFoot.setChecked(false);
 			   }});

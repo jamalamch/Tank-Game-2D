@@ -20,7 +20,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Scaling;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.screen.Tools.ProgressUi;
 import crach.stage.game.screen.Tools.ViewTank;
@@ -52,7 +52,7 @@ public class Hanger extends WindowsGames{
 	
 	@SuppressWarnings("unchecked")
 	public Hanger(Button paButton) {
-		super(Assest.StringHanger.getString("title"));
+		super(Assets.jsonStringHanger.getString("title"));
         this.getTitleTable().getCell(getTitleLabel()).maxSize(600,100).padBottom(30);
 		this.parent = paButton;
         GroupGun = new Table();
@@ -61,17 +61,17 @@ public class Hanger extends WindowsGames{
         StackScrll = new Stack();
         viewTank = new ViewTank();
              
-        LHpHull = new Label("", Assest.Style, "inSqure");
-        LSpeedHull = new Label("", Assest.Style, "inSqure");
-        LArmorHull = new Label("", Assest.Style, "inSqure");
-        LDamageHull = new Label("", Assest.Style, "inSqure");
+        LHpHull = new Label("", Assets.skinStyle, "inSqure");
+        LSpeedHull = new Label("", Assets.skinStyle, "inSqure");
+        LArmorHull = new Label("", Assets.skinStyle, "inSqure");
+        LDamageHull = new Label("", Assets.skinStyle, "inSqure");
         
-        BcolorA = new Button(Assest.Style, "Color_A_BTN");
-        BcolorB = new Button(Assest.Style, "Color_B_BTN");
-        BcolorC = new Button(Assest.Style, "Color_C_BTN");
-        BcolorD = new Button(Assest.Style, "Color_D_BTN");
+        BcolorA = new Button(Assets.skinStyle, "Color_A_BTN");
+        BcolorB = new Button(Assets.skinStyle, "Color_B_BTN");
+        BcolorC = new Button(Assets.skinStyle, "Color_C_BTN");
+        BcolorD = new Button(Assets.skinStyle, "Color_D_BTN");
         
-        ColorI = new Image(Assest.Style, "Icon/Color_Icon");
+        ColorI = new Image(Assets.skinStyle, "Icon/Color_Icon");
 
         SGunA = new SelectItems(TypeItem.Gun_A);
         SGunB =  new SelectItems(TypeItem.Gun_B); 
@@ -116,7 +116,7 @@ public class Hanger extends WindowsGames{
 			Items.addActor(items);
 			groupItems[i].add(items);
 		}
-		ScrllGun[i] =new ScrollPane(Items, Assest.Style);
+		ScrllGun[i] =new ScrollPane(Items, Assets.skinStyle);
 		ScrllGun[i].setScrollingDisabled(true, false);
 		ScrllGun[i].setScrollBarPositions(true,false);
 		ScrllGun[i].setVariableSizeKnobs(false);
@@ -139,15 +139,15 @@ public class Hanger extends WindowsGames{
         defaults().minSize(sizeR1).center().space(spaceR1);
         columnDefaults(0).prefSize(90);
 	    add().size(55).row();
-        add(new Image(Assest.Style, "Icon/HP_Icon")).spaceRight(10);add(LHpHull).prefSize(200,90);
+        add(new Image(Assets.skinStyle, "Icon/HP_Icon")).spaceRight(10);add(LHpHull).prefSize(200,90);
         
         add(viewTank).prefSize(300,heightC3+30).padBottom(-padC3).padTop(-30);
         add(StackScrll).prefSize(250,heightC4+30).padBottom(-padC4).padTop(-30);
         add(GroupGun).size(200,heightC4+60).padBottom(-padC4).padTop(-60).padRight(20).fill().row();
 
-        add(new Image(Assest.Style, "Icon/Speed_Icon")).spaceRight(10);add(LSpeedHull).prefWidth(200).row();
-        add(new Image(Assest.Style, "Icon/Armor_Icon")).spaceRight(10);add(LArmorHull).prefWidth(200).row();
-        add(new Image(Assest.Style, "Icon/Damage_Icon")).spaceRight(10);add(LDamageHull).prefWidth(200).row();
+        add(new Image(Assets.skinStyle, "Icon/Speed_Icon")).spaceRight(10);add(LSpeedHull).prefWidth(200).row();
+        add(new Image(Assets.skinStyle, "Icon/Armor_Icon")).spaceRight(10);add(LArmorHull).prefWidth(200).row();
+        add(new Image(Assets.skinStyle, "Icon/Damage_Icon")).spaceRight(10);add(LDamageHull).prefWidth(200).row();
         add(SelectColor).colspan(3).spaceTop(spaceR4).prefHeight(sizeR4).fillX().right();
         pack();
 	}
@@ -156,7 +156,7 @@ public class Hanger extends WindowsGames{
 		super.AddListener();
   		ClickListener C = new ClickListener() {
   			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-  				Assest.checkOnClick.play();
+  				Assets.checkOnClick.play();
   				VisibleTable();
   			}
   		};
@@ -165,7 +165,7 @@ public class Hanger extends WindowsGames{
   		
   		C = new ClickListener() {
   			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-  				Assest.checkOnClick.play();
+  				Assets.checkOnClick.play();
   				updateTrackColor();
   			}
   		};
@@ -178,9 +178,9 @@ public class Hanger extends WindowsGames{
   			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
   				final Items items = ((Items) (event.getListenerActor()));
   				if(items.isDisabled()) {				
-  	  				Assest.checkOfClick.play();
-					addActor(new DialogQuestion(Assest.StringHanger.getString("dialoge"),
-							Assest.StringHanger.getString("dialogeM") + " \n" + items.code + "" + items.type + " $"
+  	  				Assets.checkOfClick.play();
+					addActor(new DialogQuestion(Assets.jsonStringHanger.getString("dialoge"),
+							Assets.jsonStringHanger.getString("dialogeM") + " \n" + items.code + "" + items.type + " $"
 									+ items.prix + "") {
 						@Override
 						public void Refuse() {
@@ -189,17 +189,17 @@ public class Hanger extends WindowsGames{
 						public void Accepte() {
 							if (CrachGame.getCoin() > items.prix) {
 								//Assest.soundCoin.get(MathUtils.random(1)).play();
-								Assest.soundPurchase.play();
+								Assets.soundPurchase.play();
 								items.setDisabled(false);
 								setPaid(items.type, items.code);
 								CrachGame.addCoin(-items.prix);
 							}
 							else 
-								Assest.soundErrour.play();
+								Assets.soundErrour.play();
 						}
 					});
   				} else { 	
-  	  				Assest.checkOnClick.play();
+  	  				Assets.checkOnClick.play();
   					updateTrak();
   				}
   			}
@@ -270,16 +270,16 @@ public class Hanger extends WindowsGames{
         TextureRegion itemTexture = null;
         switch (type) {
         case Gun_A:
-        	itemTexture = Assest.Gun_A.get(code);
+        	itemTexture = Assets.textureGunAs.get(code);
         	break;
         case Gun_B:
-        	itemTexture = Assest.Gun_B.get(color).get(code);
+        	itemTexture = Assets.textureGunBs.get(color).get(code);
         	break;
         case Hull:
-        	itemTexture  = Assest.Hull.get(color).get(code);
+        	itemTexture  = Assets.textureHulls.get(color).get(code);
         	break;
         case Track:
-        	itemTexture  = Assest.Track_A.get(code);
+        	itemTexture  = Assets.textureTrackAs.get(code);
         	break;
 		} 
 		return new TextureRegionDrawable(itemTexture);
@@ -287,13 +287,13 @@ public class Hanger extends WindowsGames{
     public static int sizeByItems(TypeItem tyItem) {
     	switch (tyItem) {
     	case Gun_A:
-    		return Assest.Gun_A.size;
+    		return Assets.textureGunAs.size;
     	case Gun_B:
-    		return Assest.Gun_B.get(0).size;
+    		return Assets.textureGunBs.get(0).size;
     	case Hull:
-    		return Assest.Hull.get(0).size;
+    		return Assets.textureHulls.get(0).size;
     	case Track:
-    		return Assest.Track_A.size;
+    		return Assets.textureTrackAs.size;
     	}
     	return 0;
     }
@@ -329,7 +329,7 @@ public class Hanger extends WindowsGames{
 		private TypeItem type;
 		
         public Items(int Code,TypeItem type) {
-           super(Assest.Style, "items");
+           super(Assets.skinStyle, "items");
            this.code = Code;
            this.type = type;
            this.prix = getDataOfItems(Code, type, "prix");
@@ -341,8 +341,8 @@ public class Hanger extends WindowsGames{
         defaults().minSize(30).pad(2);
         row();
         add(new Image(getDrawableItemTank(type,code,0),Scaling.fit)).prefWidth(160).row();
-	    LabelStyle SCo = new LabelStyle(Assest.Style.get("extra", LabelStyle.class));
-	    SCo.fontColor = new Color(Assest.Style.getColor("CoinColor"));
+	    LabelStyle SCo = new LabelStyle(Assets.skinStyle.get("extra", LabelStyle.class));
+	    SCo.fontColor = new Color(Assets.skinStyle.getColor("CoinColor"));
 	    addProgressbar();
         if(!isPaid(type, code)) {
         	add(new Label("$"+prix, SCo)).padBottom(-20).bottom();
@@ -353,13 +353,13 @@ public class Hanger extends WindowsGames{
     	private int getDataOfItems(int Code,TypeItem type,String val) {
         	switch (type) {
         	case Gun_A:
-        		return Assest.DataGunA.get(Code).getInt(val); 
+        		return Assets.jsonDataGunA.get(Code).getInt(val);
         	case Gun_B:
-        		return Assest.DataGunB.get(Code).getInt(val);
+        		return Assets.jsonDataGunB.get(Code).getInt(val);
         	case Hull:
-        		return Assest.DataHull.get(Code).getInt(val); 
+        		return Assets.jsonDataHull.get(Code).getInt(val);
         	case Track:
-        		return Assest.DataTrack.get(Code).getInt(val);
+        		return Assets.jsonDataTrack.get(Code).getInt(val);
 			}
         	return 0;
     	}
@@ -371,7 +371,7 @@ public class Hanger extends WindowsGames{
     		if(this.refire != 0) add(setProgressValeur(this.refire, "refire","C",Color.GOLDENROD)).row();
     	}
     	private ProgressUi.ProgressText setProgressValeur(int value,String text,String typrBro,Color color) {
-    		ProgressUi.ProgressText textPro = new ProgressUi.ProgressText(100, Assest.Style, typrBro+"-horizontal", color);
+    		ProgressUi.ProgressText textPro = new ProgressUi.ProgressText(100, Assets.skinStyle, typrBro+"-horizontal", color);
     		textPro.setTextAndValue(value, text);
     		return textPro;
     	}
@@ -381,7 +381,7 @@ public class Hanger extends WindowsGames{
 		private final int codeSelect = 2;
 		private  TypeItem type;
 		public SelectItems(TypeItem type) {
-	        super(Assest.Style, "SelectItems");
+	        super(Assets.skinStyle, "SelectItems");
 	        this.type=type;
 	        row();
 	        add(new Image(getDrawableItemTank(type,codeSelect,0),Scaling.fit));

@@ -2,7 +2,7 @@ package crach.stage.game.entity.Pickups;
 
 import com.badlogic.gdx.maps.MapObject;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.entity.Entity;
 
 public class Repair extends Pickup{
@@ -13,7 +13,7 @@ public class Repair extends Pickup{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.repair);
+		setTexture(Assets.animationRepair);
 	}
 	@Override
 	public void DeathEntity() {

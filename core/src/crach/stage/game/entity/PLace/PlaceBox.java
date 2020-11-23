@@ -8,7 +8,7 @@ import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.joints.PrismaticJointDef;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 import crach.stage.game.entity.Object.Box;
@@ -49,7 +49,7 @@ public class PlaceBox extends Place {
         b2body.setUserData(this);
 	}
 	public void setTexture() {
-		setRegion(Assest.Platform);
+		setRegion(Assets.texturePlatform);
         setOriginCenter();
         setZIndex(Zindex.ZindexPlace);
 	}
@@ -70,7 +70,7 @@ public class PlaceBox extends Place {
 		if (otherEntity instanceof Box) {
 			if (interaction != Interaction.BOX)
 				setInteraction(Interaction.BOX, otherEntity);
-			setRegion(Assest.PlatformActive0);
+			setRegion(Assets.texturePlatformActive0);
 		}
 
 	}
@@ -80,7 +80,7 @@ public class PlaceBox extends Place {
 		if (otherEntity instanceof Box) {
 			if (interaction == Interaction.BOX && currentJoint == null) {
 				setInteraction(Interaction.NONE, null);
-				setRegion(Assest.Platform);
+				setRegion(Assets.texturePlatform);
 			}
 		}
 

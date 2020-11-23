@@ -1,11 +1,11 @@
 package crach.stage.game.windows;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public class Help extends WindowsGames{
 
 	public Help() {
-		super(Assest.StringHelp.getString("title"));
+		super(Assets.jsonStringHelp.getString("title"));
 		addContent();
 		AddListener();
 	}

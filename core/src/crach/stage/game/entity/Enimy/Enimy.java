@@ -19,7 +19,7 @@ import aurelienribon.tweenengine.BaseTween;
 import aurelienribon.tweenengine.Timeline;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenCallback;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.control.ControuleEnimy;
 import crach.stage.game.entity.Entity;
@@ -32,7 +32,7 @@ import net.dermetfan.gdx.physics.box2d.PositionController;
 import net.dermetfan.gdx.physics.box2d.RotationController;
 
 public class Enimy extends Entity implements InZone{   
-	private final static Animation<TextureRegion> destroyAnimation =  Assest.Sprite_Effects_Explosion;
+	private final static Animation<TextureRegion> destroyAnimation =  Assets.spriteEffectsExplosion;
     protected long soundMoved ;
 
 	protected TextureRegion trank, trank1, trank2;
@@ -114,21 +114,21 @@ public class Enimy extends Entity implements InZone{
 	}
     @Override
     public void setTexture() {
-    	trank1 =trank=Assest.Enimycrach.get(codeEnimy);
-    	trank2 =Assest.Enimycrach2.get(codeEnimy);
+    	trank1 =trank= Assets.textureEnimyCrach.get(codeEnimy);
+    	trank2 = Assets.textureEnimyCrach2.get(codeEnimy);
         setRegion(trank);
         setZIndex(Zindex.ZindexEnimy);
     }
 	public void updateParameter() {
 		
-		this.speed = Assest.DataEnimy.get(codeEnimy).getInt("vitass")-10;
-		this.force = Assest.DataEnimy.get(codeEnimy).getInt("force");
-		this.rotation = Assest.DataEnimy.get(codeEnimy).getFloat("rotation");
-		this.fire = Assest.DataEnimy.get(codeEnimy).getInt("refire");
-		this.life = Assest.DataEnimy.get(codeEnimy).getInt("life");
+		this.speed = Assets.jsonDataEnimy.get(codeEnimy).getInt("vitass")-10;
+		this.force = Assets.jsonDataEnimy.get(codeEnimy).getInt("force");
+		this.rotation = Assets.jsonDataEnimy.get(codeEnimy).getFloat("rotation");
+		this.fire = Assets.jsonDataEnimy.get(codeEnimy).getInt("refire");
+		this.life = Assets.jsonDataEnimy.get(codeEnimy).getInt("life");
 		
-		soundMoved = Assest.movement.loop(0);
-		Assest.movement.pause(soundMoved);
+		soundMoved = Assets.movement.loop(0);
+		Assets.movement.pause(soundMoved);
 	}
     @Override
     public void update(float dt) {
@@ -177,7 +177,7 @@ public class Enimy extends Entity implements InZone{
     
     
 	public void tweenHitAnim() {
-		Assest.hit_Enimy_medium.play(getVolume(), 1, getPan());		
+		Assets.soundHitEnimyMedium.play(getVolume(), 1, getPan());
 		int flashAmount = 1;		
 		tweenFlash(this, flashAmount, invincibleTimer, new Color(1, 0.6f, 0.6f, 0.4f))
 		.end().start(creator.TWEEN_MANAGER);
@@ -199,14 +199,14 @@ public class Enimy extends Entity implements InZone{
 		.end().start(creator.TWEEN_MANAGER);
 	}
    	public void TireFire() {
-   		Assest.enemyhit.play(getVolume(), 1, getPan());
+   		Assets.soundEnemyHit.play(getVolume(), 1, getPan());
 		//creator.addEntity(new fireEnimy(b2body.getPosition(), b2body.getAngle(), force));
    		creator.addEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.maskShell.enimyshoet));
 	}
     @Override
     public void DeathEntity() {
-    	Assest.movement.stop(soundMoved);
-    	Assest.explosion_Enimy.play(getVolume(), 1, getPan());
+    	Assets.movement.stop(soundMoved);
+    	Assets.soundExplosionEnimy.play(getVolume(), 1, getPan());
 		creator.addExper((int)MathUtils.map(1,16,5,20,codeEnimy));
 
     	destore = true;
@@ -228,8 +228,8 @@ public class Enimy extends Entity implements InZone{
 		}
 		setRegion(trank);
 
-		Assest.movement.setPan(soundMoved, getPan(), getVolume(0.3f));
-		Assest.movement.setPitch(soundMoved, LinearVelocity + 0.8f);
+		Assets.movement.setPan(soundMoved, getPan(), getVolume(0.3f));
+		Assets.movement.setPitch(soundMoved, LinearVelocity + 0.8f);
 	}
     
     @Override
@@ -259,7 +259,7 @@ public class Enimy extends Entity implements InZone{
 	}
 	public void Starting() {
 		move =true;
-	    Assest.movement.resume(soundMoved);
+	    Assets.movement.resume(soundMoved);
 	}
 	@Override
 	public void Getting(Entity otherEntity) {

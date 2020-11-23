@@ -10,7 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Array;
 
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.screen.PlayScreen;
 import crach.stage.game.windows.dialog.WaitDowload;
@@ -22,7 +22,7 @@ public class SelectStageOnline extends WindowsGames {
     private ScrollPane Scrll;
 
     public SelectStageOnline(){
-        super(Assest.StringSelectStage.getString("title"));
+        super(Assets.jsonStringSelectStage.getString("title"));
         Stages = new ButtonGroup<StageOnline>();
         nameStage = CrachGame.getDownloadFiles().getListeNameFiles();
         if(nameStage.size>1)
@@ -57,7 +57,7 @@ public class SelectStageOnline extends WindowsGames {
         String Url ;
         String name;
         public StageOnline(String url){
-            super("D", Assest.Style, "stage");
+            super("D", Assets.skinStyle, "stage");
             this.Url = url;
             this.name = url.split("/")[1];
             this.addListener(new ClickListener(){
@@ -67,7 +67,7 @@ public class SelectStageOnline extends WindowsGames {
                         @Override
                         public void onSuccess() {
                             Gdx.app.log("Firebase","Success");
-                            CrachGame.getGdxGame().setScreen(new PlayScreen(Assest.loadMaps(this.getFile()),modeGame));
+                            CrachGame.getGdxGame().setScreen(new PlayScreen(Assets.loadMaps(this.getFile()),modeGame));
                         }
                         @Override
                         public void onFailure() {

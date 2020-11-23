@@ -16,7 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Stack;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 
 public class WatchAds extends Stack{
@@ -32,13 +32,13 @@ public class WatchAds extends Stack{
 		buttonGanCiamonds = new TextButton[6];
 		for(int i=0;i<6;i++) {
 			int Diamound = 10+i*5;
-			buttonGanCiamonds[i] = new TextButton(Diamound+"*",Assest.Style, "number");
+			buttonGanCiamonds[i] = new TextButton(Diamound+"*", Assets.skinStyle, "number");
 			buttonGanCiamonds[i].setUserObject(Diamound);
 			buttonGanCiamonds[i].setSize(50, 50);
 			buttonGanCiamonds[i].setDisabled(true);
 			buttonGanCiamonds[i].setTouchable(Touchable.disabled);
 		}
-		buttonPlayAds = new Button(Assest.Style, "PlayAds");
+		buttonPlayAds = new Button(Assets.skinStyle, "PlayAds");
 		
 		Table buttons = new Table();
 		buttons.padRight(progressWatchAds.bgRightWidth-25);
@@ -67,7 +67,7 @@ public class WatchAds extends Stack{
     	buttonPlayAds.addListener(new ClickListener() {
     		@Override
     		public void clicked(InputEvent event, float x, float y) {
-					Assest.buttonClick1.play();
+					Assets.buttonClick1.play();
 					CrachGame.getiActivityRequestHandler().showVideosAds(new Runnable() {
 						@Override
 						public void run() {
@@ -89,7 +89,7 @@ public class WatchAds extends Stack{
 		private Drawable bg,knobBefore;
 		public float bgLeftWidth,bgRightWidth,getTopHeight,BottomHeight,positionHeight,positionWidth;
 		public ProgressWatchAds() {
-			super(0, 6, 0.001f, false, Assest.Style, "WatchAds");
+			super(0, 6, 0.001f, false, Assets.skinStyle, "WatchAds");
 	    	ProgressBarStyle style = this.getStyle();
 			setAnimateDuration(1);
 	 		 bg =  style.background;
@@ -135,7 +135,7 @@ public class WatchAds extends Stack{
 				buttonGanCiamonds[value].addAction(Actions.delay(1, Actions.run(new Runnable() {
 					@Override
 					public void run() {
-						Assest.soundWatchAds.get(value).play();
+						Assets.soundWatchAds.get(value).play();
        				    buttonGanCiamonds[value].setDisabled(false);
 					}
 				})));
@@ -148,7 +148,7 @@ public class WatchAds extends Stack{
 			return Actions.run(new Runnable() {
 				@Override
 				public void run() {
-					Assest.soundCrystal.play();
+					Assets.soundCrystal.play();
                	 buttonGanCiamonds[value].setDisabled(true);
                	 buttonGanCiamonds[value].setChecked(false);
                	 CrachGame.addDiamound((Integer) buttonGanCiamonds[value].getUserObject());

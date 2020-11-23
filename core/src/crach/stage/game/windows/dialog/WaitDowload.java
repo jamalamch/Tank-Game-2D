@@ -6,7 +6,7 @@ import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.DownloadFiles;
 import crach.stage.game.screen.Tools.ProgressUi;
@@ -19,12 +19,12 @@ public abstract class WaitDowload extends DialogGame {
     private boolean isHide;
 
     public WaitDowload(String FileUrl) {
-        super(Assest.StringDialog.getString("dowload"),"special-dialog2",null,false);
+        super(Assets.jsonStringDialog.getString("dowload"),"special-dialog2",null,false);
         text(new Label("File :" +FileUrl, getSkin(), "font-small", Color.SKY)).bottom().padTop(200).padBottom(50);
         fileToDownload = CrachGame.getDownloadFiles().getFile(FileUrl);
     }
     public void addPrgress(Long Max){
-        progressDowload = new ProgressUi(Max,Assest.Style,"B-horizontal",true);
+        progressDowload = new ProgressUi(Max, Assets.skinStyle,"B-horizontal",true);
         getContentTable().add(progressDowload).size(200,30).center();
         getContentTable().pack();
     }

@@ -13,7 +13,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 import net.dermetfan.gdx.physics.box2d.RotationController;
@@ -116,7 +116,7 @@ public abstract class BombGunShell extends Bomb{
 	@Override
 	public void DeathEntity() {
 		super.DeathEntity();
-		Assest.Gun_Motor.stop(soundMotor);
+		Assets.soundGunMotor.stop(soundMotor);
 		
 		Explosion = false;
 		b2body.setLinearVelocity(0, 0);
@@ -149,7 +149,7 @@ public abstract class BombGunShell extends Bomb{
 	
     public void UpdateToDeplace(Vector2 toPosion) {
     		UpdateToDeplace(toPosion, getAngelToPosion(b2body.getWorldCenter(),toPosion));
-    		Assest.Gun_Motor.setPan(soundMotor,getPan() ,getVolume(0.2f));
+    		Assets.soundGunMotor.setPan(soundMotor,getPan() ,getVolume(0.2f));
     }
     public float getAngelToPosion(Vector2 InPosiotion,Vector2 toPosion) {
     	Vector2 chemain = new Vector2(toPosion);
@@ -165,7 +165,7 @@ public abstract class BombGunShell extends Bomb{
 
 		public A(Vector2 posiVector, Body target) {
 			super(posiVector, target,30,60,30,3);
-	 		soundMotor = Assest.Gun_Motor.loop(getVolume(0.2f));
+	 		soundMotor = Assets.soundGunMotor.loop(getVolume(0.2f));
 		}
 		@Override
 		public void defineEntity(float X, float Y, float R) {
@@ -174,7 +174,7 @@ public abstract class BombGunShell extends Bomb{
 
 		@Override
 		public void setTexture() {		
-			setTexture(Assest.comet_a, Assest.comet_animation_a, Assest.impact_asteroid_c);
+			setTexture(Assets.textureCometA, Assets.animationCometA, Assets.animationImpactAsteroidC);
 		}
     	
     }
@@ -182,7 +182,7 @@ public abstract class BombGunShell extends Bomb{
 
 		public B(Vector2 posiVector, Body target) {
 			super(posiVector, target,20,60,30,1);
-	 		soundMotor = Assest.Gun_Motor.loop(getVolume(0.2f));
+	 		soundMotor = Assets.soundGunMotor.loop(getVolume(0.2f));
 		}
 		@Override
 		public void defineEntity(float X, float Y, float R) {
@@ -191,7 +191,7 @@ public abstract class BombGunShell extends Bomb{
 
 		@Override
 		public void setTexture() {		
-			setTexture(Assest.comet_b, Assest.comet_animation_b, Assest.impact_asteroid_b);
+			setTexture(Assets.textureCometB, Assets.animationCometB, Assets.animationImpactAsteroidB);
 		}
     	
     }

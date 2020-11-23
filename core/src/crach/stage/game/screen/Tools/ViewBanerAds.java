@@ -6,7 +6,7 @@ import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Timer;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 
 public class ViewBanerAds extends Image {
@@ -14,7 +14,7 @@ public class ViewBanerAds extends Image {
 	private Timer.Task taskVisible;
 
     public ViewBanerAds(){
-    	super(Assest.Style, "Table04");
+    	super(Assets.skinStyle, "Table04");
     	setVisible(false);
     	setOrigin(Align.bottom);
         taskVisible = new Timer.Task() {

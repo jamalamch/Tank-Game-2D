@@ -11,7 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public class Credits extends WindowsGames{
 	
@@ -46,7 +46,7 @@ public class Credits extends WindowsGames{
 		addString("CraftPix.net").addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				Gdx.net.openURI("https://www.CraftPix.net");
 			}
 		});;
@@ -58,7 +58,7 @@ public class Credits extends WindowsGames{
 		addString("by Eric Matyas \n www.soundimage.org").addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				Gdx.net.openURI("https://www.soundimage.org");
 			}
 		});
@@ -70,7 +70,7 @@ public class Credits extends WindowsGames{
 		addString("jamalamchart@gmail.com").addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				Gdx.net.openURI("mailto:jamalamchart@gmail.com?subject=Game+Crach");
 			}
 		});
@@ -87,7 +87,7 @@ public class Credits extends WindowsGames{
 		Gimp = new Image(getSkin(),"Icon/gimp-logo.jpeg");
 		Audacity =new Image(getSkin(),"Icon/AudacityLogo");
 
-		logiccelOpen = new Table(Assest.Style);
+		logiccelOpen = new Table(Assets.skinStyle);
 		logiccelOpen.defaults().pad(1).space(40).expandX();
 		logiccelOpen.add(Libgdx);
 		logiccelOpen.add(Tiled).row();
@@ -102,7 +102,7 @@ public class Credits extends WindowsGames{
 		
         Grouplist.pad(10,100,10,100);
         Grouplist.space(10);
-		Scrll = new ScrollPane(Grouplist, Assest.Style);
+		Scrll = new ScrollPane(Grouplist, Assets.skinStyle);
 		Scrll.setScrollingDisabled(true, false);
 		Scrll.setScrollBarPositions(true,false);
 		Scrll.setVariableSizeKnobs(false);
@@ -137,28 +137,28 @@ public class Credits extends WindowsGames{
 		Libgdx.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				Gdx.net.openURI("https://libgdx.badlogicgames.com");
 			}
 		});
 		Tiled.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				Gdx.net.openURI("http://www.mapeditor.org");
 			}
 		});
 		Gimp.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				Gdx.net.openURI("https://www.gimp.org");
 			}
 		});
 		Audacity.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				Gdx.net.openURI("https://audacityteam.org");
 			}
 		});

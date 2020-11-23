@@ -42,7 +42,7 @@ public class Text {
             textWidth = 0;
             textHeight = 0;
         } else {
-            layout = new GlyphLayout(Assest.font, text,Color.BLACK,12/CrachGame.PPM, Align.center, false);
+            layout = new GlyphLayout(Assets.font, text,Color.BLACK,12/CrachGame.PPM, Align.center, false);
             textWidth = layout.width;
             textHeight = layout.height;
 
@@ -53,13 +53,13 @@ public class Text {
 
     public void draw(Batch batch, float x, float y) {
         if (visible && text != null) {
-            Assest.font.draw(batch, text, x - (textWidth/2), y+textHeight/2,textWidth/CrachGame.PPM, Align.center, false);
+            Assets.font.draw(batch, text, x - (textWidth/2), y+textHeight/2,textWidth/CrachGame.PPM, Align.center, false);
         }
     }
     public void draw(Batch batch) {
         if (visible && text != null) {
         	
-        	Assest.font.draw(batch,layout, x ,y +textHeight/2);
+        	Assets.font.draw(batch,layout, x ,y +textHeight/2);
         }
     }
 }

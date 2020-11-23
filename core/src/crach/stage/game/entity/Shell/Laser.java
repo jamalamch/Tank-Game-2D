@@ -1,7 +1,7 @@
 package crach.stage.game.entity.Shell;
 
 import com.badlogic.gdx.math.Vector2;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public class Laser extends Shell{
 
@@ -11,7 +11,7 @@ public class Laser extends Shell{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.Laser);
+		setTexture(Assets.textureLaser);
 
 	}
 

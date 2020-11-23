@@ -15,7 +15,7 @@ import aurelienribon.tweenengine.BaseTween;
 import aurelienribon.tweenengine.Timeline;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenCallback;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 import crach.stage.game.entity.Explosion;
@@ -109,7 +109,7 @@ public  abstract class Bomb extends Entity implements Explosion{
 	}
 	
 	private void AddZoneOfDestor() {
-		Assest.explode_Bomb.play(getVolume(0.4f),1,getPan());
+		Assets.soundExplodeBomb.play(getVolume(0.4f),1,getPan());
 
         CircleShape shape = new CircleShape();
         FixtureDef fdef = new FixtureDef();

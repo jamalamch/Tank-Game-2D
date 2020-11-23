@@ -6,7 +6,7 @@ import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.physics.box2d.Body;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 
@@ -19,7 +19,7 @@ public class Gold extends Pickup{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.gold);
+		setTexture(Assets.animationGold);
 		setScale(1.7f);
 		setPosition(b2body.getPosition().x, b2body.getPosition().y);
 	}
@@ -27,7 +27,7 @@ public class Gold extends Pickup{
 	public void DeathEntity() {
     	destory = true;
     	tweenDeathAnim(new Color(1, 0.5f, 0.01f, 0.6f),2.2f);
-		Assest.soundCoins.get(MathUtils.random(1)).play();
+		Assets.soundCoins.get(MathUtils.random(1)).play();
 	}
 	@Override
 	void deletePickup(Entity E) {

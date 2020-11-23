@@ -1,7 +1,7 @@
 package crach.stage.game.entity.Shell;
 
 import com.badlogic.gdx.math.Vector2;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public class Granade_Shell extends Shell{
 
@@ -11,6 +11,6 @@ public class Granade_Shell extends Shell{
 
 	@Override
 	public void setTexture() {
-		setTexture(Assest.Granade_Shell);
+		setTexture(Assets.textureGranadeShell);
 	}
 }

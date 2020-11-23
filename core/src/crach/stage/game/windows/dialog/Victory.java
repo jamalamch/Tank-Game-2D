@@ -4,11 +4,11 @@ import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
 import com.badlogic.gdx.utils.Align;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public abstract class Victory extends DialogGame{
 	public Victory( int nStage ,int score,int record,int coin,int star) {
-		super(Assest.StringDialog.getString("victory"));
+		super(Assets.jsonStringDialog.getString("victory"));
 		addScore(score);
 		addRecord(record);
 		addCoin(coin);
@@ -17,7 +17,7 @@ public abstract class Victory extends DialogGame{
 		button(new Button(getSkin(), "Back_BTN"), 0,Align.left);
 		button(new Button(getSkin(), "Replay_BTN"), 1,Align.center);
 		button(new Button(getSkin(), "Play_BTN"), 2,Align.right).pack();
-		Assest.musicVector.play();
+		Assets.musicVector.play();
 	}
 	
 	public Dialog button(Button button, int x,int align) {
@@ -27,7 +27,7 @@ public abstract class Victory extends DialogGame{
 	}
 	
 	protected void result (Object object) {
-		Assest.buttonClick1.play();
+		Assets.buttonClick1.play();
 		switch((Integer)object) {
 			case 0:
 				Back();

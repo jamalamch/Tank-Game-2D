@@ -1,7 +1,7 @@
 package crach.stage.game.entity.Pickups;
 
 import com.badlogic.gdx.maps.MapObject;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.entity.Entity;
 
 
@@ -27,7 +27,7 @@ public abstract class Crystal extends Pickup{
 
 		@Override
 		public void setTexture() {
-			setTexture(Assest.crystal);
+			setTexture(Assets.animationCrystal);
 		}
 		@Override
 		public void defineEntity(float X, float Y, float R) {
@@ -36,7 +36,7 @@ public abstract class Crystal extends Pickup{
 		@Override
 		public void DeathEntity() {
 			super.DeathEntity();
-			Assest.soundCrystal.play();
+			Assets.soundCrystal.play();
 		}
 		@Override
 		void deletePickup(Entity E) {
@@ -51,7 +51,7 @@ public abstract class Crystal extends Pickup{
 
 		@Override
 		public void setTexture() {
-			setTexture(Assest.crystal2);
+			setTexture(Assets.animationCrystal2);
 		}
 
 		@Override
@@ -61,7 +61,7 @@ public abstract class Crystal extends Pickup{
 		@Override
 		public void DeathEntity() {
 			super.DeathEntity();
-			Assest.soundBonus1.play();
+			Assets.soundBonus1.play();
 		}
 		@Override
 		void deletePickup(Entity E) {

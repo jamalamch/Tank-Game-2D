@@ -13,7 +13,7 @@ import crach.stage.game.DownloadFiles;
 public class FirebaseFiles implements DownloadFiles {
 
     @Override
-    public FileToDownload getFile(String UrlDowload, final Runnable onSuccess, Runnable onFailure) {
+    public FileToDownload getFile(String urlDowload, final Runnable onSuccess, Runnable onFailure) {
         final FileDowload fileDowload = new FileDowload(Gdx.files.internal("maps/stage/stage1.tmx"));
         Timer.schedule(new Timer.Task() {
             @Override

@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.math.Vector2;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.entity.Entity;
 import crach.stage.game.entity.Explosion;
 
@@ -101,7 +101,7 @@ public abstract class Object extends Entity{
     }
     
 	public void Hit(Explosion explosion) {
-		Assest.impact_Object_wall.play(getVolume(),1,getPan());
+		Assets.soundImpactObjectWall.play(getVolume(),1,getPan());
     	tweenFlash(this,1,1,Colorflash);
 	}
 	public boolean isEnabled() {

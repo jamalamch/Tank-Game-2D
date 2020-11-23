@@ -61,7 +61,7 @@ public class CrachGame extends Game implements IGameServiceListener {
 	private static boolean music ,sfx ,notific,vibr,noAds;
 	private static float nVmusic,nVsfx; 
 	private static float hoursPlayed;
-	private static int Coin,Diamound,Exper,Life,Hp,bombs,Nive,adsWatchd,enimykill,matchWinne,nPlayMulti,nStar;
+	private static int coin, diamound, exper, life, hp,bombs, nive,adsWatchd,enimykill,matchWinne,nPlayMulti,nStar;
     private static Double deltaTimeSeconds ;
     private static final long timeStar = System.currentTimeMillis();
 
@@ -70,7 +70,7 @@ public class CrachGame extends Game implements IGameServiceListener {
 	private static boolean[] bonus = new boolean[20];
 	private static int[][] stage ;
 	private static int[][] matchfoot;
-	private static float[] XP_Boost = new float[3];
+	private static float[] XPBoost = new float[3];
 	private static boolean[] paidGun_A,paidGun_B, paidHull,paidTrack;
 	private static int selectGunA;
 	private static int selectGunB;
@@ -78,8 +78,8 @@ public class CrachGame extends Game implements IGameServiceListener {
 	private static int selectTrack;
 	private static int selectColor;
 
-	private final static  int time_life = 90;
-	private static int  dt_timeLife = time_life;
+	private final static  int TIME_LIFE = 90;
+	private static int  dt_timeLife = TIME_LIFE;
 	public CrachGame(IActivityRequestHandler RequestHandler){
 		iActivityRequestHandler = RequestHandler;
 		RequestHandler.showAds(false);
@@ -91,7 +91,7 @@ public class CrachGame extends Game implements IGameServiceListener {
 	public void create() {
 		prefs = Gdx.app.getPreferences("Data.prefs");
 		Langue = prefs.getString("Langue",Langues[0]);
-	  	RATA=Rata();
+	  	RATA= getRata();
 	  	isload = false;
         setScreen(new Loading());
         GdxGame = this;
@@ -105,25 +105,25 @@ public class CrachGame extends Game implements IGameServiceListener {
 		}
 	}
 	private static void updateLife(){
-		if(Life < 10){
+		if(life < 10){
 			dt_timeLife -= 1;
 			if(dt_timeLife < 0) {
 				addLife(+1);
-				dt_timeLife = time_life;
+				dt_timeLife = TIME_LIFE;
 			}
 			else
 				menuUi.getUiHub().timerLife(dt_timeLife);
 		}
 	}
 	private static void updateXP_Boost(){
-		if(XP_Boost[2] >0)
-			XP_Boost[2] -=1;
-		else if(XP_Boost[1] >0)
-			XP_Boost[1] -=1;
-		else if(XP_Boost[0] >0)
-			XP_Boost[0] -=1;
+		if(XPBoost[2] >0)
+			XPBoost[2] -=1;
+		else if(XPBoost[1] >0)
+			XPBoost[1] -=1;
+		else if(XPBoost[0] >0)
+			XPBoost[0] -=1;
 	}
-	private static void TimerInOneSecounds(){
+	private static void timerInOneSecounds(){
 		Timer.instance().scheduleTask(new Timer.Task() {
 			@Override
 			public void run() {
@@ -132,17 +132,17 @@ public class CrachGame extends Game implements IGameServiceListener {
 			}
 		},0,1);
 	}
-	public static void GotToMenu() {
+	public static void gotToMenu() {
 		 Screen toDispose = GdxGame.getScreen();
 		 if(menuUi == null) {
 			 menuUi = new MenuUI();
-			 TimerInOneSecounds();
-			 addLife((int)(deltaTimeSeconds/time_life));
+			 timerInOneSecounds();
+			 addLife((int)(deltaTimeSeconds/ TIME_LIFE));
 		 }
 		 GdxGame.setScreen(menuUi);
 		 toDispose.dispose();
 	}
-	public float Rata(){
+	public float getRata(){
 		float Ratawidth = (float)Gdx.graphics.getWidth()/Width;
 		float Rataheight = (float)Gdx.graphics.getHeight()/Height;
 			return  (Ratawidth < Rataheight)?Ratawidth : Rataheight;
@@ -171,13 +171,13 @@ public class CrachGame extends Game implements IGameServiceListener {
 	
 	public static void load(){
 		        Id = prefs.getString("Id","Player01");
-		       	Exper = prefs.getInteger("Exper",0);   
-		     	Nive = prefs.getInteger("Niveau",1);  
-		    	Diamound = prefs.getInteger("Diamound",5);  
-		        Coin = prefs.getInteger("Coin",100); 
-		        Life = prefs.getInteger("Life",8); 
+		       	exper = prefs.getInteger("Exper",0);
+		     	nive = prefs.getInteger("Niveau",1);
+		    	diamound = prefs.getInteger("Diamound",5);
+		        coin = prefs.getInteger("Coin",100);
+		        life = prefs.getInteger("Life",8);
 		        bombs = prefs.getInteger("bombs",2);
-		        Hp = prefs.getInteger("Hp",2);
+		        hp = prefs.getInteger("Hp",2);
 		      	music = prefs.getBoolean("music",true);  
 		        sfx = prefs.getBoolean("sfx",true);  
 		     	nVmusic = prefs.getFloat("nVmusic",1); 
@@ -203,8 +203,8 @@ public class CrachGame extends Game implements IGameServiceListener {
 
 		        System.out.println("delta time "+deltaTimeSeconds);
 		int i;     
-        for( i=0;i<XP_Boost.length;i++)
-        	XP_Boost[i] = prefs.getFloat("Xp"+i,0);
+        for(i=0; i< XPBoost.length; i++)
+        	XPBoost[i] = prefs.getFloat("Xp"+i,0);
         
         for( i=1;i<=bonus.length;i++)
         	 bonus[i-1]=prefs.getBoolean("bonus"+i,false);
@@ -245,13 +245,13 @@ public class CrachGame extends Game implements IGameServiceListener {
 		prefs.clear();
 		prefs.putString("Id",Id);
 		prefs.putString("Langue",Langue);
-		prefs.putInteger("Exper", Exper);
-		prefs.putInteger("Niveau", Nive);
-		prefs.putInteger("Diamound", Diamound);
-		prefs.putInteger("Coin", Coin);
-		prefs.putInteger("Life", Life);
+		prefs.putInteger("Exper", exper);
+		prefs.putInteger("Niveau", nive);
+		prefs.putInteger("Diamound", diamound);
+		prefs.putInteger("Coin", coin);
+		prefs.putInteger("Life", life);
 		prefs.putInteger("bombs",bombs);
-        prefs.putInteger("Hp",Hp);
+        prefs.putInteger("Hp", hp);
 		prefs.putBoolean("music", music);
 		prefs.putBoolean("sfx", sfx);
 		prefs.putBoolean("notific",notific);
@@ -276,8 +276,8 @@ public class CrachGame extends Game implements IGameServiceListener {
  		prefs.putLong("Time", System.currentTimeMillis());
  		
  		int i;
-        for( i=0;i<XP_Boost.length;i++)
-        	if(XP_Boost[i] >0) prefs.putFloat("Xp"+i,(XP_Boost[i]>0)?XP_Boost[i]:0);
+        for(i=0; i< XPBoost.length; i++)
+        	if(XPBoost[i] >0) prefs.putFloat("Xp"+i,(XPBoost[i]>0)? XPBoost[i]:0);
         for(i=1;i<=bonus.length;i++)
        	 	if(bonus[i-1]) prefs.putBoolean("bonus"+i,bonus[i-1]);
         for(i=0;i<stage.length;i++)
@@ -318,7 +318,7 @@ public class CrachGame extends Game implements IGameServiceListener {
 	}
 	public static void setMusic(boolean music) {
 		CrachGame.music = music;
-		Assest.updateMusic(music);
+		Assets.updateMusic(music);
 	}
 	public static boolean isSfx() {
 		return sfx;
@@ -343,7 +343,7 @@ public class CrachGame extends Game implements IGameServiceListener {
 	}
 	public static void setnVmusic(float nVmusic) {
 		CrachGame.nVmusic = nVmusic;
-		Assest.updateMusic(nVmusic);
+		Assets.updateMusic(nVmusic);
 	}
 	public static float getnVsfx() {
 		return nVsfx;
@@ -354,49 +354,49 @@ public class CrachGame extends Game implements IGameServiceListener {
 	
 	// ...........................Profile Coin...........................//
 	public static int getCoin() {
-		return Coin;
+		return coin;
 	}
 	public static void addCoin(int coin) {
-		Coin += coin ; menuUi.getUiHub().updateLCoin(Coin);
+		CrachGame.coin += coin ; menuUi.getUiHub().updateLCoin(CrachGame.coin);
 	}
 	public static int getDiamound() {
-		return Diamound; 
+		return diamound;
 	}
 	public static void addDiamound(int diamound) {
-		Diamound += diamound ; menuUi.getUiHub().updateLDiamound(Diamound);
+		CrachGame.diamound += diamound ; menuUi.getUiHub().updateLDiamound(CrachGame.diamound);
 	}
 	public static int getExper() {
-		return Exper;
+		return exper;
 	}
 	public static void addExper(int exper) {
-		Exper += exper;
-		if(Exper < Assest.ValueNive.get(Nive-1).getInt("max"))
-			menuUi.getUiHub().updatePExper(Exper);
+		CrachGame.exper += exper;
+		if(CrachGame.exper < Assets.valueNiveu.get(nive -1).getInt("max"))
+			menuUi.getUiHub().updatePExper(CrachGame.exper);
 		else{
-			Exper =Exper - Assest.ValueNive.get(Nive-1).getInt("max");
-			Nive +=1;
-			menuUi.getUiHub().updateNive(Nive,Exper);
+			CrachGame.exper = CrachGame.exper - Assets.valueNiveu.get(nive -1).getInt("max");
+			nive +=1;
+			menuUi.getUiHub().updateNive(nive, CrachGame.exper);
 		}
 	}
 	public static int getLife() {
-		return Life;
+		return life;
 	}
 	public static boolean addLife(int life) {
-		Life += life;
-		Life = (Life>10)?10:Life;
-		menuUi.getUiHub().updateLife(Life);
-		if(Life >= 0)
+		CrachGame.life += life;
+		CrachGame.life = (CrachGame.life >10)?10: CrachGame.life;
+		menuUi.getUiHub().updateLife(CrachGame.life);
+		if(CrachGame.life >= 0)
 				return true;
 		else{
-			Life = 0;
+			CrachGame.life = 0;
 			return false;
 		}
 	}
 	public static int getNive() {
-		return Nive;
+		return nive;
 	}
 	public static void addNive() {
-		Nive += 1;
+		nive += 1;
 	}
 	public static int getBombs() {
 		return bombs;
@@ -405,10 +405,10 @@ public class CrachGame extends Game implements IGameServiceListener {
 		CrachGame.bombs = bombs;
 	}
 	public static int getHp() {
-		return Hp;
+		return hp;
 	}
 	public static void addHp(int hp) {
-		Hp += hp;
+		CrachGame.hp += hp;
 	}
 	//.............................BonusColled...........................//
 	public static boolean isBonusColled(int nbonus) {
@@ -486,21 +486,21 @@ public class CrachGame extends Game implements IGameServiceListener {
 	public static void setPaidTrack(int code) {
 		CrachGame.paidTrack[code] = true;
 	}
-	public static int getXP_Boost(){
-		if(XP_Boost[2] > 0)
+	public static int getXPBoost(){
+		if(XPBoost[2] > 0)
 			return 6;
-		if(XP_Boost[1] > 0)
+		if(XPBoost[1] > 0)
 			return 3;
-		if(XP_Boost[0] > 0)
+		if(XPBoost[0] > 0)
 			return 2;
 		else
 			return 1;
 	}
 	public static float getXP_Boost(int XpCode) {
-		return XP_Boost[XpCode];
+		return XPBoost[XpCode];
 	}
 	public static void setXP_Boost(int xXCode,int Period) {
-		XP_Boost[xXCode] = Period;
+		XPBoost[xXCode] = Period;
 	}
 	//.................................add info..................................//
 	public static int getAdsWatchd() {
@@ -664,7 +664,7 @@ public class CrachGame extends Game implements IGameServiceListener {
 
 	@Override
 	public void dispose() {
-		Assest.dispose();
+		Assets.dispose();
 		super.dispose();
 	}
 }

@@ -13,7 +13,7 @@ import aurelienribon.tweenengine.BaseTween;
 import aurelienribon.tweenengine.Timeline;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenCallback;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Explosion;
 import crach.stage.game.entity.Shell.Shell;
@@ -28,7 +28,7 @@ public class Ball  extends M_Circle{
 
     @Override
     public void setTexture() {
-        setTexture(Assest.Ball.getKeyFrame(0));
+        setTexture(Assets.animationBall.getKeyFrame(0));
     }
 
     @Override
@@ -52,7 +52,7 @@ public class Ball  extends M_Circle{
         super.update(dt);
         if(destory) {
             dt_time += dt;
-            if(Assest.Ball.isAnimationFinished(dt_time)) {
+            if(Assets.animationBall.isAnimationFinished(dt_time)) {
                 creator.SetDestoryEntity(this);
                 creator.defeatGame();
             }
@@ -61,7 +61,7 @@ public class Ball  extends M_Circle{
 
     @Override
     public void DeathEntity() {
-        Assest.impact_cannon.play(getVolume(), 1, getPan());
+        Assets.soundImpactCannon.play(getVolume(), 1, getPan());
         destory = true;
         setPosition(b2body.getPosition().x, b2body.getPosition().y);
         setRotation(b2body.getAngle()*MathUtils.radiansToDegrees);
@@ -89,7 +89,7 @@ public class Ball  extends M_Circle{
         if(!destory)
             super.draw(batch, body);
         else{
-            TextureRegion AnimationF = Assest.Ball.getKeyFrame(dt_time);
+            TextureRegion AnimationF = Assets.animationBall.getKeyFrame(dt_time);
             float WidthS = (AnimationF.getRegionWidth()*0.7f)/ CrachGame.PPM, HiegthS = (AnimationF.getRegionHeight()*0.7f)/CrachGame.PPM;
             batch.setColor(Color.WHITE);
             batch.draw(AnimationF, getX()  -WidthS/2, getY() -HiegthS/2, WidthS/2, HiegthS/2, WidthS, HiegthS, getScaleX(), getScaleY(), getRotation());

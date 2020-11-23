@@ -18,7 +18,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Scaling;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.GdxRequest;
 import crach.stage.game.screen.Tools.*;
@@ -30,56 +30,55 @@ import crach.stage.game.windows.Shop;
 
 public class MenuUI extends ScreenGame {
 	
-	private Table UiMenu;
-    private HubUi UiHub; 
-    private HorizontalGroup SettingAndInfo;
-    private VerticalGroup HangarShop;
+	private Table uiMenu;
+    private HubUi uiHub;
+    private HorizontalGroup settingAndInfo;
+    private VerticalGroup hangarShop;
     private ModeGame modegame;
 
     private Shop shope;   
     private Hanger hanger;
-	private Settings Setting;
-	private Bonus BonusW;
+	private Settings setting;
+	private Bonus bonusW;
 	private SelectStage selectStage;
 	private SelectStage selectMatch;
 
 	
-	private Image HeadTitle;
+	private Image headTitle;
     private Image backgroundI;
-	private Button B_Star,B_Exit,Rating_BTN,More_Games_BTN, Game_Center_BTN,Facebook_BTN
-			//,Twitter_BTN
-			,Share_BTN,Settings_BTN,Settings_BTN2
-	               ,Hangar_BTN,Shop_BTN,Info_BTN;
+	private Button bStar, bExit,Rating_BTN, moreGamesBTN, gameCenterBTN, facebookBTN
+			, shareBTN, settingsBTN, settingsBTN2
+			, hangarBTN, shopBTN, infoBTN;
 		
 	public MenuUI() {
 		super();
-		HeadTitle = new Image(Assest.Style, "Head_title");
-		backgroundI = new Image(Assest.Style, "BackgroundMenu");
+		headTitle = new Image(Assets.skinStyle, "Head_title");
+		headTitle.setOrigin(Align.center);
+		backgroundI = new Image(Assets.skinStyle, "BackgroundMenu");
 		backgroundI.setFillParent(true);
 		backgroundI.setScaling(Scaling.fill);
-		HeadTitle.setOrigin(Align.center);		
-		B_Star = new TextButton(Assest.StringMenu.getString("Star"), Assest.Style,"tileButton");
-		B_Exit = new TextButton(Assest.StringMenu.getString("Exit"), Assest.Style,"tileButton");
-		B_Exit.setVisible(false);
-		Rating_BTN = new Button(Assest.Style, "Rating_BTN");
-		More_Games_BTN = new Button(Assest.Style, "More_Games_BTN");
-		Game_Center_BTN = new Button(Assest.Style, "Game_Center_BTN");
-		Facebook_BTN = new Button(Assest.Style, "Facebook_BTN");
+		bStar = new TextButton(Assets.jsonStringMenu.getString("Star"), Assets.skinStyle,"tileButton");
+		bExit = new TextButton(Assets.jsonStringMenu.getString("Exit"), Assets.skinStyle,"tileButton");
+		bExit.setVisible(false);
+		Rating_BTN = new Button(Assets.skinStyle, "Rating_BTN");
+		moreGamesBTN = new Button(Assets.skinStyle, "More_Games_BTN");
+		gameCenterBTN = new Button(Assets.skinStyle, "Game_Center_BTN");
+		facebookBTN = new Button(Assets.skinStyle, "Facebook_BTN");
 		//Twitter_BTN = new Button(Assest.Style, "Twitter_BTN");
-		Share_BTN = new Button(Assest.Style, "Share_BTN");
-		Settings_BTN = new Button(Assest.Style, "Settings_BTN");
-		Settings_BTN2 = new Button(Assest.Style, "Settings_BTN");
-		Hangar_BTN = new Button(Assest.Style, "Hangar_BTN");
-		Shop_BTN = new Button(Assest.Style, "Shop_BTN");
-		Info_BTN = new Button(Assest.Style, "Info_BTN");
+		shareBTN = new Button(Assets.skinStyle, "Share_BTN");
+		settingsBTN = new Button(Assets.skinStyle, "Settings_BTN");
+		settingsBTN2 = new Button(Assets.skinStyle, "Settings_BTN");
+		hangarBTN = new Button(Assets.skinStyle, "Hangar_BTN");
+		shopBTN = new Button(Assets.skinStyle, "Shop_BTN");
+		infoBTN = new Button(Assets.skinStyle, "Info_BTN");
        addContent();
-       AddListener();
+       addlistener();
        if(MathUtils.random(1) == 1) {
-		   Assest.musicMenu2.play();
-		   Assest.musicMenu2.setLooping(true);
+		   Assets.musicMenu2.play();
+		   Assets.musicMenu2.setLooping(true);
 	   }else{
-		   Assest.musicMenu1.play();
-		   Assest.musicMenu1.setLooping(true);
+		   Assets.musicMenu1.play();
+		   Assets.musicMenu1.setLooping(true);
 	   }
 	}
 	@Override
@@ -91,88 +90,88 @@ public class MenuUI extends ScreenGame {
 
 	private void  addContent() {
 		addActor(backgroundI);
-		UiHub = new HubUi(this);
-		addActor(UiHub);
+		uiHub = new HubUi(this);
+		addActor(uiHub);
 
-		UiMenu = new Table(Assest.Style);
+		uiMenu = new Table(Assets.skinStyle);
 		//table.setDebug(true);
-		UiMenu.pad(2);
-		UiMenu.defaults().pad(8).center().minSize(3);
-		UiMenu.setFillParent(true);
-		UiMenu.row();
-		UiMenu.add(Rating_BTN).prefSize(120);
-		UiMenu.add();
-		UiMenu.add().expandX().prefSize(120);
-		UiMenu.add();
-		UiMenu.add(Settings_BTN).prefSize(120);
-		UiMenu.row();
-		UiMenu.add(More_Games_BTN).prefSize(120);
-		UiMenu.add().colspan(4);
-		UiMenu.row();
-		UiMenu.add(Game_Center_BTN).prefSize(120);
-		UiMenu.add().colspan(4);
-		UiMenu.row();
-		UiMenu.add(HeadTitle).colspan(5).padBottom(-50).padTop(-300).expandY()
+		uiMenu.pad(2);
+		uiMenu.defaults().pad(8).center().minSize(3);
+		uiMenu.setFillParent(true);
+		uiMenu.row();
+		uiMenu.add(Rating_BTN).prefSize(120);
+		uiMenu.add();
+		uiMenu.add().expandX().prefSize(120);
+		uiMenu.add();
+		uiMenu.add(settingsBTN).prefSize(120);
+		uiMenu.row();
+		uiMenu.add(moreGamesBTN).prefSize(120);
+		uiMenu.add().colspan(4);
+		uiMenu.row();
+		uiMenu.add(gameCenterBTN).prefSize(120);
+		uiMenu.add().colspan(4);
+		uiMenu.row();
+		uiMenu.add(headTitle).colspan(5).padBottom(-50).padTop(-300).expandY()
 		      .prefSize(830, 280).center();
-		UiMenu.row();
-		UiMenu.add(B_Star).colspan(5).minWidth(400).align(Align.bottom).padBottom(-70).padTop(50).bottom();
-		UiMenu.row();
-		UiMenu.add(B_Exit).colspan(5).expandY().top().padBottom(60).minWidth(300);
-		UiMenu.row().padTop(-200).bottom();
-		UiMenu.add(Facebook_BTN).prefSize(120);
+		uiMenu.row();
+		uiMenu.add(bStar).colspan(5).minWidth(400).align(Align.bottom).padBottom(-70).padTop(50).bottom();
+		uiMenu.row();
+		uiMenu.add(bExit).colspan(5).expandY().top().padBottom(60).minWidth(300);
+		uiMenu.row().padTop(-200).bottom();
+		uiMenu.add(facebookBTN).prefSize(120);
 		//UiMenu.add(Twitter_BTN).prefSize(120);
-		UiMenu.add(Share_BTN).prefSize(120);
-		UiMenu.add().colspan(3);
-		UiMenu.row();
-		UiMenu.pack();
-		addActor(UiMenu);
-		SettingAndInfo = new HorizontalGroup();
-		SettingAndInfo.addActor(Settings_BTN2);
-		SettingAndInfo.addActor(Info_BTN);
-        SettingAndInfo.setScale(0.5f);
-        SettingAndInfo.space(10);
-        SettingAndInfo.setVisible(false);
-        SettingAndInfo.pack();
-        addActor(SettingAndInfo);
-        HangarShop = new VerticalGroup();
-        HangarShop.addActor(Hangar_BTN);
-        HangarShop.addActor(Shop_BTN);
-        HangarShop.space(5);
-        HangarShop.setVisible(false);
-        HangarShop.pack();
+		uiMenu.add(shareBTN).prefSize(120);
+		uiMenu.add().colspan(3);
+		uiMenu.row();
+		uiMenu.pack();
+		addActor(uiMenu);
+		settingAndInfo = new HorizontalGroup();
+		settingAndInfo.addActor(settingsBTN2);
+		settingAndInfo.addActor(infoBTN);
+        settingAndInfo.setScale(0.5f);
+        settingAndInfo.space(10);
+        settingAndInfo.setVisible(false);
+        settingAndInfo.pack();
+        addActor(settingAndInfo);
+        hangarShop = new VerticalGroup();
+        hangarShop.addActor(hangarBTN);
+        hangarShop.addActor(shopBTN);
+        hangarShop.space(5);
+        hangarShop.setVisible(false);
+        hangarShop.pack();
         modegame = new ModeGame(this);
         addActor(modegame);
-		addActor(HangarShop);
-        hanger = new Hanger(Hangar_BTN);
+		addActor(hangarShop);
+        hanger = new Hanger(hangarBTN);
         addActor(hanger);
-		BonusW = new Bonus();
-		addActor(BonusW);
-		Setting = new Settings();
-		stage.addActor(Setting);
-        shope = new Shop(Shop_BTN);
+		bonusW = new Bonus();
+		addActor(bonusW);
+		setting = new Settings();
+		stage.addActor(setting);
+        shope = new Shop(shopBTN);
         addActor(shope); 
         selectStage = new SelectStage();
         addActor(selectStage);
-        selectMatch = new SelectStage(Assest.StringSelectStage.getString("title_match"),CrachGame.getMatchfoot(), PlayScreen.ModeGame.football);
+        selectMatch = new SelectStage(Assets.jsonStringSelectStage.getString("title_match"),CrachGame.getMatchfoot(), PlayScreen.ModeGame.football);
 		addActor(selectMatch);
 	}
  
 	public HubUi getUiHub() {
-		return UiHub;
+		return uiHub;
 	}
 
-	private void AddListener() {
-		B_Star.addListener(new ClickListener() {
+	private void addlistener() {
+		bStar.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				   Assest.buttonClick1.play();
-				   OpenUiPlay();
+				   Assets.buttonClick1.play();
+				   openUiPlay();
 			}});
 		
-        B_Exit.addListener(new ClickListener() {
+        bExit.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				  // CrachGame.getGdxGame().setScreen(new PlayScreen(10));
                // CloseUiPlay(); 
 			}});
@@ -180,26 +179,26 @@ public class MenuUI extends ScreenGame {
         Rating_BTN.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
-				BonusW.Open();
+				Assets.buttonClick1.play();
+				bonusW.Open();
 			}});     
-        More_Games_BTN.addListener(new ClickListener() {
+        moreGamesBTN.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				CrachGame.showLeaderboard();
 			}});
-        Game_Center_BTN.addListener(new ClickListener() {
+        gameCenterBTN.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
                 Gdx.net.openURI("https://play.google.com/store/apps/dev?id=5154066778505369303");
             }
 		});
-        Facebook_BTN.addListener(new ClickListener() {
+        facebookBTN.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
                 Gdx.net.openURI("https://www.facebook.com/Gamer-Key-106490947508953");
             }
 		});  
@@ -210,10 +209,10 @@ public class MenuUI extends ScreenGame {
 //
 //			}
 //		});
-        Share_BTN.addListener(new ClickListener() {
+        shareBTN.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				//Gdx.net.openURI("http://play.google.com/store/apps/details?id=crach.stage.game");
                 GdxRequest.partage();
 			}
@@ -221,55 +220,55 @@ public class MenuUI extends ScreenGame {
         InputListener C = new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
-				if(Setting == null) {
+				Assets.buttonClick1.play();
+				if(setting == null) {
 				}
-				Setting.Open();
+				setting.Open();
 			}
         };
-        Settings_BTN.addListener(C);  
-        Settings_BTN2.addListener(C);             
-        Hangar_BTN.addListener(new ClickListener() {
+        settingsBTN.addListener(C);
+        settingsBTN2.addListener(C);
+        hangarBTN.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 				if(!hanger.hasActions() && !hanger.isVisible())
 					hanger.Open();
 			}
 		});
-        Shop_BTN.addListener(new ClickListener() {
+        shopBTN.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				if(Shop_BTN.isChecked()) Assest.checkOnClick.play();
-				else Assest.checkOfClick.play();
+				if(shopBTN.isChecked()) Assets.checkOnClick.play();
+				else Assets.checkOfClick.play();
 				if(!shope.hasActions() && !shope.isVisible())
 					shope.Open();
 			}
 		});
-        Info_BTN.addListener(new ClickListener() {
+        infoBTN.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Assest.buttonClick1.play();
+				Assets.buttonClick1.play();
 			}
 		});
          C = new InputListener() {
         	@Override
         	public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                if(CloseAllWindows()) return false;
+                if(closeAllWindows()) return false;
         		return super.touchDown(event, x, y, pointer, button);
         	}
         };
-        UiMenu.addListener(C);
-        SettingAndInfo.addListener(C);
-        HangarShop.addListener(C);
+        uiMenu.addListener(C);
+        settingAndInfo.addListener(C);
+        hangarShop.addListener(C);
         modegame.addListener(C);
         stage.addListener(new InputListener() {        	
 			@Override
 			public boolean keyDown(InputEvent event, int keycode) {
 				if(keycode == Input.Keys.ESCAPE || keycode == Input.Keys.BACK) {
-					Assest.buttonClick2.play();
-					if(!CloseAllWindows())
-	 			        CloseUiPlay();
+					Assets.buttonClick2.play();
+					if(!closeAllWindows())
+	 			        closeUiPlay();
 					}
 				return (keycode == Input.Keys.ESCAPE || keycode == Input.Keys.BACK);
 			}});
@@ -281,38 +280,38 @@ public class MenuUI extends ScreenGame {
 		drawStage(delta);
 	}
 	
-	public void SetUiMenuTochable(Touchable tochable) {
-		if(UiMenu.isVisible()) UiMenu.setTouchable(tochable);
-		if(SettingAndInfo.isVisible())  SettingAndInfo.setTouchable(tochable);
-		if(HangarShop.isVisible()) HangarShop.setTouchable(tochable);
+	public void setUiMenuTochable(Touchable tochable) {
+		if(uiMenu.isVisible()) uiMenu.setTouchable(tochable);
+		if(settingAndInfo.isVisible())  settingAndInfo.setTouchable(tochable);
+		if(hangarShop.isVisible()) hangarShop.setTouchable(tochable);
 		if(modegame.isVisible()) modegame.setTouchable(tochable);
 	}
-	public void OpenUiPlay() {
-		if(!UiMenu.hasActions() && !modegame.hasActions()) {
-			UiMenu.addAction(Actions.sequence(Actions.alpha(0, 1.5f),Actions.visible(false)));
-			HeadTitle.addAction(Actions.scaleTo(2.5f, 2.5f, 1.5f));
-			UiHub.Open();
+	public void openUiPlay() {
+		if(!uiMenu.hasActions() && !modegame.hasActions()) {
+			uiMenu.addAction(Actions.sequence(Actions.alpha(0, 1.5f),Actions.visible(false)));
+			headTitle.addAction(Actions.scaleTo(2.5f, 2.5f, 1.5f));
+			uiHub.Open();
 			modegame.open();
-			HangarShop.addAction(Actions.sequence(Actions.delay(1.5f),Actions.moveTo(-HangarShop.getWidth(),HangarShop.getY()),Actions.visible(true),Actions.moveTo(HangarShop.getX(), HangarShop.getY(),0.4f)));
-			SettingAndInfo.addAction(Actions.sequence(Actions.delay(1.5f),Actions.moveTo(SettingAndInfo.getX(),-SettingAndInfo.getHeight()),Actions.visible(true),Actions.moveTo(SettingAndInfo.getX(), SettingAndInfo.getY(),0.4f)));
+			hangarShop.addAction(Actions.sequence(Actions.delay(1.5f),Actions.moveTo(-hangarShop.getWidth(), hangarShop.getY()),Actions.visible(true),Actions.moveTo(hangarShop.getX(), hangarShop.getY(),0.4f)));
+			settingAndInfo.addAction(Actions.sequence(Actions.delay(1.5f),Actions.moveTo(settingAndInfo.getX(),-settingAndInfo.getHeight()),Actions.visible(true),Actions.moveTo(settingAndInfo.getX(), settingAndInfo.getY(),0.4f)));
 			}
 	}
-	public void CloseUiPlay() {
-		if(!UiMenu.hasActions() && !UiHub.hasActions() && !UiMenu.isVisible() &&HangarShop.isVisible() ) {
-			UiHub.Close();
+	public void closeUiPlay() {
+		if(!uiMenu.hasActions() && !uiHub.hasActions() && !uiMenu.isVisible() && hangarShop.isVisible() ) {
+			uiHub.Close();
 			modegame.close();
-			UiMenu.addAction(Actions.sequence(Actions.delay(0.55f),Actions.visible(true),Actions.alpha(1, 0.6f)));
-			HeadTitle.addAction(Actions.sequence(Actions.delay(0.6f),Actions.scaleTo(1, 1, 1)));
-			HangarShop.addAction(Actions.sequence(Actions.moveTo(-HangarShop.getWidth(),HangarShop.getY(),0.3f),Actions.visible(false),Actions.moveTo(HangarShop.getX(), HangarShop.getY())));
-			SettingAndInfo.addAction(Actions.sequence(Actions.moveTo(SettingAndInfo.getX(),-SettingAndInfo.getHeight(),0.4f),Actions.visible(false),Actions.moveTo(SettingAndInfo.getX(), SettingAndInfo.getY())));
+			uiMenu.addAction(Actions.sequence(Actions.delay(0.55f),Actions.visible(true),Actions.alpha(1, 0.6f)));
+			headTitle.addAction(Actions.sequence(Actions.delay(0.6f),Actions.scaleTo(1, 1, 1)));
+			hangarShop.addAction(Actions.sequence(Actions.moveTo(-hangarShop.getWidth(), hangarShop.getY(),0.3f),Actions.visible(false),Actions.moveTo(hangarShop.getX(), hangarShop.getY())));
+			settingAndInfo.addAction(Actions.sequence(Actions.moveTo(settingAndInfo.getX(),-settingAndInfo.getHeight(),0.4f),Actions.visible(false),Actions.moveTo(settingAndInfo.getX(), settingAndInfo.getY())));
 		}
 	}
-	public boolean CloseAllWindows() {
+	public boolean closeAllWindows() {
 		boolean WindowOpen = false;
 		
-		 if(Setting.isVisible() && !Setting.hasActions()) {
+		 if(setting.isVisible() && !setting.hasActions()) {
 			WindowOpen =true;
-			Setting.Close();
+			setting.Close();
 		}
 		if(shope.isVisible() && !shope.hasActions()) {
 			WindowOpen =true;
@@ -322,9 +321,9 @@ public class MenuUI extends ScreenGame {
 			WindowOpen =true;
 			hanger.Close();
 		}
-	    if(BonusW.isVisible() && !BonusW.hasActions()) {
+	    if(bonusW.isVisible() && !bonusW.hasActions()) {
 			WindowOpen =true;
-			BonusW.Close();
+			bonusW.Close();
 		}
 	    if(selectStage.isVisible() && !selectStage.hasActions()) {
 			WindowOpen =true;
@@ -340,23 +339,23 @@ public class MenuUI extends ScreenGame {
 	@Override
 	public void resize(int width, int height) {
 		super.resize(width, height);
-			Setting.resize();
+			setting.resize();
 		
-			BonusW.resize();
+			bonusW.resize();
 		
-			UiHub.setSize(stage.getWidth(), 85);
-			UiHub.setPosition(0, stage.getHeight()-85);
+			uiHub.setSize(stage.getWidth(), 85);
+			uiHub.setPosition(0, stage.getHeight()-85);
 		
-			HangarShop.setPosition(10, stage.getHeight()-390);
+			hangarShop.setPosition(10, stage.getHeight()-390);
 		
-			SettingAndInfo.setPosition(stage.getWidth()-150, 10);
+			settingAndInfo.setPosition(stage.getWidth()-150, 10);
 		
 			modegame.setSize(1000, 400);
 			modegame.setPosition(stage.getWidth()-1010,stage.getHeight()/4);
 		
-			float Y = HangarShop.getY()+HangarShop.getHeight()-shope.getHeight();
+			float Y = hangarShop.getY()+ hangarShop.getHeight()-shope.getHeight();
 			if(Y < 0) Y=0;
-			shope.setPosition(HangarShop.getX()+Shop_BTN.getWidth(),Y);
+			shope.setPosition(hangarShop.getX()+ shopBTN.getWidth(),Y);
 		
 			hanger.resize();
 			selectStage.resize();

@@ -8,7 +8,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.Touchpad;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.entity.Crach.CrachPlayer.State;
 import crach.stage.game.entity.Object.Box;
 import crach.stage.game.creator.B2WorldCreator;
@@ -29,13 +29,13 @@ public class ControulMobile extends ControuleClass {
 
 	public ControulMobile(final B2WorldCreator creator) {
         super(creator);
-		buttonUp = new Button(Assest.Style,"ButtonUp");
-		buttonDown = new Button(Assest.Style,"ButtonDown");
+		buttonUp = new Button(Assets.skinStyle,"ButtonUp");
+		buttonDown = new Button(Assets.skinStyle,"ButtonDown");
 //		buttonRIGHT = new Button(Assest.Style,"ButtonRight");
 //		buttonLEFT = new Button(Assest.Style,"ButtonLeft");
-		buttonForce = new Button(Assest.Style,"Buttonfire");
-		buttonIteraction = new Button(Assest.Style,"ButtonInteraction");
-		touchpad = new Touchpad(50,Assest.Style);;
+		buttonForce = new Button(Assets.skinStyle,"Buttonfire");
+		buttonIteraction = new Button(Assets.skinStyle,"ButtonInteraction");
+		touchpad = new Touchpad(50, Assets.skinStyle);;
 		buttonIteraction.setVisible(false);
 		buttonIteraction.addListener(new ClickListener() {
 			@Override

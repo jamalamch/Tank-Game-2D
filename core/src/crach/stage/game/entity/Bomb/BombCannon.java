@@ -4,7 +4,7 @@ import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 
 public class BombCannon extends TrapBomb{
@@ -20,7 +20,7 @@ public class BombCannon extends TrapBomb{
 	
 	@Override
 	public void setTexture() {
-		setTexture(Assest.Bomb_cannon_firing,null);
+		setTexture(Assets.animationBombCannonFiring,null);
 	}
 	
 	@Override
@@ -46,7 +46,7 @@ public class BombCannon extends TrapBomb{
 		pause = false;
 		tweenToAttack();
 		dt_time = 0;
-		Assest.impact_cannon.play(getVolume(), 1, getPan());
+		Assets.soundImpactCannon.play(getVolume(), 1, getPan());
 	}
 	@Override
 	protected void pauseAttack() {

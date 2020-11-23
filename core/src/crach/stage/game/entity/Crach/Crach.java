@@ -13,7 +13,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 import aurelienribon.tweenengine.BaseTween;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenCallback;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 import crach.stage.game.entity.Explosion;
@@ -24,7 +24,7 @@ public abstract class Crach extends Entity {
 	 
 	protected TextureRegion Track_1,Track_2,Gun,GunPoss,Track;
 //  protected TextureRegion Tire_Track;
-    private final static Animation<TextureRegion> animation = Assest.Sprite_Effects_Exhaust_00;    
+    private final static Animation<TextureRegion> animation = Assets.spriteEffectsExhaust00;
     protected long soundMoved ;
     
     protected  float DstBetTr ;
@@ -60,14 +60,14 @@ public abstract class Crach extends Entity {
 		defineEntity(object);
 		Tween.registerAccessor(Sprite.class, new SpriteAccessor());
 		tweenFadeInt();
-		soundMoved = Assest.movement.loop(0);
+		soundMoved = Assets.movement.loop(0);
 	}
 	public Crach(float x,float y,float r) {
         setTexture();  
 		defineEntity(x,y,r);
 		Tween.registerAccessor(Sprite.class, new SpriteAccessor());
 		tweenFadeInt();
-		soundMoved = Assest.movement.loop(0);
+		soundMoved = Assets.movement.loop(0);
 	}
   
 	public void setTexture() {
@@ -76,13 +76,13 @@ public abstract class Crach extends Entity {
 				,nHull = CrachGame.getHullSelect() 
 				,nTranck = CrachGame.getTrackSelect()
 				,ncolor = CrachGame.getColorSelect();
-		Track_1 = new TextureRegion(Assest.Track_A.get(nTranck));
-		Track_2 =  new TextureRegion(Assest.Track_B.get(nTranck));
-		Gun = new TextureRegion(Assest.Gun_B.get(ncolor).get(nGun_B));
-		GunPoss = new TextureRegion(Assest.Gun_A.get(nGunA));
+		Track_1 = new TextureRegion(Assets.textureTrackAs.get(nTranck));
+		Track_2 =  new TextureRegion(Assets.textureTrackBs.get(nTranck));
+		Gun = new TextureRegion(Assets.textureGunBs.get(ncolor).get(nGun_B));
+		GunPoss = new TextureRegion(Assets.textureGunAs.get(nGunA));
 		Track = Track_1;
 		
-        setRegion(new TextureRegion(Assest.Hull.get(ncolor).get(nHull)));
+        setRegion(new TextureRegion(Assets.textureHulls.get(ncolor).get(nHull)));
         setRotation(90);
         setZIndex(Zindex.ZindexCrach);
         
@@ -139,8 +139,8 @@ public abstract class Crach extends Entity {
 		    Track = (Track == Track_1)?Track_2 : Track_1;
 		    Dt_time=0;
 		}
-		Assest.movement.setVolume(soundMoved, LinearVelocity);
-		Assest.movement.setPitch(soundMoved, LinearVelocity+0.6f);
+		Assets.movement.setVolume(soundMoved, LinearVelocity);
+		Assets.movement.setPitch(soundMoved, LinearVelocity+0.6f);
 		if(SmokeFire) {
 			Dt_smoke += dt;
 		}
@@ -187,7 +187,7 @@ public abstract class Crach extends Entity {
 		}
 	
 	public void tweenHitAnim() {
-		Assest.playerhit.play();
+		Assets.soundPlayerHit.play();
 		int flashAmount = 3;
 		tweenFlash(this,flashAmount, invincibleTimer, new Color(1, 0.1f, 0.2f, 0.2f))
 		.end().start(creator.TWEEN_MANAGER);
@@ -195,7 +195,7 @@ public abstract class Crach extends Entity {
 	
 	
 	public void tweenDeathAnim() {
-		Assest.explosion_Player.play();
+		Assets.soundExplosionPlayer.play();
 		creator.TWEEN_MANAGER.killTarget(this);
 		tweenFadeOut(this,deathDuration, new Color(1, 0.2f, 0.2f, 0))		
 		.push(Tween.call(new TweenCallback() {

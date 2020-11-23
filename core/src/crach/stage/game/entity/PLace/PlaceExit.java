@@ -6,7 +6,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 import crach.stage.game.entity.Crach.CrachPlayer;
@@ -50,9 +50,9 @@ public class PlaceExit extends Place{
         b2body.setUserData(this);
 	}
 	public void setTexture() {
-        animation1 =Assest.PlatformActive0;
-        animation2 = Assest.PlatformActive1;
-		region = Assest.Platform;
+        animation1 = Assets.texturePlatformActive0;
+        animation2 = Assets.texturePlatformActive1;
+		region = Assets.texturePlatform;
 		setRegion(region);
         setOriginCenter();
         setZIndex(Zindex.ZindexPlace);

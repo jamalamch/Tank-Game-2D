@@ -4,14 +4,14 @@ import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
 import com.badlogic.gdx.utils.Align;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 
 public abstract class Defeat extends DialogGame{
 
 	public Button Bback,Breplay,Bplay;
 
 	public Defeat( int nStage ,int score,int record,int coin,boolean isContinue) {
-		super(Assest.StringDialog.getString("defeat"));
+		super(Assets.jsonStringDialog.getString("defeat"));
 		addScore(score);
 		addRecord(record);
 		addCoin(coin);
@@ -31,7 +31,7 @@ public abstract class Defeat extends DialogGame{
 	}
 	
 	protected void result (Object object) {
-		Assest.buttonClick1.play();
+		Assets.buttonClick1.play();
 		switch((Integer)object) {
 			case 0:
 				Back();

@@ -20,7 +20,7 @@ import crach.stage.game.utils.CameraHandler;
 import crach.stage.game.utils.WorldContactListener;
 import crach.stage.game.creator.B2WorldCreator;
 import crach.stage.game.creator.B2WorldCreatorOfline;
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.screen.Tools.WordMapRender;
 
@@ -28,7 +28,8 @@ import crach.stage.game.entity.Entity;
 import crach.stage.game.windows.dialog.DialogQuestion;
 
 public class PlayScreen extends ScreenGame{
-	
+	private final float TIME_STEP = 1/60f;
+
 	public enum ModeGame{
 		simple,football,deathmatch,P2P
 	}
@@ -36,7 +37,7 @@ public class PlayScreen extends ScreenGame{
 	public TiledMap tileMap;
 	private int nStage;
 
-	private boolean Pause,Zoom;
+	private boolean isPause, isZoom;
 	
     private SpriteBatch batch;
     private World box2dWorld;
@@ -49,11 +50,10 @@ public class PlayScreen extends ScreenGame{
     private Viewport gamePort;
     private B2WorldCreator creator;
 	private DragListener dragListener;
-	private final float TIME_STEP = 1/60f;
 	private float accumulator = TIME_STEP;
 	private ViewBanerAds banerAds;
     public PlayScreen(int nstage,ModeGame modegame) {
-		this(Assest.loadMaps(nstage,modegame),nstage,modegame);
+		this(Assets.loadMaps(nstage,modegame),nstage,modegame);
     }
 	public PlayScreen(TiledMap TiledMap ,ModeGame modegame) {
     	this(TiledMap,TiledMap.getProperties().get("code",99,Integer.class),modegame);
@@ -97,28 +97,28 @@ public class PlayScreen extends ScreenGame{
 	public void show() {
 		super.show();
 		if(!CrachGame.addLife(-1)){
-			Pause = true;
-			getStage().addActor(new DialogQuestion(Assest.StringDialog.getString("noLife")
-							, Assest.StringDialog.getString("msgNoLife")) {
+			isPause = true;
+			getStage().addActor(new DialogQuestion(Assets.jsonStringDialog.getString("noLife")
+							, Assets.jsonStringDialog.getString("msgNoLife")) {
 				@Override
 				public void Accepte() {
 					CrachGame.getiActivityRequestHandler().showVideosAds(new Runnable() {
 						@Override
 						public void run() {
 							CrachGame.addLife(10);
-							Pause = false;
+							isPause = false;
 						}
 					}, new Runnable() {
 						@Override
 						public void run() {
 							if(CrachGame.isVibr()) Gdx.input.vibrate(60);
-							CrachGame.GotToMenu();
+							CrachGame.gotToMenu();
 						}
 					});
 				}
 				@Override
 				public void Refuse() {
-					CrachGame.GotToMenu();
+					CrachGame.gotToMenu();
 				}
 			});
 		}
@@ -127,7 +127,7 @@ public class PlayScreen extends ScreenGame{
 	public void render(float delta) {
         Gdx.gl.glClearColor(0.12f, 0.19f, 0.2f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        if(!Pause) {
+        if(!isPause) {
 			accumulator += delta;
 			while (accumulator >= TIME_STEP) {
 				box2dWorld.step(TIME_STEP, 6, 2);
@@ -164,9 +164,9 @@ public class PlayScreen extends ScreenGame{
 		box2DCamera.zoom=zoom;
 		gamePort.update(width, height);
 		cameraHandler.setView(gamePort.getWorldWidth()*zoom, gamePort.getWorldHeight()*zoom);
-		ViewGamePort.update(width, height,true);
-		banerAds.resize(ViewGamePort,width, height);
-		mapRender.translate(ViewGamePort.getCamera().combined, ViewGamePort.getWorldWidth(), ViewGamePort.getWorldHeight());
+		viewGamePort.update(width, height,true);
+		banerAds.resize(viewGamePort,width, height);
+		mapRender.translate(viewGamePort.getCamera().combined, viewGamePort.getWorldWidth(), viewGamePort.getWorldHeight());
 		mapRender.setMapVeiw(cameraHandler.getWidthView(), cameraHandler.getHeightView());
 	}
 	public void updatecamera(float dragX,float dragY) {
@@ -180,34 +180,34 @@ public class PlayScreen extends ScreenGame{
         tiledMapRenderer.setView(box2DCamera);			
 	}
 	public void upToModeZoom() {
-		Zoom=Pause=true;
+		isZoom = isPause =true;
 		resize(2);
 		stage.addListener(dragListener);
 	}
 	public void quitModeZoom() {
-		Zoom=Pause=false;
+		isZoom = isPause =false;
 		resize();
 		stage.removeListener(dragListener);
 	}
     public boolean isPause() {
-		return Pause;
+		return isPause;
 	}
     public boolean isZoom() {
-		return Zoom;
+		return isZoom;
 	}
 	@Override
 	public void pause() {
-		if(!Pause || Zoom)
+		if(!isPause || isZoom)
 			creator.pauser();
 	}
 	public void setPauser(boolean pause) {
-		if(pause && Zoom)
+		if(pause && isZoom)
 			quitModeZoom();
-		this.Pause = pause; 
+		this.isPause = pause;
 		if(pause)
-			Assest.pauseAllSound();
+			Assets.pauseAllSound();
 		else{
-			Assest.resumeAllSound();
+			Assets.resumeAllSound();
 			banerAds.close();
 		}
 	}
@@ -222,7 +222,7 @@ public class PlayScreen extends ScreenGame{
 		 if(mapRender != null) mapRender.dispose();    
 		 if(tiledMapRenderer != null) tiledMapRenderer.dispose();
 		 if(batch != null) batch.dispose();
-		 Assest.stopAllSound();
+		 Assets.stopAllSound();
 		banerAds.close();
 	}
 	public World getBox2dWorld() {

@@ -10,7 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.screen.MenuUI;
 import crach.stage.game.screen.Tools.ProgressUi.ProgressText;
@@ -27,19 +27,19 @@ public class HubUi extends Table{
     	  super();
     	  this.menuUI = menuUI;
           this.setVisible(false);
-    	  lCoin = new Label("", Assest.Style,"inSqure");
-    	  lCoin.setColor(Assest.Style.getColor("CoinColor"));
-    	  lDiamound = new Label("", Assest.Style,"inSqure");
-    	  lDiamound.setColor(Assest.Style.getColor("diamondColor"));
+    	  lCoin = new Label("", Assets.skinStyle,"inSqure");
+    	  lCoin.setColor(Assets.skinStyle.getColor("CoinColor"));
+    	  lDiamound = new Label("", Assets.skinStyle,"inSqure");
+    	  lDiamound.setColor(Assets.skinStyle.getColor("diamondColor"));
     	  lCoin.setAlignment(Align.center);
     	  lDiamound.setAlignment(Align.center);
-    	  lifeGame = new ProgressText(10, Assest.Style, "ProgresUI",new Color(0xA07676FF),false);
-          LifeGame2 = new ProgressUi(10, Assest.Style, "ProgresUI",false);
-    	  PExper = new ProgressText(Assest.ValueNive.get(CrachGame.getNive()-1).getInt("max"), Assest.Style, "B-horizontal", new Color(0xfd9d9d9));
-    	  iCoin = new Image(Assest.Style, "Icon/Coin_A");
-    	  iDiamound =new  Image(Assest.Style, "Icon/DIamond");
-    	  iLife =new Image(Assest.Style, "Icon/Carte_Icon");
-    	  inive = new Image(Assest.Style, Assest.ValueNive.get(CrachGame.getNive()-1).getString("drawable"));
+    	  lifeGame = new ProgressText(10, Assets.skinStyle, "ProgresUI",new Color(0xA07676FF),false);
+          LifeGame2 = new ProgressUi(10, Assets.skinStyle, "ProgresUI",false);
+    	  PExper = new ProgressText(Assets.valueNiveu.get(CrachGame.getNive()-1).getInt("max"), Assets.skinStyle, "B-horizontal", new Color(0xfd9d9d9));
+    	  iCoin = new Image(Assets.skinStyle, "Icon/Coin_A");
+    	  iDiamound =new  Image(Assets.skinStyle, "Icon/DIamond");
+    	  iLife =new Image(Assets.skinStyle, "Icon/Carte_Icon");
+    	  inive = new Image(Assets.skinStyle, Assets.valueNiveu.get(CrachGame.getNive()-1).getString("drawable"));
           addContent();
           updatePExper(CrachGame.getExper());
           updateLCoin(CrachGame.getCoin());
@@ -59,7 +59,7 @@ public class HubUi extends Table{
           add().expandX();
           add(PExper).prefSize(350, 60);
           add(inive).prefSize(90).pad(-10);
-          setBackground(Assest.Style.getDrawable("Hub"));
+          setBackground(Assets.skinStyle.getDrawable("Hub"));
           
       }
      public void updateLCoin(int  coin) {
@@ -90,20 +90,20 @@ public class HubUi extends Table{
     	 PExper.setValue(exper);
      }
      public void updateNive(int nive, int exper) {
-    	 inive.setDrawable(Assest.Style, Assest.ValueNive.get(nive-1).getString("drawable"));
-         ProgressText pExper = new ProgressText(Assest.ValueNive.get(nive-1).getInt("max"), Assest.Style, "B-horizontal", new Color(0xfd9d9d9));
+    	 inive.setDrawable(Assets.skinStyle, Assets.valueNiveu.get(nive-1).getString("drawable"));
+         ProgressText pExper = new ProgressText(Assets.valueNiveu.get(nive-1).getInt("max"), Assets.skinStyle, "B-horizontal", new Color(0xfd9d9d9));
          this.getCell(this.PExper).setActor(pExper);
          this.PExper = pExper;
          updatePExper(exper);
-         getStage().addActor(new BonusCuler(Assest.StringDialog.getString("finirStage"),
-                 Assest.ValueNive.get(nive-2).getInt("prize"),
-                 Assest.ValueNive.get(nive-2).getString("drawable")));
+         getStage().addActor(new BonusCuler(Assets.jsonStringDialog.getString("finirStage"),
+                 Assets.valueNiveu.get(nive-2).getInt("prize"),
+                 Assets.valueNiveu.get(nive-2).getString("drawable")));
      }
      private void AddListener() {
          ClickListener  C = new ClickListener() {
              @Override
              public void clicked(InputEvent event, float x, float y) {
-                 Assest.buttonClick1.play();
+                 Assets.buttonClick1.play();
                  menuUI.getShope().Open_TMore_Coin();
              }
          };
@@ -112,7 +112,7 @@ public class HubUi extends Table{
          C = new ClickListener() {
              @Override
              public void clicked(InputEvent event, float x, float y) {
-                 Assest.buttonClick1.play();
+                 Assets.buttonClick1.play();
                  menuUI.getShope().Open_TMore_Diamond();
              }
          };
@@ -122,7 +122,7 @@ public class HubUi extends Table{
          C = new ClickListener() {
              @Override
              public void clicked(InputEvent event, float x, float y) {
-                 Assest.buttonClick1.play();
+                 Assets.buttonClick1.play();
                  menuUI.getShope().Open_BXP_Boost();
              }
          };
@@ -131,11 +131,11 @@ public class HubUi extends Table{
          C = new ClickListener() {
              @Override
              public void clicked(InputEvent event, float x, float y) {
-                 Assest.buttonClick1.play();
+                 Assets.buttonClick1.play();
                  if(CrachGame.getLife() > 3)
                      return;
-                 getStage().addActor(new DialogQuestion(Assest.StringDialog.getString("noLife")
-                         , Assest.StringDialog.getString("msgNoLife") ){
+                 getStage().addActor(new DialogQuestion(Assets.jsonStringDialog.getString("noLife")
+                         , Assets.jsonStringDialog.getString("msgNoLife") ){
                      @Override
                      public void Accepte() {
                          CrachGame.getiActivityRequestHandler().showVideosAds(new Runnable() {

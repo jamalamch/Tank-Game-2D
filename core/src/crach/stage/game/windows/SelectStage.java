@@ -11,7 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.screen.MenuUI;
 import crach.stage.game.screen.PlayScreen;
@@ -23,7 +23,7 @@ public class SelectStage extends WindowsGames{
 	private PlayScreen.ModeGame modeGame;
 	private ScrollPane Scrll;
 	public SelectStage() {
-		this(Assest.StringSelectStage.getString("title"),CrachGame.getStage(),PlayScreen.ModeGame.simple);
+		this(Assets.jsonStringSelectStage.getString("title"),CrachGame.getStage(),PlayScreen.ModeGame.simple);
 	}
 	public SelectStage(String title,int[][] stage,PlayScreen.ModeGame modeGame) {
 		super(title);
@@ -65,7 +65,7 @@ public class SelectStage extends WindowsGames{
 		super.AddListener();
 		ClickListener C = new ClickListener() {
 			public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-  				Assest.buttonClick1.play();
+  				Assets.buttonClick1.play();
   				final stage stage = ((stage) (event.getListenerActor()));
   				getStage().addActor(new SelectLevel(stage.nStage ,stage.Score,stage.Record,stage.nstar) {
 					
@@ -96,7 +96,7 @@ public class SelectStage extends WindowsGames{
 		Image Istar[] = new Image[3];
 
 		public stage(int number,boolean active) {
-			super((active)?number+1+"":"?", Assest.Style, "stage");
+			super((active)?number+1+"":"?", Assets.skinStyle, "stage");
 			this.getLabelCell().top();
 			this.nStage = number;			
 			this.Istar[0] = new Image(getDrawableStar(0));

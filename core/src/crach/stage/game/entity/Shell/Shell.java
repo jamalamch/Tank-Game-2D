@@ -11,7 +11,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.JsonValue;
 
-import crach.stage.game.Assest;
+import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.entity.Entity;
 import crach.stage.game.entity.Explosion;
@@ -21,7 +21,7 @@ import crach.stage.game.entity.Enimy.Enimy;
 public abstract class Shell extends Entity implements Explosion{
 	
 	private short maskShell;
-	private Animation<TextureRegion> animationFire  = Assest.Sprite_Fire_Shots_Shot_B;
+	private Animation<TextureRegion> animationFire  = Assets.spriteFireShotsShotB;
 
 	//private float Px,Py,rotation;
 	private float HieghtShell ,WidthShell;
@@ -47,7 +47,7 @@ public abstract class Shell extends Entity implements Explosion{
      b2body.applyLinearImpulse(Direction, getBody().getPosition(), true);
    }
 	private void updateParameter(TypeShell type){
-		JsonValue value = Assest.DataShell.get(type.ordinal());
+		JsonValue value = Assets.jsonDataShell.get(type.ordinal());
 		speed = value.getFloat("speed");
 		danger = value.getFloat("Damage");
 		timeLief = value.getFloat("life");
@@ -98,7 +98,7 @@ public abstract class Shell extends Entity implements Explosion{
     }
     
     public void DeathEntity() {
-    	 Assest.impact_Shell.play(getVolume(),1,getPan());
+    	 Assets.soundImpactShell.play(getVolume(),1,getPan());
 		 timeLief = 0;
 	     Destore = true;
 	     setPosition(b2body.getPosition().x, b2body.getPosition().y);
@@ -112,7 +112,7 @@ public abstract class Shell extends Entity implements Explosion{
     public void onContactStart(Entity otherEntity) {
     	if(!Destore) {
     		if(otherEntity instanceof Crach || otherEntity instanceof Enimy) {
-    			animationFire = Assest.Sprite_Fire_Shots_Shot_A;
+    			animationFire = Assets.spriteFireShotsShotA;
     		}
     		timeLief = 0;
     	}
