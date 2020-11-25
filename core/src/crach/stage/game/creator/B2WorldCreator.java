@@ -37,46 +37,47 @@ import box2dLight.RayHandler;
 import crach.stage.game.CrachGame;
 import crach.stage.game.Text;
 import crach.stage.game.screen.PlayScreen;
-import crach.stage.game.screen.Tools.Hub;
+import crach.stage.game.screen.tools.Hub;
 import crach.stage.game.control.ControulMobile;
 import crach.stage.game.control.ControulPc;
 import crach.stage.game.control.ControuleClass;
-import crach.stage.game.entity.Bomb.Bomb;
+import crach.stage.game.entity.bomb.Bomb;
 import crach.stage.game.entity.Entity;
-import crach.stage.game.entity.Bomb.BombCannon;
-import crach.stage.game.entity.Bomb.BombFire;
-import crach.stage.game.entity.Bomb.BombGun;
-import crach.stage.game.entity.Crach.CrachPlayer;
-import crach.stage.game.entity.Door.Door;
-import crach.stage.game.entity.Door.DoorExit;
-import crach.stage.game.entity.Door.DoorSimple;
-import crach.stage.game.entity.Enimy.Enimy;
-import crach.stage.game.entity.Object.Ball;
-import crach.stage.game.entity.Object.Box;
-import crach.stage.game.entity.Object.Container;
-import crach.stage.game.entity.Object.Crate;
-import crach.stage.game.entity.Object.Goal;
-import crach.stage.game.entity.Object.M_Circle;
-import crach.stage.game.entity.Object.Barell;
-import crach.stage.game.entity.Object.Object;
-import crach.stage.game.entity.PLace.Place;
-import crach.stage.game.entity.PLace.PlaceBox;
-import crach.stage.game.entity.PLace.PlaceExit;
-import crach.stage.game.entity.Pickups.Crystal;
-import crach.stage.game.entity.Pickups.Gold;
-import crach.stage.game.entity.Pickups.Pickup;
-import crach.stage.game.entity.Pickups.Repair;
-import crach.stage.game.entity.Pickups.Upgarde;
-import crach.stage.game.entity.Zone.ZonObject;
-import crach.stage.game.entity.Zone.Zone;
+import crach.stage.game.entity.bomb.BombCannon;
+import crach.stage.game.entity.bomb.BombFire;
+import crach.stage.game.entity.bomb.BombGun;
+import crach.stage.game.entity.crach.CrachPlayer;
+import crach.stage.game.entity.door.Door;
+import crach.stage.game.entity.door.DoorExit;
+import crach.stage.game.entity.door.DoorSimple;
+import crach.stage.game.entity.enimy.Enimy;
+import crach.stage.game.entity.object.Ball;
+import crach.stage.game.entity.object.Box;
+import crach.stage.game.entity.object.Container;
+import crach.stage.game.entity.object.Crate;
+import crach.stage.game.entity.object.Goal;
+import crach.stage.game.entity.object.M_Circle;
+import crach.stage.game.entity.object.Barell;
+import crach.stage.game.entity.object.Object;
+import crach.stage.game.entity.pLace.Place;
+import crach.stage.game.entity.pLace.PlaceBox;
+import crach.stage.game.entity.pLace.PlaceExit;
+import crach.stage.game.entity.pickups.Crystal;
+import crach.stage.game.entity.pickups.Gold;
+import crach.stage.game.entity.pickups.Pickup;
+import crach.stage.game.entity.pickups.Repair;
+import crach.stage.game.entity.pickups.Upgarde;
+import crach.stage.game.entity.zone.ZonObject;
+import crach.stage.game.entity.zone.Zone;
 import net.dermetfan.gdx.graphics.g2d.Box2DSprite;
 
 public abstract class B2WorldCreator implements Disposable{
 
 	public TweenManager TWEEN_MANAGER ;
     public RayHandler rayHandler;
-    public Filter Fglobal;
-    public Filter Fstatic;
+
+	protected Filter Fglobal;
+	protected Filter Fstatic;
 
 
 	protected ControuleClass controule;
@@ -88,9 +89,10 @@ public abstract class B2WorldCreator implements Disposable{
 	protected TiledMap tileMap; 
 	protected CrachPlayer player;
 	protected PlaceExit exite;
+
     protected Array<Entity> entitys;
     protected Array<Entity> toDestroy;
-    
+
     protected Array<Text> mapText;
     
     protected int numberBox;

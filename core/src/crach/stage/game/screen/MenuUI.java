@@ -21,7 +21,7 @@ import com.badlogic.gdx.utils.Scaling;
 import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
 import crach.stage.game.GdxRequest;
-import crach.stage.game.screen.Tools.*;
+import crach.stage.game.screen.tools.*;
 import crach.stage.game.windows.Bonus;
 import crach.stage.game.windows.Hanger;
 import crach.stage.game.windows.SelectStage;

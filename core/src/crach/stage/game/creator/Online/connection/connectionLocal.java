@@ -15,7 +15,7 @@ import com.badlogic.gdx.utils.Json;
 import crach.stage.game.creator.Online.B2WorldCreatorOnline;
 import crach.stage.game.creator.Online.B2WorldCreatorOnline.StateEntity;
 import crach.stage.game.entity.Entity;
-import crach.stage.game.entity.Crach.CrachPlayer;
+import crach.stage.game.entity.crach.CrachPlayer;
 
 
 

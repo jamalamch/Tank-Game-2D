@@ -15,14 +15,14 @@ import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
-import crach.stage.game.screen.Tools.ViewBanerAds;
+import crach.stage.game.screen.tools.ViewBanerAds;
 import crach.stage.game.utils.CameraHandler;
 import crach.stage.game.utils.WorldContactListener;
 import crach.stage.game.creator.B2WorldCreator;
 import crach.stage.game.creator.B2WorldCreatorOfline;
 import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
-import crach.stage.game.screen.Tools.WordMapRender;
+import crach.stage.game.screen.tools.WordMapRender;
 
 import crach.stage.game.entity.Entity;
 import crach.stage.game.windows.dialog.DialogQuestion;

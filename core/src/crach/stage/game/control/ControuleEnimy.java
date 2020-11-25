@@ -5,8 +5,8 @@ import com.badlogic.gdx.math.Vector2;
 
 import crach.stage.game.control.Pathfinding.ArrayGraphFind;
 import crach.stage.game.entity.Entity;
-import crach.stage.game.entity.Crach.CrachPlayer;
-import crach.stage.game.entity.Enimy.Enimy;
+import crach.stage.game.entity.crach.CrachPlayer;
+import crach.stage.game.entity.enimy.Enimy;
 import crach.stage.game.creator.B2WorldCreatorOfline;
 
 public class ControuleEnimy implements Controule {
@@ -84,7 +84,7 @@ public class ControuleEnimy implements Controule {
 				if (mPath.getCount() > 4) {
 					float x = mPath.first().mX + creator.CellSize / 2;
 					float y = mPath.first().mY + creator.CellSize / 2;
-					Enimy.UpdateToDeplace(new Vector2(x, y), !Attack);
+					Enimy.updateToDeplace(new Vector2(x, y), !Attack);
 					Move = true;
 					mPath.getNode().remove(0).select(false);
 				} 

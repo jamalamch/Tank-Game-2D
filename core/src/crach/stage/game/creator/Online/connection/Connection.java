@@ -10,7 +10,7 @@ import java.util.Enumeration;
 import java.util.List;
 
 import crach.stage.game.creator.B2WorldCreator;
-import crach.stage.game.entity.Crach.CrachPlayer;
+import crach.stage.game.entity.crach.CrachPlayer;
 
 public  class Connection {
 	    float update_times;

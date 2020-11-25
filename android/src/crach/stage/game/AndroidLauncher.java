@@ -26,7 +26,7 @@ import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
-import crach.stage.game.screen.Tools.ViewBanerAds;
+import crach.stage.game.screen.tools.ViewBanerAds;
 import de.golfgl.gdxgamesvcs.GpgsClient;
 
 public class AndroidLauncher extends AndroidApplication {

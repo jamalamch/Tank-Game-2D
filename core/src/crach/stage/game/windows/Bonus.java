@@ -18,7 +18,7 @@ import com.badlogic.gdx.utils.Json;
 
 import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
-import crach.stage.game.screen.Tools.ProgressUi;
+import crach.stage.game.screen.tools.ProgressUi;
 
 public class Bonus extends WindowsGames{
 

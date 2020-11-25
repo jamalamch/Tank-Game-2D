@@ -16,7 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
-import crach.stage.game.screen.Tools.WatchAds;
+import crach.stage.game.screen.tools.WatchAds;
 
 public class Shop extends Table{
 	private final int prix100C=20,prix1000C=180,prixNoAds=1000,PrixNoAdsAndCoin=1100,prixXp2=100,prixXp3=120,prixXp6=200;

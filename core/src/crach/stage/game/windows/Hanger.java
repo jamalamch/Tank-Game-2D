@@ -22,8 +22,8 @@ import com.badlogic.gdx.utils.Scaling;
 
 import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
-import crach.stage.game.screen.Tools.ProgressUi;
-import crach.stage.game.screen.Tools.ViewTank;
+import crach.stage.game.screen.tools.ProgressUi;
+import crach.stage.game.screen.tools.ViewTank;
 import crach.stage.game.windows.dialog.DialogQuestion;
 
 public class Hanger extends WindowsGames{

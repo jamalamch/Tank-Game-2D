@@ -9,7 +9,7 @@ import crach.stage.game.creator.Online.connection.Connection;
 import crach.stage.game.creator.Online.connection.connectionLocal;
 import crach.stage.game.screen.PlayScreen;
 import crach.stage.game.entity.*;
-import crach.stage.game.entity.Enimy.Enimy;
+import crach.stage.game.entity.enimy.Enimy;
 
 
 
@@ -59,7 +59,7 @@ public class B2WorldCreatorOnline extends B2WorldCreator {
 	public void updateEntityPosition(String id, float x, float y, float r) {
 		if (EntityMap.containsKey(id)) {
 			Entity E = getEntiy(id);
-			E.UpdateToDeplace(new Vector2(x, y), r);
+			E.updateToDeplace(new Vector2(x, y), r);
 		}
 	}
 
@@ -91,7 +91,7 @@ public class B2WorldCreatorOnline extends B2WorldCreator {
 		default:
 			return null;
 		}
-		E.SetForceDeplace(x, y, r);
+		E.setForceDeplace(x, y, r);
 		
 		return E;
 	}

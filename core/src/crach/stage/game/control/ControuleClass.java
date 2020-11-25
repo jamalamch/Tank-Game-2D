@@ -4,7 +4,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
-import crach.stage.game.entity.Crach.CrachPlayer;
+import crach.stage.game.entity.crach.CrachPlayer;
 import crach.stage.game.creator.B2WorldCreator;
 
 
@@ -18,11 +18,8 @@ public class ControuleClass implements Controule {
 	protected Body b2body;
 	protected Vector2 vitaseUp,vitaseDown ;
 	protected Vector2 Center;
-	protected boolean Interaction ;
 	protected float Dt_time;
 
-	public float fairevitass;
-	
     public ControuleClass(final B2WorldCreator creator){
         this.stage = creator.getGdxPlayScreen().getStage();
         this.player = creator.getPlayer();
@@ -42,10 +39,6 @@ public class ControuleClass implements Controule {
         player.setControule(this);
 	}
 	
-    @Override
-   public void setInteraction(boolean Inter) {
-  	  Interaction = Inter;
-   }
     public float getDt_time() {
 		return Dt_time;
 	}

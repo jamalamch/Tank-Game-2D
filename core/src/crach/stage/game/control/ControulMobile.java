@@ -9,8 +9,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.Touchpad;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import crach.stage.game.Assets;
-import crach.stage.game.entity.Crach.CrachPlayer.State;
-import crach.stage.game.entity.Object.Box;
 import crach.stage.game.creator.B2WorldCreator;
 
 
@@ -37,26 +35,11 @@ public class ControulMobile extends ControuleClass {
 		buttonIteraction = new Button(Assets.skinStyle,"ButtonInteraction");
 		touchpad = new Touchpad(50, Assets.skinStyle);;
 		buttonIteraction.setVisible(false);
-		buttonIteraction.addListener(new ClickListener() {
-			@Override
-			public void clicked(InputEvent event, float x, float y) {
-				if(Interaction) {
-				  Box box = (Box) player.interactEntity; 
-		            if (box.isEnabled() && player.state == State.CONTROL) {
-		               player.startInteractionWithBox(box);
-		               box.setState(crach.stage.game.entity.Object.Box.State.INTER);
-		           }else  if ( player.state == State.MOVE_BOX) {
-		               box.setState(crach.stage.game.entity.Object.Box.State.NONE);
-		               player.endInteractionWithBox(box);           
-		            }
-			      }
-			  }
-		});
 		buttonForce.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-    			if ( player.state == State.CONTROL && Dt_time > player.fire){
-                    player.TireFire();
+    			if (Dt_time > player.fire){
+                    player.tireFire();
 					Dt_time = 0;
 				}
 		}});
@@ -101,24 +84,6 @@ public class ControulMobile extends ControuleClass {
 				toRotation.set(touchpad.getKnobPercentX(),touchpad.getKnobPercentY());
 				player.updateToAngel(toRotation);
             }
-            if(Interaction) {
-                final Box box = (Box) player.interactEntity;
-                if(buttonForce.isPressed()){
-        			if ( player.state == State.MOVE_BOX && player.boxBumber == null){
-        				 player.addPower(2);
-        			}
-        		} 
-                if(box.isINTER_PLAYERS()) {
-                	player.AntyReaction(box);
-                }
-            }else if(player.boxBumber != null)
-          	   player.boxBumber(player.boxBumber);
-            
     super.update(delta);
-	}
-	@Override
-	public void setInteraction(boolean Inter) {
-        super.setInteraction(Inter);
-		buttonIteraction.setVisible(Inter);
 	}
 }

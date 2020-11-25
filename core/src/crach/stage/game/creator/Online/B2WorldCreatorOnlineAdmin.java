@@ -4,8 +4,8 @@ import com.badlogic.gdx.math.MathUtils;
 
 import crach.stage.game.screen.PlayScreen;
 import crach.stage.game.entity.Entity;
-import crach.stage.game.entity.Enimy.Enimy;
-import crach.stage.game.entity.Object.Object;
+import crach.stage.game.entity.enimy.Enimy;
+import crach.stage.game.entity.object.Object;
 
 
 public class B2WorldCreatorOnlineAdmin extends B2WorldCreatorOnline{
@@ -50,7 +50,7 @@ public class B2WorldCreatorOnlineAdmin extends B2WorldCreatorOnline{
 		Entity E = creatEntity(State, id, x, y);
 		EntityMap.put(id, E);
 		EntityActive.put(id, State);
-		E.SetForceDeplace(x, y, E.getBody().getAngle());
+		E.setForceDeplace(x, y, E.getBody().getAngle());
 	}
 	public void updateRoom() {
 		if (numberBox < MaxNumberBox) {
