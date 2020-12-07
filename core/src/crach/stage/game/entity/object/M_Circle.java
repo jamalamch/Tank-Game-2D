@@ -36,4 +36,9 @@ public abstract class M_Circle extends Object{
         b2body.createFixture(fdef);
         shape.dispose();	  
 	}
+
+    @Override
+    public String toString() {
+        return "M_Circle";
+    }
 }

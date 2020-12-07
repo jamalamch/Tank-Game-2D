@@ -22,9 +22,6 @@ import com.badlogic.gdx.utils.Disposable;
 
 import crach.stage.game.Assets;
 import crach.stage.game.CrachGame;
-import crach.stage.game.entity.bomb.BombGun;
-import crach.stage.game.entity.bomb.BombGunShell;
-import crach.stage.game.entity.bomb.TrapBomb;
 import crach.stage.game.entity.pickups.Crystal;
 import net.dermetfan.gdx.math.MathUtils;
 
@@ -142,13 +139,13 @@ public class WordMapRender extends Image implements Disposable {
 					break;
 				case CrachGame.BOMB_BIT:
 					Object dataObject = fixture.getBody().getUserData();
-					if (dataObject instanceof BombGun)
-						drawShape(verticesGun, fixture.getBody().getTransform(), getColorFixture(fixture));
-					else if (dataObject instanceof BombGunShell)
-						drawShape(verticesShell, fixture.getBody().getTransform(), getColorFixture(fixture));
-					else if (dataObject instanceof TrapBomb)
-						drawShape(verticesDanger, fixture.getBody().getTransform(), getColorFixture(fixture));
-					else
+//					if (dataObject instanceof BombGun)
+//						drawShape(verticesGun, fixture.getBody().getTransform(), getColorFixture(fixture));
+//					else if (dataObject instanceof BombGunShell)
+//						drawShape(verticesShell, fixture.getBody().getTransform(), getColorFixture(fixture));
+//					else if (dataObject instanceof TrapBomb)
+//						drawShape(verticesDanger, fixture.getBody().getTransform(), getColorFixture(fixture));
+//					else
 						drawShape(verticesBomb, fixture.getBody().getTransform(), getColorFixture(fixture));
 					break;
 				case CrachGame.CRACH_BIT:

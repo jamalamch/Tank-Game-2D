@@ -24,7 +24,7 @@ public abstract class Crate extends Box{
 	private final static float deathDuration = 1;
 	private float dt_time ;
 	private float life = 35;
-	private boolean Destore;
+	private boolean destore;
 	public Crate(MapObject object) {
 		super(object);
 		b2body.setGravityScale(100);
@@ -35,7 +35,7 @@ public abstract class Crate extends Box{
 	@Override
 	public void update(float dt) {
 		super.update(dt);
- 		if(Destore) {
+ 		if(destore) {
 			dt_time +=dt;
 			if(destoryCrate.isAnimationFinished(dt_time)) {
 		    	creator.SetDestoryEntity(this);
@@ -47,7 +47,7 @@ public abstract class Crate extends Box{
 	
 	@Override
 	public void draw(Batch batch, Body body) {
-		if(Destore) {
+		if(destore) {
 			batch.setColor(getColor());
     		batch.draw(this,  getX() -getWidth()/2,  getY()-getHeight()/2,  getOriginX() ,  getOriginY() ,  getWidth(),  getHeight(), getScaleX(), getScaleY(),  getRotation());
 			TextureRegion AnimationF = destoryCrate.getKeyFrame(dt_time);
@@ -69,7 +69,7 @@ public abstract class Crate extends Box{
 		Assets.soundHitCrateHeavy.play(getVolume(),1,getPan());
 		creator.addExper(5);
 
-    	Destore= true;
+    	destore = true;
 	    setPosition(b2body.getPosition().x, b2body.getPosition().y);
 	    setRotation(b2body.getAngle()*MathUtils.radiansToDegrees);
 	    setSize(Box2DUtils.size(getBody()).x,Box2DUtils.size(getBody()).y);
@@ -164,5 +164,14 @@ public abstract class Crate extends Box{
 				break;
 		}
 		return C;
+	}
+
+	@Override
+	public String toString() {
+		return "Crate{" +
+				"dt_time=" + dt_time +
+				", life=" + life +
+				", destore=" + destore +
+				'}';
 	}
 }

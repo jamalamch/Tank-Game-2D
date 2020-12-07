@@ -96,4 +96,12 @@ public class Ball  extends M_Circle{
         }
     }
 
+    @Override
+    public String toString() {
+        return "Ball{" +
+                "life=" + life +
+                ", deathDuration=" + deathDuration +
+                ", dt_time=" + dt_time +
+                '}';
+    }
 }

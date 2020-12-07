@@ -25,5 +25,14 @@ public abstract class Place extends Entity{
 	public Place(MapObject object){
 		defineEntity(object);
 		setTexture();
-	}	    
+	}
+
+	@Override
+	public String toString() {
+		return "Place{" +
+				"hieght=" + hieght +
+				", interaction=" + interaction +
+				", interactEntity=" + interactEntity +
+				'}';
+	}
 }

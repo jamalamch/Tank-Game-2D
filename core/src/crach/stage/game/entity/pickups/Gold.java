@@ -51,4 +51,9 @@ public class Gold extends Pickup{
 				, getWidth(), getHeight(), getScaleX(), getScaleY(), getRotation());
 		batch.setColor(Color.WHITE);
 	}
+
+	@Override
+	public String toString() {
+		return "Gold{"+ super.toString() +"}";
+	}
 }

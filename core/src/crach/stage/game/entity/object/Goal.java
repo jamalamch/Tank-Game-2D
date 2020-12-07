@@ -32,8 +32,6 @@ public class Goal extends Object {
         Shape shape;
 
         bdef.type = BodyDef.BodyType.StaticBody;
-     //   bdef.linearDamping=2;
-      //  bdef.angularDamping=1.4f;
         bdef.position.set(X,Y-15);
         bdef.angle = R;
         b2body = world.createBody(bdef);
@@ -69,5 +67,10 @@ public class Goal extends Object {
             creator.addScore(com.badlogic.gdx.math.MathUtils.random(20 +10*creator.getnStage(),50 +10*creator.getnStage()));
             creator.victorGame();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Goal";
     }
 }

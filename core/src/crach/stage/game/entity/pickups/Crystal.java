@@ -69,5 +69,9 @@ public abstract class Crystal extends Pickup{
 		}
 
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Crystal{" + super.toString() +"}";
+	}
 }

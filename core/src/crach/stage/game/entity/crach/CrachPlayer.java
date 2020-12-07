@@ -127,7 +127,7 @@ public class CrachPlayer extends Crach {
     }
     public void tireFire() {
     	Assets.soundPlayerAttack.play();
-    	creator.addEntity(Shell.createShell(typeShell, getBody().getPosition(), b2body.getAngle(), force, Shell.maskShell.playershot));
+    	creator.addEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.maskShell.playershot));
         actGunPoss(5,10);
         addSmokeFire();
     }
@@ -187,5 +187,13 @@ public class CrachPlayer extends Crach {
 	@Override
 	public short getCategoryBits() {
 		return CrachGame.CRACH_BIT;
+	}
+
+	@Override
+	public String toString() {
+		return "CrachPlayer{" +
+				", life=" + life +
+				", power=" + power +
+				'}';
 	}
 }

@@ -34,5 +34,9 @@ public  class Container extends Box{
 	public void defineEntity(float X, float Y, float R) {
 		defineEntity(X, Y, R, 80, 160, 4.5f, 4.7f, 0.07f);
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Container";
+	}
 }

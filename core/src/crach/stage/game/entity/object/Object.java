@@ -131,4 +131,11 @@ public abstract class Object extends Entity{
 	public void setState(State S) {
 		state = S;
 	}
+
+	@Override
+	public String toString() {
+		return "Object{" +
+				", state=" + state +
+				'}';
+	}
 }

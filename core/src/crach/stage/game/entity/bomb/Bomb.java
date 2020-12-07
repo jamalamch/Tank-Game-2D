@@ -69,7 +69,7 @@ public  abstract class Bomb extends Entity implements Explosion{
 	public void defineEntity(float X, float Y, float R,float radius,float zonDeath) {
 //		this.defineEntity(X, Y, R, 4, 2, true, 0.1f, 0.7f, radius, zonDeath);
 		bodyDef(X,Y,R);
-		createFixtureCircle(radius,true);
+		createFixtureCircle(radius/CrachGame.PPM,true);
 		this.zonDeath=zonDeath;
 	}
 	public void defineEntity(float X, float Y, float R,float LinearDamp, float AngularDamp,boolean isSensor,float density,float restitution,float radius,float zonDeath) {
@@ -118,10 +118,11 @@ public  abstract class Bomb extends Entity implements Explosion{
         FixtureDef fdef = new FixtureDef();
         shape.setRadius(zonDeath /CrachGame.PPM);
         fdef.shape = shape;
-        fdef.filter.categoryBits = CrachGame.EXPLOSION_BIT;	  
+        fdef.filter.categoryBits = CrachGame.EXPLOSION_BIT;
         fdef.filter.maskBits =  CrachGame.CRACH_BIT|CrachGame.BOMB_BIT |CrachGame.FIRE_BIT| CrachGame.ENIMY_BIT|
         						CrachGame.OBJECT_BIT |CrachGame.DOOR_BIT|CrachGame.EXPLOSION_BIT;
         b2body.createFixture(fdef);
+
         shape.dispose();
 	}
 	
@@ -226,5 +227,13 @@ public  abstract class Bomb extends Entity implements Explosion{
 	public short getMaskBits() {
 		return CrachGame.CRACH_BIT|CrachGame.BOMB_BIT | CrachGame.ENIMY_BIT|
 				CrachGame.OBJECT_BIT|CrachGame.DOOR_BIT |CrachGame.EXPLOSION_BIT;
+	}
+
+	@Override
+	public String toString() {
+		return "Bomb{" +
+				", lifeTime=" + lifeTime +
+				", Domage=" + Domage +
+				'}';
 	}
 }

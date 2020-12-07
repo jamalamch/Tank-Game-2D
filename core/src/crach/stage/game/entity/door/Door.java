@@ -164,4 +164,15 @@ public abstract class Door extends Entity {
 		toOpen = false;
 		toClose = false;
 	}
+
+	@Override
+	public String toString() {
+		return "Door{" +
+				", toOpen=" + toOpen +
+				", toClose=" + toClose +
+				", rotat90=" + rotat90 +
+				", Dt_time=" + Dt_time +
+				", DerType=" + DerType +
+				'}';
+	}
 }

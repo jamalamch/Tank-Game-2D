@@ -43,9 +43,6 @@ import crach.stage.game.control.ControulPc;
 import crach.stage.game.control.ControuleClass;
 import crach.stage.game.entity.bomb.Bomb;
 import crach.stage.game.entity.Entity;
-import crach.stage.game.entity.bomb.BombCannon;
-import crach.stage.game.entity.bomb.BombFire;
-import crach.stage.game.entity.bomb.BombGun;
 import crach.stage.game.entity.crach.CrachPlayer;
 import crach.stage.game.entity.door.Door;
 import crach.stage.game.entity.door.DoorExit;
@@ -324,17 +321,17 @@ public abstract class B2WorldCreator implements Disposable{
 
         for(MapObject object : maplayerBomb.getObjects().getByType(MapObject.class)){
 			type = object.getProperties().get("type","bomb",String.class);
-			if(type.equals("bomb"))
+			if(type.equals("bomb")){
 				B = Bomb.CreateBomb(object);
-			else if(type.equals("bombgun")) {
-				B = BombGun.CreateBombGun(object);
-			}else if(type.equals("bombfire")) {
-				B = new BombFire(object);
+//			}else if(type.equals("bombgun")) {
+//				B = BombGun.CreateBombGun(object);
+//			}else if(type.equals("bombfire")) {
+//				B = new BombFire(object);
+//			}
+//			else if(type.equals("Bombcan")) {
+//				B = new BombCannon(object);
+				entitys.add(B);
 			}
-			else if(type.equals("Bombcan")) {
-				B = new BombCannon(object);
-			}
-           entitys.add(B);
          }
 	}
 	
@@ -386,7 +383,7 @@ public abstract class B2WorldCreator implements Disposable{
     	    destoryEntity();
     	    controule.update(dt);
             hub.update(dt);
-            updatehubWeapon(controule.getDt_time());
+            updateHubWeapon(controule.getDt_time());
     }
     public void drawEntity(Batch batch,int minindexZ,int maxIndexZ) {
         batch.begin();
@@ -413,11 +410,11 @@ public abstract class B2WorldCreator implements Disposable{
     	entitys.add(E);
     }
     private void destoryEntity(Entity E) {
-    	entitys.removeValue(E,false);
-		toDestroy.removeValue(E,false);
+    	entitys.removeValue(E,true);
+		toDestroy.removeValue(E,true);
     }
     public void SetDestoryEntity(Entity E) {
-    	if(!toDestroy.contains(E,false))
+    	if(!toDestroy.contains(E,true))
     	          toDestroy.add(E);
     }
     
@@ -493,9 +490,9 @@ public abstract class B2WorldCreator implements Disposable{
         chain.createChain(worldVertices);
         return chain;
     }
-	
 
-	
+
+
     public abstract void victorGame();
     public abstract void defeatGame();
     public abstract void pauser();
@@ -543,7 +540,7 @@ public abstract class B2WorldCreator implements Disposable{
 		if(hub != null)
 			hub.updatePHealth(player.getLife());
 	}
-	public void updatehubWeapon(float Vweapon) {
+	public void updateHubWeapon(float Vweapon) {
 		hub.updatePWeapon(Vweapon);
 	}
 	public PlayScreen getGdxPlayScreen() {

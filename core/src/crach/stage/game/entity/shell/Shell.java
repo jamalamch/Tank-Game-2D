@@ -23,9 +23,8 @@ public abstract class Shell extends Entity implements Explosion{
 	private short maskShell;
 	private Animation<TextureRegion> animationFire  = Assets.spriteFireShotsShotB;
 
-	//private float Px,Py,rotation;
-	private float HieghtShell ,WidthShell;
-	private boolean Destore;
+	private float heightShell, widthShell;
+	private boolean destore;
 	
 	protected float speed;
 	protected float timeLief ;
@@ -55,8 +54,8 @@ public abstract class Shell extends Entity implements Explosion{
 	
     public void setTexture(TextureRegion region) {
     	super.setRegion(region);
-    	WidthShell = region.getRegionWidth()/(2*CrachGame.PPM);
-    	HieghtShell = region.getRegionHeight()/(2*CrachGame.PPM);
+    	widthShell = region.getRegionWidth()/(2*CrachGame.PPM);
+    	heightShell = region.getRegionHeight()/(2*CrachGame.PPM);
     	setOriginCenter();
         setZIndex(Zindex.Zindexfire);
     }
@@ -65,7 +64,7 @@ public abstract class Shell extends Entity implements Explosion{
         BodyDef bdef = new BodyDef();
         FixtureDef fdef = new FixtureDef();
         PolygonShape shape = new PolygonShape();
-        shape.setAsBox(WidthShell, HieghtShell);
+        shape.setAsBox(widthShell, heightShell);
         
         bdef.type = BodyDef.BodyType.DynamicBody;
         bdef.angle = R;
@@ -81,7 +80,7 @@ public abstract class Shell extends Entity implements Explosion{
     
     @Override
     public void update(float dt){
-      if(!Destore) {
+      if(!destore) {
     	      timeLief -= dt;
       if(timeLief<0) { 
     	  deathEntity();
@@ -100,7 +99,7 @@ public abstract class Shell extends Entity implements Explosion{
     public void deathEntity() {
     	 Assets.soundImpactShell.play(getVolume(),1,getPan());
 		 timeLief = 0;
-	     Destore = true;
+	     destore = true;
 	     setPosition(b2body.getPosition().x, b2body.getPosition().y);
 	     setRotation(b2body.getAngle()*MathUtils.radiansToDegrees+180);
 	     destroy();
@@ -110,7 +109,7 @@ public abstract class Shell extends Entity implements Explosion{
     
     @Override
     public void onContactStart(Entity otherEntity) {
-    	if(!Destore) {
+    	if(!destore) {
     		if(otherEntity instanceof Crach || otherEntity instanceof Enimy) {
     			animationFire = Assets.spriteFireShotsShotA;
     		}
@@ -122,7 +121,7 @@ public abstract class Shell extends Entity implements Explosion{
 	
     @Override
     public void draw(Batch batch, Body body) {
-    	if(!Destore)
+    	if(!destore)
     	super.draw(batch, body);
     	else {
     		TextureRegion AnimationF = animationFire.getKeyFrame(timeLief);
@@ -191,5 +190,15 @@ public abstract class Shell extends Entity implements Explosion{
 					break;
 			}
 		return shell;
+	}
+
+	@Override
+	public String toString() {
+		return "Shell{" +
+				", destore=" + destore +
+				", speed=" + speed +
+				", timeLief=" + timeLief +
+				", danger=" + danger +
+				'}';
 	}
 }

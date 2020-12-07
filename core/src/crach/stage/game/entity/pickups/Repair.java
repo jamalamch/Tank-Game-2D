@@ -29,6 +29,10 @@ public class Repair extends Pickup{
 	@Override
 	public void defineEntity(float X, float Y, float R) {
 		defineEntity(X, Y, R, 40);
-	
-}
+	}
+
+	@Override
+	public String toString() {
+		return "Repair{" + super.toString()+"}";
+	}
 }

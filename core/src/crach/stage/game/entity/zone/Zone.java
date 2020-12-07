@@ -45,4 +45,10 @@ public abstract class Zone extends Entity{
 	@Override
 	public void draw(Batch batch, Body body) {
 	}
+
+    @Override
+    public String toString() {
+        return "Zone{" +
+                '}';
+    }
 }

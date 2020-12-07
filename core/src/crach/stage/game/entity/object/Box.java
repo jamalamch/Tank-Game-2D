@@ -12,7 +12,6 @@ import crach.stage.game.CrachGame;
 
 public abstract class  Box extends Object{	
 
-
 	public Box(String id,float x,float y) {
 		super(x, y);
 		this.Id=id;
@@ -121,4 +120,9 @@ public abstract class  Box extends Object{
 		}
 		return B;
 	}
+
+	@Override
+	public String toString() {
+		return "Box{" +
+				'}';	}
 }

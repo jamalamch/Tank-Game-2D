@@ -93,7 +93,7 @@ public class Enimy extends Entity implements InZone{
 	@Override
 	public void defineEntity(float X, float Y, float R) {
 		bodyDef(X,Y,R);
-		createFixtureCircle(radius/CrachGame.PPM);
+		createFixtureCircle(radius/CrachGame.PPM,false);
 	}
 
 	@Override
@@ -272,5 +272,18 @@ public class Enimy extends Entity implements InZone{
 	@Override
 	public short getCategoryBits() {
 		return CrachGame.ENIMY_BIT;
+	}
+
+	@Override
+	public String toString() {
+		return "Enimy{" +
+				", destore=" + destore +
+				", dt_time=" + dt_time +
+				", force=" + force +
+				", codeEnimy=" + codeEnimy +
+				", timeTrak=" + timeTrak +
+				", active=" + active +
+				", move=" + move +
+				'}';
 	}
 }

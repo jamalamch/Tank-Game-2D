@@ -124,4 +124,13 @@ public abstract class Pickup extends Entity{
 		return Score;
 	}
 	 abstract void deletePickup(Entity E);
+
+	@Override
+	public String toString() {
+		return "Pickup{" +
+				", dt_time=" + dt_time +
+				", deathDuration=" + deathDuration +
+				", Score=" + Score +
+				'}';
+	}
 }

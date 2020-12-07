@@ -37,7 +37,8 @@ public abstract class Entity extends Box2DSprite {
     public void onContactEnd(Entity otherEntity) {
     }
     public void destroy() {
-		    	world.destroyBody(b2body);				
+    	System.out.println("destory Enity"+this.toString());
+    	world.destroyBody(b2body);
     }
     public Body getBody() {
 		return b2body;  	

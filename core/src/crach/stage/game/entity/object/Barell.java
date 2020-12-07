@@ -205,4 +205,12 @@ public static class Barell3 extends Barell{
 		}
 		return B;
 	}
-}
+
+	 @Override
+	 public String toString() {
+		 return "Barell{" +
+				 ", dt_time=" + dt_time +
+				 ", life=" + life +
+				 '}';
+	 }
+ }

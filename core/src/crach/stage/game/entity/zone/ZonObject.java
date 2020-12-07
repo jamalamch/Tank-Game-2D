@@ -46,4 +46,11 @@ public class ZonObject extends Zone{
 	public static void dispose() {
 		Zones.clear();
 	}
+
+	@Override
+	public String toString() {
+		return "ZonObject{" +
+				"sise ObjectInZon=" + ObjectInZon.size +
+				'}';
+	}
 }

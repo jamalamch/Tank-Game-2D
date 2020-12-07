@@ -29,5 +29,8 @@ public class Upgarde extends Pickup{
 		defineEntity(X, Y, R, 32);
 	}
 
-
+	@Override
+	public String toString() {
+		return "Upgrade{" + super.toString() +"}";
+	}
 }

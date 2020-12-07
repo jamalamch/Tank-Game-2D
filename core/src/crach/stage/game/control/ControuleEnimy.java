@@ -51,12 +51,11 @@ public class ControuleEnimy implements Controule {
 			Enimy.toRoration.applyTorque(Enimy.getBody(), true);
 	}
 	
-	@Override
 	public void setInteraction(boolean Inter) {
 		Vector2 position = creator.getEntityCell(Enimy);
 		mPath = FindPath.calculatePath((int) position.x, (int) position.y, (int) creator.pCellPlayer.x,
 				(int) creator.pCellPlayer.y);
-			setCloseDoor(mPath.hasDoor());;
+			setCloseDoor(mPath.hasDoor());
 	}
 	
 	public void setCloseDoor(boolean close) {
