@@ -4,7 +4,6 @@ import com.badlogic.gdx.maps.MapObject;
 import crach.stage.game.Assets;
 import crach.stage.game.entity.Entity;
 
-
 public abstract class Crystal extends Pickup{
 	public Crystal(String id,float x, float y) {
         this(x, y);

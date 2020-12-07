@@ -62,17 +62,19 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 	public void addPickUpTitle() {
 		super.addPickUpTitle();
 	}
+
 	@Override
     public void update(float dt) {
-
 		if(isFindPathActive) pCellPlayer = getEntityCell(player);
     	super.update(dt);
     }
+
 	public Vector2 getEntityCell(Entity E) {
 		Vector2 position = new Vector2(E.getBody().getPosition());
 		position.scl(1 / CellSize);
 		return position;
 	}
+
 	private void addToPath() {
 	    if(isFindPathActive) {
             for (int i = 0; i < entitys.size; i++)
@@ -80,6 +82,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
                     addEntitToPath(entitys.get(i));
         }
 	}
+
 	private void addEntitToPath(Entity E) {
 		Vector2 size = new Vector2(Box2DUtils.size(E.getBody()));
 		size.rotateRad(E.getBody().getAngle());
@@ -87,8 +90,6 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 		int xCell = (int)(size.x / CellSize) ;
 		int yCell = (int)(size.y / CellSize) ;
 
-
-		
 		Vector2 Position = new Vector2(E.getBody().getPosition()) ;
 		Position.sub(size.scl(0.5f));
 		Position.scl(1 / CellSize);
@@ -98,6 +99,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 				PathFind.setCellClose((int)Position.x + i, (int)Position.y +j, true);
 			}		
 	}
+
 //	private void addEntitToPath(Fixture fexFixture,float angle) {		
 //		Vector2 size = new Vector2(Box2DUtils.size(fexFixture));
 //		size.rotateRad(angle);
@@ -112,6 +114,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 //				PathFind.setCellClose((int)Position.x + i, (int)Position.y +j, true);
 //			}
 //	}
+
 	public Pathfinding getPathfinding() {
 		return  PathFind;
 	}
@@ -126,10 +129,12 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 	public void deletePlayer() {
 		defeatGame();
 	}
+
 	@Override
 	protected void activePlaceExit() {
 		if(exite != null) exite.setActive(true);
 	}
+
 	@Override
 	public void victorGame() {
 		int score = getScore(),nstar = getStars();
@@ -177,6 +182,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 			}
 		});
 	}
+
 	@Override
 	public void defeatGame() {
 		gdxPlayScreen.setPauser(true);
@@ -210,6 +216,7 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 		});
         gdxPlayScreen.showAds();
     }
+
 	@Override
 	public void pauser() {
 		gdxPlayScreen.setPauser(true);
@@ -304,18 +311,22 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 	public int getExper() {
 		return (((getScore()>0)?getScore()*2:0) + PointExper)*CrachGame.getXPBoost();
 	}
+
 	@Override
 	public int getStars() {
 		return (int)MathUtils.map(0, getRecord(), 1, 6, getScore());
 	}
+
 	@Override
 	public int getRecord() {
 		return tileMap.getProperties().get("score", 100, Integer.class);
 	}
+
 	@Override
 	public int getCoin() {
 		return nCoin;
 	}
+
 	@Override
 	public void addScore(int score) {
 		PointScore += score;
@@ -326,8 +337,6 @@ public class B2WorldCreatorOfline extends B2WorldCreator{
 	public void addExper(int expertion) {
 		 PointExper += expertion;
 	}
-
-
 
 	@Override
 	public void addDanger(int danger) {

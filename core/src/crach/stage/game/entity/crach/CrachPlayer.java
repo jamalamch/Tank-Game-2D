@@ -66,7 +66,7 @@ public class CrachPlayer extends Crach {
 		toRoration = new RotationController.PD(rotation*10,15,0);
 		this.rotation /=40;
 		tweenFadeInt();
-		creator.updatehubHealth();
+		creator.updateHubHealth();
 	}
 	private void getAllParameter() {
 		this.Vitass = hanger.getSpeed()*3;
@@ -77,7 +77,7 @@ public class CrachPlayer extends Crach {
 		Assets.soundUpgrade.play();
 		this.life = 150 + hanger.getEnergy();
 		tweenFadeInt();
-		creator.updatehubHealth();
+		creator.updateHubHealth();
 	}
 	public void upgradCrach() {
 			Assets.soundUpgrade.play();

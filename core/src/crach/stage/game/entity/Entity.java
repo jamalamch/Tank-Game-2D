@@ -93,7 +93,6 @@ public abstract class Entity extends Box2DSprite {
 		b2body.setUserData(this);
 	}
 
-
 	public void createFixtureCircle(boolean sensor){
 		createFixtureCircle(getHeight(),sensor);
 	}

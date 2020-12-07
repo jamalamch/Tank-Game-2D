@@ -50,27 +50,30 @@ public abstract class Pickup extends Entity{
 	public void onContactStart(Entity otherEntity) {
 		 deathEntity();
 	}
-	public void defineEntity(float X,float Y,float R,float hieght) {
-        BodyDef bdef = new BodyDef();
-        PolygonShape shape = new PolygonShape();
-        FixtureDef fdef = new FixtureDef();
 
-        bdef.type = BodyDef.BodyType.StaticBody;
-        bdef.position.set(X,Y);
-        bdef.angle = R;
-        b2body = world.createBody(bdef);
-        shape.setAsBox( hieght/CrachGame.PPM, hieght/CrachGame.PPM);
-        fdef.isSensor = true;
-        fdef.shape = shape;
-        fdef.filter.categoryBits = CrachGame.CRYSTAL_BIT;
-        fdef.filter.maskBits = CrachGame.CRACH_BIT;
-        b2body.createFixture(fdef);
-        b2body.setUserData(this);
-        shape.dispose();
-        setRotation(getRotation()-45);
-        dt_time =R;
+	public void defineEntity(float X,float Y,float R,float hieght) {
+		bodyDef(X,Y,R);
+		createFixtureBox(hieght/CrachGame.PPM, hieght/CrachGame.PPM,true);
+		setRotation(getRotation()-45);
+		dt_time =R;
 	}
-    @Override
+
+	@Override
+	public BodyDef.BodyType getBodyType() {
+		return BodyDef.BodyType.DynamicBody;
+	}
+
+	@Override
+	public short getCategoryBits() {
+		return CrachGame.CRYSTAL_BIT;
+	}
+
+	@Override
+	public short getMaskBits() {
+		return CrachGame.CRACH_BIT;
+	}
+
+	@Override
     public void update(float dt) {    		
     	dt_time +=dt;
     	setRegion(animation.getKeyFrame(dt_time, true));
@@ -84,18 +87,18 @@ public abstract class Pickup extends Entity{
     		super.draw(batch, body);
     }
     public void deathEntity() {
-    	
     	destroy = true;
 	    setPosition(b2body.getPosition().x, b2body.getPosition().y);
 	    setRotation(b2body.getAngle()*MathUtils.radiansToDegrees);
 	    setSize(Box2DUtils.size(getBody()).x,Box2DUtils.size(getBody()).y);
         setOriginCenter();
     	tweenDeathAnim();
-    	
     }
+
 	protected void tweenDeathAnim() {
 		tweenDeathAnim(new Color(0.4f, 0.4f, 0.8f, 0.6f), 1.5f);
 	}
+
 	protected void tweenDeathAnim(Color color,float scale) {
 		final Entity E = this;
 		creator.TWEEN_MANAGER.killTarget(this);
@@ -123,7 +126,8 @@ public abstract class Pickup extends Entity{
 	public int getScore() {
 		return Score;
 	}
-	 abstract void deletePickup(Entity E);
+
+	abstract void deletePickup(Entity E);
 
 	@Override
 	public String toString() {

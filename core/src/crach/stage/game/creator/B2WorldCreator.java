@@ -323,13 +323,6 @@ public abstract class B2WorldCreator implements Disposable{
 			type = object.getProperties().get("type","bomb",String.class);
 			if(type.equals("bomb")){
 				B = Bomb.CreateBomb(object);
-//			}else if(type.equals("bombgun")) {
-//				B = BombGun.CreateBombGun(object);
-//			}else if(type.equals("bombfire")) {
-//				B = new BombFire(object);
-//			}
-//			else if(type.equals("Bombcan")) {
-//				B = new BombCannon(object);
 				entitys.add(B);
 			}
          }
@@ -492,7 +485,6 @@ public abstract class B2WorldCreator implements Disposable{
     }
 
 
-
     public abstract void victorGame();
     public abstract void defeatGame();
     public abstract void pauser();
@@ -514,8 +506,6 @@ public abstract class B2WorldCreator implements Disposable{
     public abstract int getCoin();
 	public abstract int getHp();
 
-
-
 	@Override
 	public void dispose() {
         toDestroy.clear();
@@ -536,7 +526,7 @@ public abstract class B2WorldCreator implements Disposable{
 	public Hub getHub() {
 		return hub;
 	}
-	public void updatehubHealth() {
+	public void updateHubHealth() {
 		if(hub != null)
 			hub.updatePHealth(player.getLife());
 	}
