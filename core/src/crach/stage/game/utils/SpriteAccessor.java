@@ -17,6 +17,7 @@ public class SpriteAccessor implements TweenAccessor<Sprite> {
 	public static final int COLOR = 3;
 	public static final int SCALE = 4;
 	public static final int POSITION = 5;
+	public static final int COLOR_ALPHA = 6;
 
 	@Override
 	public int getValues(Sprite target, int tweenType, float[] returnValues) {
@@ -35,6 +36,12 @@ public class SpriteAccessor implements TweenAccessor<Sprite> {
 			returnValues[1] = target.getColor().g;
 			returnValues[2] = target.getColor().b;
 			return 3;
+		case COLOR_ALPHA:
+				returnValues[0] = target.getColor().r;
+				returnValues[1] = target.getColor().g;
+				returnValues[2] = target.getColor().b;
+				returnValues[4] = target.getColor().a;
+			return 4;
 		case SCALE:
 			returnValues[0] = target.getScaleX();
 			returnValues[1] = target.getScaleY();
@@ -62,7 +69,10 @@ public class SpriteAccessor implements TweenAccessor<Sprite> {
 			target.setRotation(newValues[0]);
 			break;
 		case COLOR:
-				target.setColor(newValues[0], newValues[1], newValues[2], target.getColor().a);
+			target.setColor(newValues[0], newValues[1], newValues[2], target.getColor().a);
+			break;
+		case COLOR_ALPHA:
+			target.setColor(newValues[0], newValues[1], newValues[2], newValues[4]);
 			break;
 		case SCALE:
 			target.setScale(newValues[0], newValues[1]);

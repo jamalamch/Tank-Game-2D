@@ -252,32 +252,29 @@ public abstract class Entity extends Box2DSprite {
         force.setAngleRad(chemain.angleRad());
         eRaction.getBody().applyLinearImpulse(force,V, true);
     }
+
 	protected Timeline tweenFlash(Sprite target,int flashAmount,float invincibleTimer,Color color) {
 		float flashDuration = invincibleTimer / flashAmount * 0.5f;
 		return Timeline.createSequence().beginSequence()
-		.push(Tween.to(target, SpriteAccessor.COLOR, 0).target(color.r, color.g, color.b))
+		.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, 0).target(color.r, color.g, color.b, color.a))
 		.push(
 		Timeline.createSequence().beginSequence()
 		.push(Tween.to(target, SpriteAccessor.ALPHA, flashDuration).target(color.a))
 		.push(Tween.to(target, SpriteAccessor.ALPHA, flashDuration).target(1))
 		.repeat(flashAmount, 0)
-		.push(Tween.to(target, SpriteAccessor.COLOR, 0).target(1, 1, 1))
+		.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, 0).target(1, 1, 1, 1))
 		.end()
 		);
 	}
-	
-	
+
 	protected Timeline tweenFadeOut(Sprite target,float FadeOutDuration,Color colorOut) {
 		return Timeline.createSequence().beginSequence()
-		.push(Tween.to(target, SpriteAccessor.COLOR, FadeOutDuration/2f).target(colorOut.r, colorOut.g, colorOut.b))
-		.push(Tween.to(target, SpriteAccessor.ALPHA, FadeOutDuration/2f).target(colorOut.a));
+		.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, FadeOutDuration/2f).target(colorOut.r, colorOut.g, colorOut.b, colorOut.a));
 	}
 
 	protected Timeline tweenFadeInt(Sprite target,float fadeInDuration,Color colorIn) {
 		return Timeline.createSequence().beginSequence()
-		.push(Tween.to(target, SpriteAccessor.COLOR, 0).target(colorIn.r, colorIn.g, colorIn.b))
-		.push(Tween.to(target, SpriteAccessor.ALPHA, 0).target(colorIn.a))
-		.push(Tween.to(target, SpriteAccessor.COLOR, fadeInDuration/2f).target(1,1,1))
-		.push(Tween.to(target, SpriteAccessor.ALPHA, fadeInDuration/2f).target(1));
+		.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, 0).target(colorIn.r, colorIn.g, colorIn.b, colorIn.a))
+		.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, fadeInDuration/2f).target(1,1,1,1));
 	}
 }
