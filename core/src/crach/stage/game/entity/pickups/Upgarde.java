@@ -25,8 +25,8 @@ public class Upgarde extends Pickup{
 		creator.SetDestoryEntity(E);
 	}
 	@Override
-	public void defineEntity(float X, float Y, float R) {
-		defineEntity(X, Y, R, 32);
+	public void defineEntity(float x, float y, float angle) {
+		defineEntity(x, y, angle, 32);
 	}
 
 	@Override

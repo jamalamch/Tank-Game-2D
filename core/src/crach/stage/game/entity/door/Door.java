@@ -57,12 +57,12 @@ public abstract class Door extends Entity {
 		setZIndex(Zindex.ZindexDoor);
 	}
 	@Override
-	public void defineEntity(float X, float Y,float R) {
+	public void defineEntity(float x, float y, float angle) {
 		BodyDef bdef = new BodyDef();
 		PolygonShape shape = new PolygonShape();
 		FixtureDef fdef = new FixtureDef();
 		bdef.type = BodyDef.BodyType.KinematicBody;
-		bdef.position.set(X, Y);
+		bdef.position.set(x, y);
 		bdef.angle = MathUtils.degreesToRadians * rotat90;
 		b2body = world.createBody(bdef);
 		shape.setAsBox(width, height);

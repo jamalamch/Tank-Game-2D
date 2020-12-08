@@ -22,12 +22,12 @@ public class PlaceExit extends Place{
     }
 
 	@Override
-	public void defineEntity(float X, float Y, float R) {
+	public void defineEntity(float x, float y, float angle) {
         BodyDef bdef = new BodyDef();
         PolygonShape shape = new PolygonShape();
         FixtureDef fdef = new FixtureDef();
         bdef.type = BodyDef.BodyType.StaticBody;
-        bdef.position.set(X,Y);
+        bdef.position.set(x, y);
 
         b2body = world.createBody(bdef);
         

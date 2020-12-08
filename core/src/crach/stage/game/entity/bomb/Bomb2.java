@@ -34,8 +34,8 @@ public class Bomb2  extends Bomb{
 		
 	}
 	@Override
-	public void defineEntity(float X, float Y, float R) {
-		defineEntity(X, Y, R, 40, 120);
+	public void defineEntity(float x, float y, float angle) {
+		defineEntity(x, y, angle, 40, 120);
 	}
 	@Override
 	public void onContactStart(Entity otherEntity) {

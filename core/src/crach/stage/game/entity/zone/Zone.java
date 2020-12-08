@@ -23,17 +23,17 @@ public abstract class Zone extends Entity{
 	public void setTexture() {
 	}
 	@Override
-	public void defineEntity(float X, float Y, float R, float Width, float Height) {
+	public void defineEntity(float x, float y, float angle, float width, float height) {
 		
         BodyDef bdef = new BodyDef();
         PolygonShape shape = new PolygonShape();
         FixtureDef fdef = new FixtureDef();
 
         bdef.type = BodyDef.BodyType.StaticBody;
-        bdef.position.set(X,Y);
-        bdef.angle = R;
+        bdef.position.set(x, y);
+        bdef.angle = angle;
         b2body = world.createBody(bdef);
-        shape.setAsBox( Width, Height);
+        shape.setAsBox(width, height);
         fdef.shape = shape;
         fdef.isSensor=true;
         fdef.filter.categoryBits = CrachGame.ZONE_BIT;

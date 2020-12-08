@@ -29,8 +29,8 @@ public abstract class Crystal extends Pickup{
 			setTexture(Assets.animationCrystal);
 		}
 		@Override
-		public void defineEntity(float X, float Y, float R) {
-			defineEntity(X, Y, R, 20);
+		public void defineEntity(float x, float y, float angle) {
+			defineEntity(x, y, angle, 20);
 		}
 		@Override
 		public void deathEntity() {
@@ -54,8 +54,8 @@ public abstract class Crystal extends Pickup{
 		}
 
 		@Override
-		public void defineEntity(float X, float Y, float R) {
-			defineEntity(X, Y, R, 25);
+		public void defineEntity(float x, float y, float angle) {
+			defineEntity(x, y, angle, 25);
 		}	
 		@Override
 		public void deathEntity() {

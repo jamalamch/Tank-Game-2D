@@ -141,8 +141,8 @@ public static class Barell1 extends Barell{
 
 
 	@Override
-	public void defineEntity(float X, float Y, float R) {
-		defineEntity(X, Y, R, 40, 2.2f, 2.6f, 0.03f,0.15f,0);
+	public void defineEntity(float x, float y, float angle) {
+		defineEntity(x, y, angle, 40, 2.2f, 2.6f, 0.03f,0.15f,0);
 	}
 	@Override
 	public float getDanger() {
@@ -161,8 +161,8 @@ public static class Barell2 extends Barell{
 	}
 
 	@Override
-	public void defineEntity(float X, float Y, float R) {
-		defineEntity(X, Y, R, 40, 2.5f, 2.8f, 0.026f,0.2f,0);
+	public void defineEntity(float x, float y, float angle) {
+		defineEntity(x, y, angle, 40, 2.5f, 2.8f, 0.026f,0.2f,0);
 	}
 	@Override
 	public float getDanger() {
@@ -181,8 +181,8 @@ public static class Barell3 extends Barell{
 	}
 
 	@Override
-	public void defineEntity(float X, float Y, float R) {
-		defineEntity(X, Y, R, 40, 3, 3.4f, 0.035f,0.1f,0);
+	public void defineEntity(float x, float y, float angle) {
+		defineEntity(x, y, angle, 40, 3, 3.4f, 0.035f,0.1f,0);
 	}
 	@Override
 	public float getDanger() {

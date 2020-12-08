@@ -127,7 +127,7 @@ public class CrachPlayer extends Crach {
     }
     public void tireFire() {
     	Assets.soundPlayerAttack.play();
-    	creator.addEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.maskShell.playershot));
+    	creator.addEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.MaskShell.playershell));
         actGunPoss(5,10);
         addSmokeFire();
     }

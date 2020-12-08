@@ -11,9 +11,6 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.CircleShape;
-import com.badlogic.gdx.physics.box2d.FixtureDef;
 
 import aurelienribon.tweenengine.BaseTween;
 import aurelienribon.tweenengine.Timeline;
@@ -91,8 +88,8 @@ public class Enimy extends Entity implements InZone{
         setTexture();
     }
 	@Override
-	public void defineEntity(float X, float Y, float R) {
-		bodyDef(X,Y,R);
+	public void defineEntity(float x, float y, float angle) {
+		bodyDef(x, y, angle);
 		createFixtureCircle(radius/CrachGame.PPM,false);
 	}
 
@@ -185,7 +182,7 @@ public class Enimy extends Entity implements InZone{
    	public void TireFire() {
    		Assets.soundEnemyHit.play(getVolume(), 1, getPan());
 		//creator.addEntity(new fireEnimy(b2body.getPosition(), b2body.getAngle(), force));
-   		creator.addEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.maskShell.enimyshoet));
+   		creator.addEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.MaskShell.enimyshell));
 	}
     @Override
     public void deathEntity() {

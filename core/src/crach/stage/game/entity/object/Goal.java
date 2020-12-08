@@ -26,14 +26,14 @@ public class Goal extends Object {
         setZIndex(Zindex.ZindexDoor);
     }
 
-    public void defineEntity(float X, float Y, float R) {
+    public void defineEntity(float x, float y, float angle) {
         BodyDef bdef = new BodyDef();
         FixtureDef fdef = new FixtureDef();
         Shape shape;
 
         bdef.type = BodyDef.BodyType.StaticBody;
-        bdef.position.set(X,Y-15);
-        bdef.angle = R;
+        bdef.position.set(x, y -15);
+        bdef.angle = angle;
         b2body = world.createBody(bdef);
         shape = new ChainShape();
 

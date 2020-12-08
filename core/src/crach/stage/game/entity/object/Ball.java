@@ -32,8 +32,8 @@ public class Ball  extends M_Circle{
     }
 
     @Override
-    public void defineEntity(float X, float Y, float R) {
-        defineEntity(X, Y, R, 40, 1.4f, 0.8f, 0.01f,0.6f,0.35f);
+    public void defineEntity(float x, float y, float angle) {
+        defineEntity(x, y, angle, 40, 1.4f, 0.8f, 0.01f,0.6f,0.35f);
     }
 
     @Override

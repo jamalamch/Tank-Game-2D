@@ -6,9 +6,6 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.JsonValue;
 
 import crach.stage.game.Assets;
@@ -60,25 +57,22 @@ public abstract class Shell extends Entity implements Explosion{
         setZIndex(Zindex.Zindexfire);
     }
     @Override
-	public void defineEntity(float X, float Y,float R) {
-        BodyDef bdef = new BodyDef();
-        FixtureDef fdef = new FixtureDef();
-        PolygonShape shape = new PolygonShape();
-        shape.setAsBox(widthShell, heightShell);
-        
-        bdef.type = BodyDef.BodyType.DynamicBody;
-        bdef.angle = R;
-        bdef.position.set(X,Y);
-        b2body = world.createBody(bdef);
-        fdef.shape = shape;
-        fdef.filter.categoryBits = CrachGame.FIRE_BIT;	
-        fdef.filter.maskBits = maskShell;
-        b2body.createFixture(fdef);
-        b2body.setUserData(this);
-        shape.dispose();
-        }
-    
-    @Override
+	public void defineEntity(float x, float y, float angle) {
+        bodyDef(x, y, angle);
+        createFixtureBox(widthShell, heightShell,false);
+	}
+
+	@Override
+	public short getCategoryBits() {
+		return CrachGame.FIRE_BIT;
+	}
+
+	@Override
+	public short getMaskBits() {
+		return maskShell;
+	}
+
+	@Override
     public void update(float dt){
       if(!destore) {
     	      timeLief -= dt;
@@ -92,8 +86,6 @@ public abstract class Shell extends Entity implements Explosion{
   			creator.SetDestoryEntity(this);
 		}
       }
-      
-      
     }
     
     public void deathEntity() {
@@ -103,10 +95,8 @@ public abstract class Shell extends Entity implements Explosion{
 	     setPosition(b2body.getPosition().x, b2body.getPosition().y);
 	     setRotation(b2body.getAngle()*MathUtils.radiansToDegrees+180);
 	     destroy();
-  }
-    
+  	}
 
-    
     @Override
     public void onContactStart(Entity otherEntity) {
     	if(!destore) {
@@ -116,9 +106,7 @@ public abstract class Shell extends Entity implements Explosion{
     		timeLief = 0;
     	}
     }
-    
 
-	
     @Override
     public void draw(Batch batch, Body body) {
     	if(!destore)
@@ -138,27 +126,28 @@ public abstract class Shell extends Entity implements Explosion{
 		this.danger= dange;
 		return d;
 	}
-	
-	
-	
+
 	@Override
 	public boolean isExplose() {
 		return true;
 	}
-	@Override
-	public void setTexture() {		
-	}
-
-
 
 	public enum TypeShell {
 		Granade_Shell,Heavy_Shell,Laser,Light_Shell,Medium_Shell,Plasma,Shotgun_Shells,Sniper_Shell
 	}
 	
 	
-	public static class maskShell{
-		public static short playershot = CrachGame.FIRE_BIT|CrachGame.BOMB_BIT |CrachGame.ENIMY_BIT|CrachGame.NOTHING_BIT |CrachGame.OBJECT_BIT|CrachGame.DOOR_BIT |CrachGame.LIGHT_BIT;
-		public static short enimyshoet = CrachGame.FIRE_BIT|CrachGame.BOMB_BIT |CrachGame.CRACH_BIT|CrachGame.NOTHING_BIT |CrachGame.OBJECT_BIT|CrachGame.DOOR_BIT |CrachGame.LIGHT_BIT;
+	public static class MaskShell {
+		public static short playershell = CrachGame.FIRE_BIT|CrachGame.BOMB_BIT |CrachGame.ENIMY_BIT|CrachGame.NOTHING_BIT |CrachGame.OBJECT_BIT|CrachGame.DOOR_BIT |CrachGame.LIGHT_BIT;
+		public static short enimyshell = CrachGame.FIRE_BIT|CrachGame.BOMB_BIT |CrachGame.CRACH_BIT|CrachGame.NOTHING_BIT |CrachGame.OBJECT_BIT|CrachGame.DOOR_BIT |CrachGame.LIGHT_BIT;
+
+		public static String toString(short maskshot) {
+			if(maskshot == playershell)
+				return "player Shot";
+			if(maskshot == enimyshell)
+				return "enimy shoet";
+			return "";
+		}
 	}
 	
 	public static Shell createShell(TypeShell type,Vector2 position, float r, float force, short mask) {
@@ -195,7 +184,7 @@ public abstract class Shell extends Entity implements Explosion{
 	@Override
 	public String toString() {
 		return "Shell{" +
-				", destore=" + destore +
+				", mask=" + MaskShell.toString(maskShell) +
 				", speed=" + speed +
 				", timeLief=" + timeLief +
 				", danger=" + danger +

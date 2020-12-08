@@ -60,14 +60,12 @@ public abstract class Entity extends Box2DSprite {
             this.defineEntity(x + width / 2 , y + height / 2, angle, width/2, height/2);
 
 	}	
-	public void defineEntity(float X,float Y) {
-        this.defineEntity(X, Y, (float)(Math.random()*1.7));
+	public void defineEntity(float x,float y) {
+        this.defineEntity(x, y, (float)(Math.random()*1.7));
 	}
-	public  void defineEntity(float X, float Y , float R ) {
-
+	public  void defineEntity(float x, float y , float angle ) {
 	}
-	public void defineEntity(float X, float Y , float R ,float Width,float Height) {
-
+	public void defineEntity(float x, float y , float angle ,float width,float height) {
 	}
 
 	public void bodyDef(float x, float y){

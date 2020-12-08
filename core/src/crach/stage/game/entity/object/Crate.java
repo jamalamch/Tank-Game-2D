@@ -112,8 +112,8 @@ public abstract class Crate extends Box{
 		}
 
 		@Override
-		public void defineEntity(float X, float Y, float R) {
-			defineEntity(X, Y, R, 60, 60, 0.9f, 0.9f, 0.019f);
+		public void defineEntity(float x, float y, float angle) {
+			defineEntity(x, y, angle, 60, 60, 0.9f, 0.9f, 0.019f);
 		}
 		
 	}
@@ -129,8 +129,8 @@ public abstract class Crate extends Box{
 		}
 
 		@Override
-		public void defineEntity(float X, float Y, float R) {
-			defineEntity(X, Y, R, 60, 60, 0.9f, 0.9f, 0.019f);
+		public void defineEntity(float x, float y, float angle) {
+			defineEntity(x, y, angle, 60, 60, 0.9f, 0.9f, 0.019f);
 		}
 		
 	}	public static class C extends Crate{
@@ -145,8 +145,8 @@ public abstract class Crate extends Box{
 		}
 
 		@Override
-		public void defineEntity(float X, float Y, float R) {
-			defineEntity(X, Y, R, 60, 120, 0.9f, 0.9f, 0.019f);
+		public void defineEntity(float x, float y, float angle) {
+			defineEntity(x, y, angle, 60, 120, 0.9f, 0.9f, 0.019f);
 		}
 	}
 	public static Crate CreateCrate(MapObject object){

@@ -27,8 +27,8 @@ public class Repair extends Pickup{
 		creator.SetDestoryEntity(E);
 	}
 	@Override
-	public void defineEntity(float X, float Y, float R) {
-		defineEntity(X, Y, R, 40);
+	public void defineEntity(float x, float y, float angle) {
+		defineEntity(x, y, angle, 40);
 	}
 
 	@Override

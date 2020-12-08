@@ -66,11 +66,11 @@ public  abstract class Bomb extends Entity implements Explosion{
 		setRegion(animation.getKeyFrame(dt_time,true));
 }
 	@Override	
-	public void defineEntity(float X, float Y, float R,float radius,float zonDeath) {
+	public void defineEntity(float x, float y, float angle, float width, float height) {
 //		this.defineEntity(X, Y, R, 4, 2, true, 0.1f, 0.7f, radius, zonDeath);
-		bodyDef(X,Y,R);
-		createFixtureCircle(radius/CrachGame.PPM,true);
-		this.zonDeath=zonDeath;
+		bodyDef(x, y, angle);
+		createFixtureCircle(width /CrachGame.PPM,true);
+		this.zonDeath= height;
 	}
 	public void defineEntity(float X, float Y, float R,float LinearDamp, float AngularDamp,boolean isSensor,float density,float restitution,float radius,float zonDeath) {
         BodyDef bdef = new BodyDef();

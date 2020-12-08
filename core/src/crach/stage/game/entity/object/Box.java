@@ -65,8 +65,8 @@ public abstract class  Box extends Object{
 		}
 
 		@Override
-		public void defineEntity(float X, float Y, float R) {
-			defineEntity(X, Y, R, 50, 50, 1.5f, 1.9f,0.065f);
+		public void defineEntity(float x, float y, float angle) {
+			defineEntity(x, y, angle, 50, 50, 1.5f, 1.9f,0.065f);
 		}
 	}
 	public static class B extends Box{
@@ -81,8 +81,8 @@ public abstract class  Box extends Object{
 		}
 
 		@Override
-		public void defineEntity(float X, float Y, float R) {
-			defineEntity(X, Y, R, 50, 50, 2, 2,0.07f);
+		public void defineEntity(float x, float y, float angle) {
+			defineEntity(x, y, angle, 50, 50, 2, 2,0.07f);
 		}
 	}
 	public static class C extends Box{
@@ -97,8 +97,8 @@ public abstract class  Box extends Object{
 		}
 
 		@Override
-		public void defineEntity(float X, float Y, float R) {
-			defineEntity(X, Y, R, 50, 50, 2.7f, 2.6f,0.06f);
+		public void defineEntity(float x, float y, float angle) {
+			defineEntity(x, y, angle, 50, 50, 2.7f, 2.6f,0.06f);
 		}
 	}
 	public static Box CreateBox(MapObject object){

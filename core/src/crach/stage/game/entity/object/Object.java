@@ -44,8 +44,8 @@ public abstract class Object extends Entity{
 		setTexture();
 		defineEntity(x,y,r);
 	}
-	public void defineEntity(float X,float Y) {
-        this.defineEntity(X, Y, (float)(Math.random()*1.7));
+	public void defineEntity(float x, float y) {
+        this.defineEntity(x, y, (float)(Math.random()*1.7));
 	}
 	public void setTexture(TextureRegion texture) {
  	    setRegion(texture);

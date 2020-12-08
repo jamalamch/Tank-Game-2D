@@ -23,12 +23,12 @@ public class CrachEnimy extends Crach{
 	
     
     
-	public void defineEntity(float X,float Y,float R) {
+	public void defineEntity(float x, float y, float angle) {
         BodyDef bdef = new BodyDef();
-        bdef.position.set(X , Y);
+        bdef.position.set(x, y);
         bdef.linearDamping=2;
         bdef.angularDamping=3;
-        bdef.angle=R;
+        bdef.angle= angle;
         bdef.type = BodyDef.BodyType.DynamicBody;
         b2body = world.createBody(bdef);
         

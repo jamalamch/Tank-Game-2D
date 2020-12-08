@@ -37,7 +37,7 @@ public class CrachGame extends Game implements IGameServiceListener {
 	public static String Langue;
 	public static String Font ;
     
-	public static final short CRACH_BIT = 1<<0;
+	public static final short FRENDS_BIT = 1<<0;
 	public static final short ENIMY_BIT = 1<<1;
 	public static final short LAMAS_BIT = 1<<2;
 	public static final short NOTHING_BIT = 1<<3;
@@ -51,7 +51,7 @@ public class CrachGame extends Game implements IGameServiceListener {
 	public static final short BOMB_BIT = 1<<11;
 	public static final short EXPLOSION_BIT = 1<<12;
 	public static final short LIGHT_BIT = 1<<13;
-	public static final short FRENDS_BIT = 1<<14;
+	public static final short CRACH_BIT = 1<<14;
 
 
 	

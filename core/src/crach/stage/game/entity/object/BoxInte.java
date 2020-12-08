@@ -24,8 +24,8 @@ public class BoxInte extends Box{
 	    	  setRegion(Assets.textureBoxNoActive);
 	}
 	@Override
-	public void defineEntity(float X, float Y, float R) {
-		defineEntity(X, Y, R, 50, 50, 2, 2, 0.02f);
+	public void defineEntity(float x, float y, float angle) {
+		defineEntity(x, y, angle, 50, 50, 2, 2, 0.02f);
 	}
 
 	@Override
