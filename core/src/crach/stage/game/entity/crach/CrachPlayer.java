@@ -173,7 +173,6 @@ public class CrachPlayer extends Crach {
 		toRoration.applyTorque(b2body,true);
 	}
 
-
 	@Override
 	public float getLinearDamp() {
 		return 2;

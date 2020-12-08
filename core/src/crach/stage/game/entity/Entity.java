@@ -16,7 +16,6 @@ import crach.stage.game.utils.SpriteAccessor;
 import crach.stage.game.creator.B2WorldCreator;
 import net.dermetfan.gdx.graphics.g2d.Box2DSprite;
 
-
 public abstract class Entity extends Box2DSprite {
 
     public static World world;

@@ -24,25 +24,26 @@ public abstract class Zone extends Entity{
 	}
 	@Override
 	public void defineEntity(float x, float y, float angle, float width, float height) {
-		
-        BodyDef bdef = new BodyDef();
-        PolygonShape shape = new PolygonShape();
-        FixtureDef fdef = new FixtureDef();
-
-        bdef.type = BodyDef.BodyType.StaticBody;
-        bdef.position.set(x, y);
-        bdef.angle = angle;
-        b2body = world.createBody(bdef);
-        shape.setAsBox(width, height);
-        fdef.shape = shape;
-        fdef.isSensor=true;
-        fdef.filter.categoryBits = CrachGame.ZONE_BIT;
-        fdef.filter.maskBits = maskBit;
-        b2body.createFixture(fdef);
-        b2body.setUserData(this);
-        shape.dispose();
+        bodyDef(x,y,angle);
+        createFixtureBox(width, height,true);
 	}
-	@Override
+
+    @Override
+    public short getCategoryBits() {
+        return CrachGame.ZONE_BIT;
+    }
+
+    @Override
+    public BodyDef.BodyType getBodyType() {
+        return BodyDef.BodyType.StaticBody;
+    }
+
+    @Override
+    public short getMaskBits() {
+        return maskBit;
+    }
+
+    @Override
 	public void draw(Batch batch, Body body) {
 	}
 

@@ -21,19 +21,23 @@ public class ZonObject extends Zone{
 	public void update(float dt) {
 		
 	}
+
 	@Override
 	public void onContactStart(Entity otherEntity) {
 		for(InZone inZone : ObjectInZon)
 			inZone.getting(otherEntity);
 	}
+
 	@Override
 	public void onContactEnd(Entity otherEntity) {
 		for(InZone inZone : ObjectInZon)
 			inZone.drifting(otherEntity);
 	}
+
 	public void addObjectZon(InZone inzone) {
 		ObjectInZon.add(inzone);
 	}
+
 	public static boolean addToZone(InZone inZone,String Id) {
 		for(int i=0;i<Zones.size;i++)
 			if(Zones.get(i).getId().equals(Id)) {
@@ -43,6 +47,7 @@ public class ZonObject extends Zone{
 				
 		return false;
 	}
+
 	public static void dispose() {
 		Zones.clear();
 	}
