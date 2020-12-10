@@ -181,8 +181,7 @@ public class Enimy extends Entity implements InZone{
 	}
    	public void TireFire() {
    		Assets.soundEnemyHit.play(getVolume(), 1, getPan());
-		//creator.addEntity(new fireEnimy(b2body.getPosition(), b2body.getAngle(), force));
-   		creator.addEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.MaskShell.enimyshell));
+   		instantaEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.MaskShell.enimyshell));
 	}
     @Override
     public void deathEntity() {

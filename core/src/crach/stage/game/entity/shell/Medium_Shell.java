@@ -12,7 +12,6 @@ public class Medium_Shell extends Shell{
 	@Override
 	public void setTexture() {
 		setTexture(Assets.textureMediumShell);
-		
 	}
 
 }

@@ -12,7 +12,6 @@ public class Plasma extends Shell{
 	@Override
 	public void setTexture() {
 		setTexture(Assets.texturePlasma);
-		
 	}
 
 }

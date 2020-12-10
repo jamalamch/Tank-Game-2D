@@ -59,6 +59,21 @@ public class CrachPlayer extends Crach {
 		createFixtureBoxAt(new Vector2(pLamassY - WidthPos/2,0),0,WidthPos/2, HieghtPos/2,false);
 	}
 
+	@Override
+	public float getLinearDamp() {
+		return 2;
+	}
+
+	@Override
+	public float getAngularDamp() {
+		return 5;
+	}
+
+	@Override
+	public short getCategoryBits() {
+		return CrachGame.CRACH_BIT;
+	}
+
 	public void updateParameter() {
 		getAllParameter();
 		this.life = 150 + hanger.getEnergy();
@@ -127,7 +142,7 @@ public class CrachPlayer extends Crach {
     }
     public void tireFire() {
     	Assets.soundPlayerAttack.play();
-    	creator.addEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.MaskShell.playershell));
+		instantaEntity(Shell.createShell(typeShell, b2body.getPosition(), b2body.getAngle(), force, Shell.MaskShell.playershell));
         actGunPoss(5,10);
         addSmokeFire();
     }
@@ -137,17 +152,8 @@ public class CrachPlayer extends Crach {
     	if(power > 200 || P == 0)  power = 0 ;
     	//controule.getHub().upPowerCrach(power);
     }
-    public void boxBumber(Box box) {
-    	if(power > 0) {    	
-    	box.getBody().applyForceToCenter(Vectorforce, true);
-    	addPower(-1);
-    	}
-    	else {
-    		boxBumber = null;
-    	}
-    }
-       
-	public boolean isActive() {
+
+    public boolean isActive() {
 		if(b2body.isAwake()) {
         if( b2body.getLinearVelocity().isZero(100) && (int)(b2body.getAngularVelocity()) == 0)
 		return false;
@@ -171,21 +177,6 @@ public class CrachPlayer extends Crach {
 	public void updateToAngel(Vector2 ToAngle){
 		toRoration.setAngle(ToAngle.angleRad());
 		toRoration.applyTorque(b2body,true);
-	}
-
-	@Override
-	public float getLinearDamp() {
-		return 2;
-	}
-
-	@Override
-	public float getAngularDamp() {
-		return 5;
-	}
-
-	@Override
-	public short getCategoryBits() {
-		return CrachGame.CRACH_BIT;
 	}
 
 	@Override

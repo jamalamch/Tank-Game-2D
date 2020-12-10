@@ -12,7 +12,6 @@ public class Light_Shell extends Shell{
 	@Override
 	public void setTexture() {
 		setTexture(Assets.textureLightShell);
-
 	}
 
 }

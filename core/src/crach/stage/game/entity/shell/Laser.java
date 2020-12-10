@@ -12,7 +12,6 @@ public class Laser extends Shell{
 	@Override
 	public void setTexture() {
 		setTexture(Assets.textureLaser);
-
 	}
 
 }

@@ -1,6 +1,7 @@
 package crach.stage.game.creator;
 
 
+import aurelienribon.tweenengine.Tween;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -113,7 +114,8 @@ public abstract class B2WorldCreator implements Disposable{
         Entity.setWorld(box2dWorld);
         
         TWEEN_MANAGER = new TweenManager();
-        
+        Tween.setCombinedAttributesLimit(4);
+
         toDestroy = new Array<Entity>();
         entitys = new Array<Entity>() {
         	@Override

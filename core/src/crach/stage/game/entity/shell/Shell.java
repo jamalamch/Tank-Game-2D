@@ -29,7 +29,7 @@ public abstract class Shell extends Entity implements Explosion{
 	
 	protected Vector2 Direction;
 		
-	protected Vector2 LongOfCente = new Vector2(60/CrachGame.PPM,60/CrachGame.PPM);
+	protected final Vector2 LongOfCente = new Vector2(100/CrachGame.PPM,100/CrachGame.PPM);
 
 	public Shell(Vector2 position,float r,float force,TypeShell type,short mask) {
 	 this.updateParameter(type);
@@ -60,6 +60,12 @@ public abstract class Shell extends Entity implements Explosion{
 	public void defineEntity(float x, float y, float angle) {
         bodyDef(x, y, angle);
         createFixtureBox(widthShell, heightShell,false);
+	}
+
+	@Override
+	public boolean isBullet() {
+		print("bullet");
+		return true;
 	}
 
 	@Override
@@ -138,8 +144,8 @@ public abstract class Shell extends Entity implements Explosion{
 	
 	
 	public static class MaskShell {
-		public static short playershell = CrachGame.FIRE_BIT|CrachGame.BOMB_BIT |CrachGame.ENIMY_BIT|CrachGame.NOTHING_BIT |CrachGame.OBJECT_BIT|CrachGame.DOOR_BIT |CrachGame.LIGHT_BIT;
-		public static short enimyshell = CrachGame.FIRE_BIT|CrachGame.BOMB_BIT |CrachGame.CRACH_BIT|CrachGame.NOTHING_BIT |CrachGame.OBJECT_BIT|CrachGame.DOOR_BIT |CrachGame.LIGHT_BIT;
+		public static final short playershell = CrachGame.FIRE_BIT|CrachGame.BOMB_BIT |CrachGame.ENIMY_BIT|CrachGame.NOTHING_BIT |CrachGame.OBJECT_BIT|CrachGame.DOOR_BIT;
+		public static final short enimyshell = CrachGame.FIRE_BIT|CrachGame.BOMB_BIT |CrachGame.CRACH_BIT|CrachGame.NOTHING_BIT |CrachGame.OBJECT_BIT|CrachGame.DOOR_BIT;
 
 		public static String toString(short maskshot) {
 			if(maskshot == playershell)

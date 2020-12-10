@@ -12,7 +12,6 @@ public class Shotgun_Shells extends Shell{
 	@Override
 	public void setTexture() {
 		setTexture(Assets.textureShotgunShells);
-
 	}
 
 }
