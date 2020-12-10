@@ -1,5 +1,6 @@
 package crach.stage.game.entity;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.maps.MapObject;
@@ -80,12 +81,16 @@ public abstract class Entity extends Box2DSprite {
 	}
 
 	public void bodyDef(float x, float y, float angle, float linearDamp, float angularDamp,BodyDef.BodyType bodyType){
+		bodyDef(x,y,angle,linearDamp,angularDamp,bodyType,isBullet());
+	}
+	public void bodyDef(float x, float y, float angle, float linearDamp, float angularDamp,BodyDef.BodyType bodyType,boolean bullet){
 		BodyDef bdef = new BodyDef();
 		bdef.position.set(x , y);
 		bdef.linearDamping = linearDamp;
 		bdef.angularDamping = angularDamp;
 		bdef.angle=angle;
 		bdef.type = bodyType;
+		bdef.bullet =bullet;
 		b2body = world.createBody(bdef);
 		b2body.setUserData(this);
 	}
@@ -154,15 +159,15 @@ public abstract class Entity extends Box2DSprite {
 	public BodyDef.BodyType getBodyType(){
     	return BodyDef.BodyType.DynamicBody;
 	}
-
+	public boolean isBullet(){
+    	return false;
+	}
 	public float getLinearDamp(){
     	return 0;
 	}
-
 	public float getAngularDamp(){
     	return 0;
 	}
-
 	public float getFriction(){
     	return 0.2f;
 	}
@@ -258,12 +263,12 @@ public abstract class Entity extends Box2DSprite {
 		return Timeline.createSequence().beginSequence()
 		.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, 0).target(color.r, color.g, color.b, color.a))
 		.push(
-		Timeline.createSequence().beginSequence()
-		.push(Tween.to(target, SpriteAccessor.ALPHA, flashDuration).target(color.a))
-		.push(Tween.to(target, SpriteAccessor.ALPHA, flashDuration).target(1))
-		.repeat(flashAmount, 0)
-		.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, 0).target(1, 1, 1, 1))
-		.end()
+			Timeline.createSequence().beginSequence()
+			.push(Tween.to(target, SpriteAccessor.ALPHA, flashDuration).target(color.a))
+			.push(Tween.to(target, SpriteAccessor.ALPHA, flashDuration).target(1))
+			.repeat(flashAmount, 0)
+			.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, 0).target(1, 1, 1, 1))
+			.end()
 		);
 	}
 
@@ -276,5 +281,16 @@ public abstract class Entity extends Box2DSprite {
 		return Timeline.createSequence().beginSequence()
 		.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, 0).target(colorIn.r, colorIn.g, colorIn.b, colorIn.a))
 		.push(Tween.to(target, SpriteAccessor.COLOR_ALPHA, fadeInDuration/2f).target(1,1,1,1));
+	}
+
+	protected void instantaEntity(Entity entity){
+		creator.addEntity(entity);
+	}
+
+	protected void print(String text){
+		print(getClass().getSimpleName(),text);
+	}
+	protected void print(String tag,String message){
+		Gdx.app.log("ENTITY ",tag+" >> "+message);
 	}
 }
