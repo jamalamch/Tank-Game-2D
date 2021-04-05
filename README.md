@@ -31,5 +31,3 @@ Artwork - By craftpix (Must pay License) [craftpix License details](https://craf
 ![GitHub Logo](https://play-lh.googleusercontent.com/Likr3WGUZ1iF5ZaLRpPtqKOe5Qti41VFlepxVhOlTkfCr5SLJIKww5Itsp1vtm7-bw=w720-h310)
 
 ![GitHub Logo](https://play-lh.googleusercontent.com/CRAxXj5d0nwQOv0ciP06_2WBcnW_Y_q7kMQv7hkT12ege0bvffDlZB0kMjG200hjLxw=w720-h310)
-
-![GitHub Logo]()
