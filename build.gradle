@@ -22,12 +22,13 @@ allprojects {
     version = '1.0'
     ext {
         appName = "CrachGame"
-        gdxVersion = '1.9.12'
-        roboVMVersion = '2.3.7'
-        box2DLightsVersion = '1.5'
-        ashleyVersion = '1.7.0'
-        aiVersion = '1.8.2'
+        gdxVersion = '1.10.0'
         gamesvcsVersion = '1.0.0'
+        roboVMVersion = '2.3.12'
+        box2DLightsVersion = '1.5'
+        ashleyVersion = '1.7.3'
+        aiVersion = '1.8.2'
+        gdxControllersVersion = '2.1.0'
     }
 
     repositories {
@@ -70,7 +71,6 @@ project(":desktop") {
         api "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 		api "de.golfgl.gdxgamesvcs:gdx-gamesvcs-desktop-gpgs:$gamesvcsVersion"    }
 }
-/*
 project(":android") {
     apply plugin: "android"
 
@@ -96,4 +96,3 @@ project(":android") {
 		api "de.golfgl.gdxgamesvcs:gdx-gamesvcs-android-gpgs:$gamesvcsVersion"
     }
 }
-*/
