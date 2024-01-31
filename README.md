@@ -14,8 +14,6 @@ Vailable for free on the Google Play Store
 
 Artwork - By craftpix (Must pay License) [craftpix License details](https://craftpix.net/file-craftpix/)
 
-[sellmyapp](https://www.sellmyapp.com/downloads/tank-1979)
-
 [link to 2D Top Down Tank Game Assets](https://craftpix.net/product/2d-top-down-tank-game-assets/)
 
 ## Features
