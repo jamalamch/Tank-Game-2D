@@ -10,7 +10,7 @@ You can play with friends
 Go to war and test your strategy abilities
 
 Vailable for free on the Google Play Store
-[link to Google play](https://play.google.com/store/apps/details?id=crach.stage.game)
+[link to Google play](https://tank-game-th-1979.en.softonic.com/android)
 
 Artwork - By craftpix (Must pay License) [craftpix License details](https://craftpix.net/file-craftpix/)
 
